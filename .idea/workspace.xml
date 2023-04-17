@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PointsComp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/plotter/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/plotter/hello-view.fxml" afterDir="false" />
     </list>
@@ -14,8 +18,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KPCa9zKgdXDFYBqbx68GMHTRlV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,7 +41,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -38,9 +55,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673866895622</updated>
-      <workItem from="1673866897071" duration="2000" />
+      <workItem from="1673866897071" duration="1318000" />
+      <workItem from="1674034130019" duration="122000" />
+      <workItem from="1674034917107" duration="23000" />
+      <workItem from="1674470468654" duration="2541000" />
+      <workItem from="1674482963423" duration="13000" />
+      <workItem from="1674486937494" duration="702000" />
+      <workItem from="1674498319429" duration="1269000" />
+      <workItem from="1674725485827" duration="36000" />
+      <workItem from="1681725298695" duration="414000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
