@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="tests for constants and functions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" afterDir="false" />
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PointsComp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/plotter/ConstantsAndFunctionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/ConstantsAndFunctionsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +20,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ea2e49a4-ed2c-4b78-a366-8be20d936a31" />
+        <option name="url" value="https://github.com/TheD4rkCoder/Plotter.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,31 +50,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.PlotAreaTest">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.plotter.HelloApplication" />
-      <module name="Plotter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.plotter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConstantsAndFunctionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RunManager" selected="JUnit.DerivationTest">
+    <configuration name="DerivationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Plotter" />
       <extension name="coverage">
         <pattern>
@@ -71,13 +74,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="plotter" />
-      <option name="MAIN_CLASS_NAME" value="plotter.ConstantsAndFunctionsTest" />
+      <option name="MAIN_CLASS_NAME" value="plotter.DerivationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlotAreaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DerivationTest.testConstantFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Plotter" />
       <extension name="coverage">
         <pattern>
@@ -86,13 +89,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="plotter" />
-      <option name="MAIN_CLASS_NAME" value="plotter.PlotAreaTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="plotter.DerivationTest" />
+      <option name="METHOD_NAME" value="testConstantFunction" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlotAreaTest.constantsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DerivationTest.testQuadraticFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Plotter" />
       <extension name="coverage">
         <pattern>
@@ -101,8 +105,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="plotter" />
-      <option name="MAIN_CLASS_NAME" value="plotter.PlotAreaTest" />
-      <option name="METHOD_NAME" value="constantsTest" />
+      <option name="MAIN_CLASS_NAME" value="plotter.DerivationTest" />
+      <option name="METHOD_NAME" value="testQuadraticFunction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DerivationTest.testTrigonometricFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Plotter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="plotter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="plotter" />
+      <option name="MAIN_CLASS_NAME" value="plotter.DerivationTest" />
+      <option name="METHOD_NAME" value="testTrigonometricFunction" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,10 +130,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlotAreaTest" />
-        <item itemvalue="JUnit.ConstantsAndFunctionsTest" />
-        <item itemvalue="Application.HelloApplication" />
-        <item itemvalue="JUnit.PlotAreaTest.constantsTest" />
+        <item itemvalue="JUnit.DerivationTest" />
+        <item itemvalue="JUnit.DerivationTest.testQuadraticFunction" />
+        <item itemvalue="JUnit.DerivationTest.testConstantFunction" />
+        <item itemvalue="JUnit.DerivationTest.testTrigonometricFunction" />
       </list>
     </recent_temporary>
   </component>
@@ -133,52 +153,37 @@
       <workItem from="1674486937494" duration="702000" />
       <workItem from="1674498319429" duration="1269000" />
       <workItem from="1674725485827" duration="36000" />
-      <workItem from="1681725298695" duration="1732000" />
-      <workItem from="1681736918627" duration="3391000" />
+      <workItem from="1681725298695" duration="414000" />
     </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1681725896036</created>
+    <task id="LOCAL-00001" summary="added testmethods">
+      <created>1681729404025</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1681725896036</updated>
+      <updated>1681729404025</updated>
     </task>
-    <task id="LOCAL-00002" summary="initial commit">
-      <created>1681726010227</created>
+    <task id="LOCAL-00002" summary="added testmethods">
+      <created>1681737045727</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1681726010227</updated>
+      <updated>1681737045727</updated>
     </task>
-    <task id="LOCAL-00003" summary="initial commit">
-      <created>1681726577260</created>
+    <task id="LOCAL-00003" summary="added and implemented DerivativeCalculator class&#10;added and implemented DerivationTest class&#10;cleared ConstantsAndFunctionsTest class">
+      <created>1681740948492</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1681726577261</updated>
+      <updated>1681740948492</updated>
     </task>
-    <task id="LOCAL-00004" summary="tests for constants and functions">
-      <created>1681737055404</created>
+    <task id="LOCAL-00004" summary="added javaDocs">
+      <created>1681741303102</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1681737055404</updated>
+      <updated>1681741303102</updated>
     </task>
-    <task id="LOCAL-00005" summary="tests for constants and functions">
-      <created>1681737930305</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681737930305</updated>
-    </task>
-    <task id="LOCAL-00006" summary="tests for constants and functions">
-      <created>1681738031416</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1681738031416</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,8 +201,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="tests for constants and functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests for constants and functions" />
+    <MESSAGE value="added commons-math3 dependency in order to perform derivations" />
+    <MESSAGE value="minor changes" />
+    <MESSAGE value="added testmethods" />
+    <MESSAGE value="added and implemented DerivativeCalculator class&#10;added and implemented DerivationTest class&#10;cleared ConstantsAndFunctionsTest class" />
+    <MESSAGE value="added javaDocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added javaDocs" />
   </component>
 </project>
