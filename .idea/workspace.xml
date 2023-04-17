@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/DerivativeCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/plotter/ConstantsAndFunctionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/ConstantsAndFunctionsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/plotter/DerivationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/DerivationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +169,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681737045727</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added and implemented DerivativeCalculator class&#10;added and implemented DerivationTest class&#10;cleared ConstantsAndFunctionsTest class">
+      <created>1681740948492</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681740948492</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added javaDocs">
+      <created>1681741303102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681741303102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +204,8 @@
     <MESSAGE value="added commons-math3 dependency in order to perform derivations" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="added testmethods" />
-    <option name="LAST_COMMIT_MESSAGE" value="added testmethods" />
+    <MESSAGE value="added and implemented DerivativeCalculator class&#10;added and implemented DerivationTest class&#10;cleared ConstantsAndFunctionsTest class" />
+    <MESSAGE value="added javaDocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added javaDocs" />
   </component>
 </project>
