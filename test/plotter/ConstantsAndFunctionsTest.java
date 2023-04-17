@@ -1,4 +1,5 @@
 package plotter;
+import org.mariuszgromada.math.mxparser.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,8 @@ public class ConstantsAndFunctionsTest {
     @Test
     @DisplayName("Test for the value of \"PI\"")
     public void piTest() {
-        assertEquals(Math.PI, Mparser.calculate("PI"));
+        Expression e = new Expression("PI");
+        assertEquals(Math.PI, e.calculate());
     }
+
 }
