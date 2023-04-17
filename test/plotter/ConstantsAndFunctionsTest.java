@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ConstantsAndFunctionsTest {
     @Test
-    @DisplayName("Test für Wert von PI")
+    @DisplayName("Test for the value of \"PI\"")
     public void piTest() {
         assertEquals(Math.PI, Mparser.calculate("PI"));
     }
