@@ -7,10 +7,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ConstantsAndFunctionsTest {
+
     @Test
     @DisplayName("Test for the value of \"PI\"")
     public void piTest() {
-        Expression e = new Expression("PI");
+        License.iConfirmNonCommercialUse("Plotter");
+
+        Expression e = new Expression("pi");
         assertEquals(Math.PI, e.calculate());
     }
 
