@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="tests for constants and functions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" afterDir="false" />
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="j">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PointsComp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/plotter/ConstantsAndFunctionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/ConstantsAndFunctionsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +33,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JUnit.PlotAreaTest">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.plotter.HelloApplication" />
@@ -135,6 +133,7 @@
       <workItem from="1674725485827" duration="36000" />
       <workItem from="1681725298695" duration="1732000" />
       <workItem from="1681736918627" duration="3391000" />
+      <workItem from="1681883805609" duration="373000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681725896036</created>
