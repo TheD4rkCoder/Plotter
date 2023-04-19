@@ -43,4 +43,10 @@ public class DerivationTest {
         double result = DerivativeCalculator.calculateDerivative("sin(x)", "x", Math.PI / 2, delta);
         assertEquals(0, result, 1e-9);
     }
+
+    @Test
+    public void testComplexFunction() {
+        double result = DerivativeCalculator.calculateDerivative("3x^3 - 2x^2 + 5*x - 7", "x", 2, delta);
+        assertEquals(28, result, 1e-9);
+    }
 }
