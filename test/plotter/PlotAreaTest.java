@@ -21,6 +21,7 @@ public class PlotAreaTest {
                 pa.addFunction(new Function("f(x) = 5//x"));
             }
         });
+        
     }
 
     @Test

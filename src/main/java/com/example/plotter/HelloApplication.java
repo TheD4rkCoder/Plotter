@@ -15,10 +15,12 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class HelloApplication extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
         License.iConfirmNonCommercialUse("Plotter");
         Group group = new Group();
+
         Scene scene = new Scene(group, 320, 240);
         stage.setTitle("Plotter");
         stage.setScene(scene);
