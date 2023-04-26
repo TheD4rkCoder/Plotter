@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
         License.iConfirmNonCommercialUse("Plotter");
 
         Group root = new Group();
-        PlotArea plotArea = new PlotArea(BEGINWIDTH);
+        PlotArea plotArea = new PlotArea(BEGINWIDTH, BEGINWIDTH);
         Group funktionArea = new Group();
         Group constantArea = new Group();
         Group buttonArea = new Group();
@@ -30,11 +30,11 @@ public class HelloApplication extends Application {
         root.getChildren().add(funktionArea);
         root.getChildren().add(constantArea);
         root.getChildren().add(buttonArea);
-
-        Scene scene = new Scene(root, 320, 240);
+        Scene scene = new Scene(root, 320, 320);
         stage.setTitle("Plotter");
         stage.setScene(scene);
         stage.show();
+        plotArea.changePlottedArea(0, 0, 1, 1);
     }
 
     public static void main(String[] args) {
