@@ -1,0 +1,5 @@
+.buttonArea {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+}

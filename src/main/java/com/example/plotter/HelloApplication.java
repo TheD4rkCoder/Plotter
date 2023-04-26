@@ -20,20 +20,21 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         License.iConfirmNonCommercialUse("Plotter");
 
-        Group root = new Group();
+        Group root = new Group();                           //main Group
         PlotArea plotArea = new PlotArea(BEGINWIDTH);
         Group funktionArea = new Group();
         Group constantArea = new Group();
         Group buttonArea = new Group();
-
         root.getChildren().add(plotArea);
         root.getChildren().add(funktionArea);
         root.getChildren().add(constantArea);
         root.getChildren().add(buttonArea);
-
+        Layout layout = new Layout(root);
         Scene scene = new Scene(root, 320, 240);
+        stage.setFullScreen(true);
         stage.setTitle("Plotter");
         stage.setScene(scene);
+        layout.setEveryGroupLayout(buttonArea,plotArea,funktionArea,constantArea);
         stage.show();
     }
 
