@@ -14,7 +14,7 @@ public class PlotAreaTest {
     public void invalidFunctionPlotAreaTest() {
 
         License.iConfirmNonCommercialUse("Plotter");
-        PlotArea pa = new PlotArea(5);
+        PlotArea pa = new PlotArea(100);
         assertThrows(IllegalArgumentException.class, new Executable() {
             @Override
             public void execute() throws Throwable {
