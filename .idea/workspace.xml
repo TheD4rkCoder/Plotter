@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="tests for PlotArea">
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/DerivativeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/DerivativeCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/plotter/DerivationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/DerivationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,41 +43,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="JUnit.DerivationTest">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.plotter.HelloApplication" />
-      <module name="Plotter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.plotter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConstantsAndFunctionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Plotter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="plotter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="plotter" />
-      <option name="MAIN_CLASS_NAME" value="plotter.ConstantsAndFunctionsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DerivationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Plotter" />
       <extension name="coverage">
@@ -92,7 +68,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlotAreaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DerivationTest.testCalculateDerivative_CubicFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Plotter" />
       <extension name="coverage">
         <pattern>
@@ -101,13 +77,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="plotter" />
-      <option name="MAIN_CLASS_NAME" value="plotter.PlotAreaTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="plotter.DerivationTest" />
+      <option name="METHOD_NAME" value="testCalculateDerivative_CubicFunction" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlotAreaTest.constantsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DerivationTest.testComplexFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Plotter" />
       <extension name="coverage">
         <pattern>
@@ -116,8 +93,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="plotter" />
-      <option name="MAIN_CLASS_NAME" value="plotter.PlotAreaTest" />
-      <option name="METHOD_NAME" value="constantsTest" />
+      <option name="MAIN_CLASS_NAME" value="plotter.DerivationTest" />
+      <option name="METHOD_NAME" value="testComplexFunction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DerivationTest.testConstantFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Plotter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="plotter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="plotter" />
+      <option name="MAIN_CLASS_NAME" value="plotter.DerivationTest" />
+      <option name="METHOD_NAME" value="testConstantFunction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DerivationTest.testExponentialFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Plotter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="plotter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="plotter" />
+      <option name="MAIN_CLASS_NAME" value="plotter.DerivationTest" />
+      <option name="METHOD_NAME" value="testExponentialFunction" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DerivationTest" />
-        <item itemvalue="JUnit.PlotAreaTest.constantsTest" />
-        <item itemvalue="JUnit.PlotAreaTest" />
-        <item itemvalue="JUnit.ConstantsAndFunctionsTest" />
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="JUnit.DerivationTest.testCalculateDerivative_CubicFunction" />
+        <item itemvalue="JUnit.DerivationTest.testConstantFunction" />
+        <item itemvalue="JUnit.DerivationTest.testComplexFunction" />
+        <item itemvalue="JUnit.DerivationTest.testExponentialFunction" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +166,7 @@
       <workItem from="1681817706471" duration="954000" />
       <workItem from="1681826650244" duration="6000" />
       <workItem from="1681883647481" duration="351000" />
+      <workItem from="1682489272788" duration="5961000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681725896036</created>
@@ -207,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681740351106</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added 6th test">
+      <created>1681885602546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681885602546</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +245,27 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="tests for constants and functions" />
     <MESSAGE value="tests for PlotArea" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests for PlotArea" />
+    <MESSAGE value="added 6th test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 6th test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/plotter/DerivativeCalculator.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/plotter/DerivativeCalculator.java</url>
+          <line>50</line>
+          <properties class="com.example.plotter.DerivativeCalculator" method="roundToDecimalPlaces">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
