@@ -14,38 +14,31 @@ import org.mariuszgromada.math.mxparser.Function;
 import java.util.ArrayList;
 
 public class Layout extends Group {
-    private double width, height;
     private TextField selectedTextField;
     private ArrayList<TextField> funktionField;
     private ArrayList<TextField> constantField;
-    private VBox functions = new VBox();
-    private VBox constants = new VBox();
-    private ScrollPane scrollPaneVariables = new ScrollPane();
-    private ScrollPane scrollPaneFunctions = new ScrollPane();
-    private ButtonBar[] buttonBar = new ButtonBar[4];
-    private int amountTextfields = 1;
-    private int amountConstants = 1;
-
+    private final VBox functions = new VBox();
+    private final VBox constants = new VBox();
 
     public Layout(double width, double height) {
-        this.width = width;
-        this.height = height;
         PlotArea plotArea = new PlotArea(width * 0.666 - 4, height - 4);
         this.getChildren().add(plotArea);
         plotArea.setLayoutX(2);
         plotArea.setLayoutY(2);
 
+        ScrollPane scrollPaneFunctions = new ScrollPane();
         scrollPaneFunctions.setLayoutX(width * 0.666 + 4);
         scrollPaneFunctions.setLayoutY(height * 0.05);
         scrollPaneFunctions.setContent(functions);
+        scrollPaneFunctions.setPrefWidth(width * 0.334 - 8);
+        scrollPaneFunctions.setPrefHeight(height * 0.2);
+        this.getChildren().add(scrollPaneFunctions);
+        ScrollPane scrollPaneVariables = new ScrollPane();
         scrollPaneVariables.setLayoutX(width * 0.666 + 4);
         scrollPaneVariables.setLayoutY(height * 0.3);
         scrollPaneVariables.setContent(constants);
-        scrollPaneFunctions.setPrefWidth(width * 0.334 - 8);
-        scrollPaneFunctions.setPrefHeight(height * 0.2);
         scrollPaneVariables.setPrefWidth(width * 0.334 - 8);
         scrollPaneVariables.setPrefHeight(height * 0.2);
-        this.getChildren().add(scrollPaneFunctions);
         this.getChildren().add(scrollPaneVariables);
         Button addFunctionButton = new Button("+");
         functions.getChildren().add(addFunctionButton);

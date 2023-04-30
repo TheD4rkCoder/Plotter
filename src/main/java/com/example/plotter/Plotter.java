@@ -38,6 +38,8 @@ public class Plotter extends Application {
         Scene scene = new Scene(root, BEGINWIDTH, BEGINHEIGHT);
         // stage.setFullScreen(true);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        stage.setMinHeight(400);
+        stage.setMinWidth(600);
         stage.setTitle("Plotter");
         stage.setScene(scene);
         stage.show();
