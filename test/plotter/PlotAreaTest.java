@@ -1,3 +1,10 @@
+/**
+ * PlotAreaTest is a test class for verifying the correct behavior
+ * of the PlotArea class in the plotter application.
+ *
+ * @autor Plotter
+ * @version 1.0
+ */
 package plotter;
 
 import com.example.plotter.PlotArea;
@@ -11,6 +18,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PlotAreaTest {
 
+    /**
+     * Tests the behavior of the PlotArea class when attempting to add an
+     * invalid function. An IllegalArgumentException should be thrown.
+     */
     @Test
     @DisplayName("Invalid function Exception test")
     public void invalidFunctionPlotAreaTest() {
@@ -26,6 +37,11 @@ public class PlotAreaTest {
 
     }
 
+    /**
+     * Tests the behavior of the PlotArea class when applying constants
+     * to all functions. The test verifies that constants are correctly
+     * applied and the expected result is calculated.
+     */
     @Test
     @DisplayName("constants applying to all functions test")
     public void constantsTest() {

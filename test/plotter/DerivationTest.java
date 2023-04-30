@@ -1,3 +1,10 @@
+/**
+ * DerivationTest is a test class for verifying the correct behavior
+ * of the DerivativeCalculator class with various functions.
+ *
+ * @autor Plotter
+ * @version 1.0
+ */
 package plotter;
 
 import com.example.plotter.DerivativeCalculator;
@@ -10,17 +17,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DerivationTest {
     private final double delta = 1e-9;
 
+    /**
+     * Test for a constant function.
+     */
     @Test
     public void testConstantFunction() {
-        /* This is a workaround for the fact that the mxparser library is not free software.
-         * The library is free for non-commercial use, but the author requires that you
-         * confirm that you are not using it for commercial purposes. This is a way to do
-         * that. */
         boolean isCallSuccessful = License.iConfirmNonCommercialUse("Plotter");
         double result = DerivativeCalculator.calculateDerivative("5", "x", 2, delta);
         assertEquals(0, result, 1e-9);
     }
 
+    /**
+     * Test for calculating the derivative of a linear function.
+     */
     @Test
     public void testCalculateDerivative_LinearFunction() {
         String function = "3 * x + 2";
@@ -32,7 +41,9 @@ public class DerivationTest {
         assertEquals(expected, actual, 0.001);
     }
 
-
+    /**
+     * Test for calculating the derivative of a quadratic function.
+     */
     @Test
     public void testCalculateDerivative_QuadraticFunction() {
         String function = "x^2 + 2 * x + 1";
@@ -44,7 +55,9 @@ public class DerivationTest {
         assertEquals(expected, actual, 0.001);
     }
 
-
+    /**
+     * Test for calculating the derivative of a cubic function.
+     */
     @Test
     public void testCalculateDerivative_ExponentialFunction() {
         String function = "2 * e^(x)";
@@ -56,7 +69,9 @@ public class DerivationTest {
         assertEquals(expected, actual, 0.001);
     }
 
-
+    /**
+     * Test for calculating the derivative of a logarithmic function.
+     */
     @Test
     public void testCalculateDerivative_TrigonometricFunction() {
         String function = "sin(x)";
@@ -68,7 +83,9 @@ public class DerivationTest {
         assertEquals(expected, actual, 0.001);
     }
 
-
+    /**
+     * Test for calculating the derivative of a logarithmic function.
+     */
     @Test
     public void testCalculateDerivative_CubicFunction() {
         String function = "x^3 - 2 * x^2 + x - 3";
@@ -79,5 +96,4 @@ public class DerivationTest {
         double actual = DerivativeCalculator.calculateDerivative(function, variable, point, delta);
         assertEquals(expected, actual, 0.001);
     }
-
 }
