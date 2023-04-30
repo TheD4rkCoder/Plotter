@@ -1,6 +1,13 @@
+/**
+ * PlotFunction is a class for managing the graphical representation of a mathematical function.
+ * It calculates the positions of line segments that approximate the function's curve and handles
+ * function visibility.
+ *
+ * @author Plotter
+ * @version 1.0
+ */
 package com.example.plotter;
 
-import javafx.event.ActionEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import org.mariuszgromada.math.mxparser.Function;
