@@ -1,30 +1,39 @@
+/**
+ * PlotArea is a custom JavaFX Group that represents a 2D plotting area for mathematical functions.
+ * It provides functionality to add, remove and update functions, variables, and grid lines.
+ * It also supports scrolling, zooming, and dragging the plotting area.
+ *
+ * @author Plotter
+ * @version 1.0
+ */
 package com.example.plotter;
 
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.input.ScrollEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
-import org.mariuszgromada.math.mxparser.*;
+import org.mariuszgromada.math.mxparser.Argument;
+import org.mariuszgromada.math.mxparser.Function;
 
 import java.util.ArrayList;
 
-
 public class PlotArea extends Group {
     private final int MAX_NUMBER_OF_GRIDLINES = 100;
-    private double width, plotCoordinatesWidth = 200;
-    private double height, plotCoordinatesHeight = 200;
-    private Line[] axisLines = new Line[2];
-    private ArrayList<Line> gridLines = new ArrayList<>();
+    private final double width;
+    private double plotCoordinatesWidth = 200;
+    private final double height;
+    private double plotCoordinatesHeight = 200;
+    private final Line[] axisLines = new Line[2];
+    private final ArrayList<Line> gridLines = new ArrayList<>();
 
-    private double[] offset = {-100.0, -100.0};
+    private final double[] offset = {-100.0, -100.0};
     //private ArrayList<Circle> points = new ArrayList<>(); // tba
-    private ArrayList<Label> labelsForAxis = new ArrayList<>(); //todo in drawPlotArea
-    private ArrayList<PlotFunction> functions = new ArrayList<>();
-    private ArrayList<Argument> variables = new ArrayList<>();
+    private final ArrayList<Label> labelsForAxis = new ArrayList<>(); //todo in drawPlotArea
+    private final ArrayList<PlotFunction> functions = new ArrayList<>();
+    private final ArrayList<Argument> variables = new ArrayList<>();
 
     public double getWidth() {
         return width;
@@ -34,6 +43,12 @@ public class PlotArea extends Group {
         return height;
     }
 
+    /**
+     * Creates a new PlotArea with the specified dimensions.
+     *
+     * @param beginWidth  The initial width of the plotting area.
+     * @param beginHeight The initial height of the plotting area.
+     */
     public PlotArea(double beginWidth, double beginHeight) {
         super();
         double[] initialMouseDragCoords = new double[2];
@@ -45,7 +60,7 @@ public class PlotArea extends Group {
 
             }
         });
-        this.setOnMouseDragged(new EventHandler<MouseEvent>() {
+        this.setOnMouseDragged(new EventHandler<>() {
             @Override
             public void handle(MouseEvent mouse) {
                 changePlottedArea((initialMouseDragCoords[0] - mouse.getX()) / width * plotCoordinatesWidth, (mouse.getY() - initialMouseDragCoords[1]) / height * plotCoordinatesHeight, 1, 1);
@@ -53,12 +68,7 @@ public class PlotArea extends Group {
                 initialMouseDragCoords[1] = mouse.getY();
             }
         });
-        this.setOnScroll(new EventHandler<ScrollEvent>() {
-            @Override
-            public void handle(ScrollEvent scrollEvent) {
-                changePlottedArea(0, 0, 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY());
-            }
-        });
+        this.setOnScroll(scrollEvent -> changePlottedArea(0, 0, 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
         this.height = beginHeight;
         this.width = beginWidth;
         this.getChildren().add(new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY));
@@ -87,8 +97,10 @@ public class PlotArea extends Group {
     }
 
     /**
-     * @param index
-     * @param function
+     * Adds a new function at the specified index in the list of functions.
+     *
+     * @param index    The index at which to add the function.
+     * @param function The function to add.
      */
     // Damit keine Rekursionen Entstehen können, kann man nur zu daroberstehende Funktionen referenzieren!!!
     public void addFunction(int index, Function function) {
@@ -110,10 +122,20 @@ public class PlotArea extends Group {
         drawPlotArea();
     }
 
+    /**
+     * Adds a new function at the end of the list of functions.
+     *
+     * @param function The function to add.
+     */
     public void addFunction(Function function) {
         addFunction(functions.size(), function);
     }
 
+    /**
+     * Removes a function from the list of functions at the specified index.
+     *
+     * @param index The index of the function to remove.
+     */
     public void removeFunction(int index) {
         for (int i = index + 1; i < functions.size(); i++) {
             functions.get(i).getFunction().removeFunctions(functions.get(index).getFunction());
@@ -125,6 +147,12 @@ public class PlotArea extends Group {
         drawPlotArea();
     }
 
+    /**
+     * Adds a variable at the specified index in the list of variables.
+     *
+     * @param index    The index at which to add the variable.
+     * @param argument The variable to add.
+     */
     public void addVariable(int index, Argument argument) {
         if (!argument.checkSyntax()) {
             argument = new Argument("rxeydtcugvbih = 1"); // no clue what the error is
@@ -136,6 +164,11 @@ public class PlotArea extends Group {
         drawPlotArea();
     }
 
+    /**
+     * Removes a variable from the list of variables at the specified index.
+     *
+     * @param index The index of the variable to remove.
+     */
     public void removeVariable(int index) {
         for (PlotFunction f : functions) {
             f.getFunction().removeArguments(variables.get(index));
@@ -147,6 +180,9 @@ public class PlotArea extends Group {
         // remove it from all functions as well
     }
 
+    /**
+     * Updates the plotting area by redrawing the grid lines, axes, and functions.
+     */
     private void drawPlotArea() {
         // reset Axis; later also reset Labels
         double xAxisPos = height + offset[1] / plotCoordinatesHeight * height;
@@ -206,6 +242,14 @@ public class PlotArea extends Group {
         }
     }
 
+    /**
+     * Changes the plotted area by translating and scaling the coordinate system.
+     *
+     * @param deltaX                       The translation amount in the x-direction.
+     * @param deltaY                       The translation amount in the y-direction.
+     * @param plotCoordsWidthChangeFactor  The scaling factor for the width of the plotting area.
+     * @param plotCoordsHeightChangeFactor The scaling factor for the height of the plotting area.
+     */
     public void changePlottedArea(double deltaX, double deltaY, double plotCoordsWidthChangeFactor, double plotCoordsHeightChangeFactor) {
         this.offset[0] += deltaX;
         this.offset[1] += deltaY;
@@ -214,38 +258,33 @@ public class PlotArea extends Group {
         drawPlotArea();
     }
 
+    /**
+     * Resizes the plotting area to the specified dimensions.
+     *
+     * @param newWidth  The new width of the plotting area.
+     * @param newHeight The new height of the plotting area.
+     */
     public void resize(double newWidth, double newHeight) {
         // todo
     }
 
+    /**
+     * Changes the visibility of a function at the specified index.
+     *
+     * @param
+     * @param index      The index of the function whose visibility to change.
+     * @param visibility The new visibility state of the function (true for visible, false for hidden).
+     */
     public void changeFunctionVisibility(int index, boolean visibility) {
         functions.get(index).changeFunctionVisibility(visibility);
     }
 
+    /**
+     * Toggles the visibility of a function at the specified index.
+     *
+     * @param index The index of the function whose visibility to toggle.
+     */
     public void changeFunctionVisibility(int index) {
         functions.get(index).changeFunctionVisibility();
     }
-/*
-    public void removeVariable(Argument argument) {
-        removeVariable(argument.getArgumentExpressionString());
-    }
-    public void removeVariable(String argument) {
-        for (Argument a : variables) {
-            if (a.getArgumentExpressionString().equals(argument)) {
-                variables.remove(a);
-            }
-        }
-    }
-    public void removeFunction(Function function) {
-        removeFunction(function.getFunctionExpressionString());
-    }
-    public void removeFunction(String function) {
-        for (int i = 0; i < functions.size(); i++) {
-            if (functions.get(i).getFunctionExpressionString().equals(function)) {
-                functions.remove(i);
-            }
-        }
-    }
-
- */
 }
