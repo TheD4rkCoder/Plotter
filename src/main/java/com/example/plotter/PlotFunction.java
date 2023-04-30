@@ -15,10 +15,25 @@ public class PlotFunction {
     private final int POINTS = 100;
     Random random = new Random();
 
+    /**
+     * Returns the list of lines representing the function's curve.
+     *
+     * @return An ArrayList of Line objects.
+     */
     public ArrayList<Line> getLines() {
         return lines;
     }
 
+    /**
+     * Recalculates the positions of the line segments that approximate the function's curve
+     * based on the given parameters.
+     *
+     * @param offset         An array containing the X and Y offsets for the graph.
+     * @param graphWidth     The width of the graph.
+     * @param graphHeight    The height of the graph.
+     * @param plotAreaWidth  The width of the plot area.
+     * @param plotAreaHeight The height of the plot area.
+     */
     public void recalculateLinesPosition(double[] offset, double graphWidth, double graphHeight, double plotAreaWidth, double plotAreaHeight) {
         if (!isFunctionVisible) {
             return;
@@ -41,14 +56,29 @@ public class PlotFunction {
         lines.get(POINTS - 1).setEndY(plotAreaHeight - (function.calculate(offset[0] + graphWidth) - offset[1]) / graphHeight * plotAreaHeight);
     }
 
+    /**
+     * Returns the Function object associated with this PlotFunction.
+     *
+     * @return A Function object.
+     */
     public Function getFunction() {
         return function;
     }
 
+    /**
+     * Returns whether the function is visible on the graph.
+     *
+     * @return true if the function is visible, false otherwise.
+     */
     public boolean isFunctionVisible() {
         return isFunctionVisible;
     }
 
+    /**
+     * Changes the visibility of the function based on the given parameter.
+     *
+     * @param visibility The new visibility of the function: true for visible, false for hidden.
+     */
     public void changeFunctionVisibility(boolean visibility) {
         if (visibility == isFunctionVisible) {
             return;
@@ -59,10 +89,19 @@ public class PlotFunction {
         }
     }
 
+    /**
+     * Toggles the visibility of the function.
+     */
     public void changeFunctionVisibility() {
         changeFunctionVisibility(!isFunctionVisible);
     }
 
+    /**
+     * Constructs a PlotFunction object with the given function and plot area.
+     *
+     * @param function The Function object to be plotted.
+     * @param root     The PlotArea object where the function will be displayed.
+     */
     public PlotFunction(Function function, PlotArea root) {
         this.function = function;
         Color color = Color.color(random.nextDouble(0, 1), random.nextDouble(0, 1), random.nextDouble(0, 1));
