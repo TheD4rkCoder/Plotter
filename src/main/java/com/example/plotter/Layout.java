@@ -139,12 +139,12 @@ public class Layout extends Group {
                 }
             }
         });
-        operation[0][2] = new Button("logₙm");
+        operation[0][2] = new Button("logₙ x");
         operation[0][2].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 if (selectedTextField != null) {
-                    selectedTextField.setText(selectedTextField.getText() + "log(n, m)");
+                    selectedTextField.setText(selectedTextField.getText() + "log(n, x)");
                 }
             }
         });
@@ -167,8 +167,34 @@ public class Layout extends Group {
             }
         });
         operation[0][3] = new Button("ln");
-        operation[1][3] = new Button("Min");
-        operation[2][3] = new Button("Max");
+        operation[0][3].setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                if (selectedTextField != null) {
+                    selectedTextField.setText(selectedTextField.getText() + "ln(");
+                }
+            }
+        });
+
+        //operation[1][3] = new Button("sin⁻¹");
+        operation[1][3] = new Button("%");
+        operation[1][3].setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                if (selectedTextField != null) {
+                    selectedTextField.setText(selectedTextField.getText() + "mod(x, n)");
+                }
+            }
+        });
+        operation[2][3] = new Button("ⁿ√");
+        operation[2][3].setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                if (selectedTextField != null) {
+                    selectedTextField.setText(selectedTextField.getText() + "root(n, x)");
+                }
+            }
+        });
         for (int y = 0; y < 4; y++) {
             for (int x = 0; x < 3; x++) {
                 this.getChildren().add(operation[x][y]);
