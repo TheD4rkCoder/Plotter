@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="Button Area and Layout">
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="PlotArea">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotFunction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,22 +22,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/plotter/Buttons.css" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/plotter/ConstantsAndFunctionsTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/plotter/DerivationTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/plotter/ExceptionsTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/plotter/PlotAreaTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,10 +42,6 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -150,11 +139,9 @@
       <workItem from="1681811706524" duration="78000" />
       <workItem from="1681817706471" duration="954000" />
       <workItem from="1681826650244" duration="6000" />
-      <workItem from="1681883647481" duration="351000" />
-      <workItem from="1682060075209" duration="6783000" />
-      <workItem from="1682488946109" duration="7364000" />
-      <workItem from="1682590512731" duration="175000" />
-      <workItem from="1682668293133" duration="4795000" />
+      <workItem from="1681883647481" duration="11731000" />
+      <workItem from="1682011772217" duration="679000" />
+      <workItem from="1682488953719" duration="3888000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681725896036</created>
@@ -205,21 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681740351106</updated>
     </task>
-    <task id="LOCAL-00008" summary="j">
-      <created>1681884318153</created>
+    <task id="LOCAL-00008" summary="PlotArea">
+      <created>1681884081234</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1681884318153</updated>
+      <updated>1681884081234</updated>
     </task>
-    <task id="LOCAL-00009" summary="Button Area and Layout">
-      <created>1682496658025</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1682496658025</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,19 +210,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -252,8 +220,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="tests for constants and functions" />
     <MESSAGE value="tests for PlotArea" />
-    <MESSAGE value="j" />
-    <MESSAGE value="Button Area and Layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Button Area and Layout" />
+    <MESSAGE value="PlotArea" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlotArea" />
   </component>
 </project>
