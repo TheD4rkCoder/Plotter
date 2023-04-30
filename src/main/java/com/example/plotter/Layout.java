@@ -49,6 +49,7 @@ public class Layout extends Group {
         this.getChildren().add(scrollPaneVariables);
         Button addFunctionButton = new Button("+");
         functions.getChildren().add(addFunctionButton);
+        addFunctionButton.setStyle("-fx-background-color: #CCFF99");
         addFunctionButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -57,7 +58,7 @@ public class Layout extends Group {
                 newRow.getChildren().get(0).setOnMouseClicked(new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent mouseEvent) {
-                        selectedTextField = (TextField)newRow.getChildren().get(0);
+                        selectedTextField = (TextField) newRow.getChildren().get(0);
                     }
                 });
                 functions.getChildren().add(functions.getChildren().size() - 1, newRow);
@@ -65,6 +66,7 @@ public class Layout extends Group {
         });
         Button addVariableButton = new Button("+");
         constants.getChildren().add(addVariableButton);
+        addVariableButton.setStyle("-fx-background-color: #CCFF99");
         addVariableButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -73,7 +75,7 @@ public class Layout extends Group {
                 newRow.getChildren().get(0).setOnMouseClicked(new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent mouseEvent) {
-                        selectedTextField = (TextField)newRow.getChildren().get(0);
+                        selectedTextField = (TextField) newRow.getChildren().get(0);
                     }
                 });
                 constants.getChildren().add(constants.getChildren().size() - 1, newRow);
@@ -82,12 +84,12 @@ public class Layout extends Group {
 
         //todo buttons
 
-        Button [] [] operation = new Button[3][4];
+        Button[][] operation = new Button[3][4];
         operation[0][0] = new Button("sin");
         operation[0][0].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "sin(");
                 }
             }
@@ -96,7 +98,7 @@ public class Layout extends Group {
         operation[1][0].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "cos(");
                 }
             }
@@ -105,7 +107,7 @@ public class Layout extends Group {
         operation[2][0].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "tan(");
                 }
             }
@@ -114,7 +116,7 @@ public class Layout extends Group {
         operation[0][1].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "π");
                 }
             }
@@ -123,7 +125,7 @@ public class Layout extends Group {
         operation[1][1].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "e");
                 }
             }
@@ -132,7 +134,7 @@ public class Layout extends Group {
         operation[2][1].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "abs(");
                 }
             }
@@ -141,7 +143,7 @@ public class Layout extends Group {
         operation[0][2].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "log(n, m)");
                 }
             }
@@ -150,7 +152,7 @@ public class Layout extends Group {
         operation[1][2].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "^(");
                 }
             }
@@ -159,7 +161,7 @@ public class Layout extends Group {
         operation[2][2].setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (selectedTextField!= null) {
+                if (selectedTextField != null) {
                     selectedTextField.setText(selectedTextField.getText() + "√(");
                 }
             }
@@ -170,10 +172,10 @@ public class Layout extends Group {
         for (int y = 0; y < 4; y++) {
             for (int x = 0; x < 3; x++) {
                 this.getChildren().add(operation[x][y]);
-                operation[x][y].setPrefWidth(width/10);
-                operation[x][y].setPrefHeight(height*0.09);
-                operation[x][y].setLayoutX(width * (0.666 + 0.111*x) + 4);
-                operation[x][y].setLayoutY(height*(0.55+0.1*y));
+                operation[x][y].setPrefWidth(width / 10);
+                operation[x][y].setPrefHeight(height * 0.09);
+                operation[x][y].setLayoutX(width * (0.666 + 0.111 * x) + 4);
+                operation[x][y].setLayoutY(height * (0.55 + 0.1 * y));
             }
         }
     }

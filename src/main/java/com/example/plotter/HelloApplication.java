@@ -25,6 +25,7 @@ public class HelloApplication extends Application {
 
         Scene scene = new Scene(root, BEGINWIDTH, BEGINHEIGHT);
         //stage.setFullScreen(true);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setTitle("Plotter");
         stage.setScene(scene);
         stage.show();

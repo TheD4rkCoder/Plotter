@@ -22,9 +22,10 @@ public class ScrollPaneVariablesElement {
         indexes.add(index, index);
         this.index = index;
         this.plotArea = plotArea;
-        plotArea.addVariable(index, new Argument("a = 0"));
-        TextField newVariableTextField = new TextField("");
-        newVariableTextField.setPrefWidth(plotArea.getWidth()/2*0.96-10);
+        String beginArgumentName = Character.toString(65 + index);
+        plotArea.addVariable(index, new Argument(beginArgumentName + " = 1"));
+        TextField newVariableTextField = new TextField(beginArgumentName + " = 1");
+        newVariableTextField.setPrefWidth(plotArea.getWidth()*0.49-30);
         newVariableTextField.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {

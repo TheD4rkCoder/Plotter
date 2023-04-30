@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="PlotArea">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" afterDir="false" />
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="now it is usable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/plotter/Buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681884081234</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="now it is usable">
+      <created>1682877277677</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682877277677</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +227,7 @@
     <MESSAGE value="tests for constants and functions" />
     <MESSAGE value="tests for PlotArea" />
     <MESSAGE value="PlotArea" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlotArea" />
+    <MESSAGE value="now it is usable" />
+    <option name="LAST_COMMIT_MESSAGE" value="now it is usable" />
   </component>
 </project>

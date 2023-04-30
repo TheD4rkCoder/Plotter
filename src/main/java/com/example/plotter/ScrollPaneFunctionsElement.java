@@ -26,8 +26,8 @@ public class ScrollPaneFunctionsElement {
         this.plotArea = plotArea;
         String beginFunctionName = Character.toString(97 + index);
         plotArea.addFunction(index, new Function(beginFunctionName + "(x) = x"));
-        TextField newFunctionTextField = new TextField(beginFunctionName + "(x) = x");
-        newFunctionTextField.setPrefWidth(plotArea.getWidth()/2*0.72);
+        TextField newFunctionTextField = new TextField(beginFunctionName + "(x)= x");
+        newFunctionTextField.setPrefWidth(plotArea.getWidth()*0.49 - 130);
         newFunctionTextField.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {
