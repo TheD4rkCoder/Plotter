@@ -24,21 +24,21 @@ public class PlotFunction {
             return;
         }
         lines.get(0).setStartX(0);
-        lines.get(0).setStartY(plotAreaHeight-(function.calculate(offset[0]) - offset[1]) / graphHeight * plotAreaHeight);
+        lines.get(0).setStartY(plotAreaHeight - (function.calculate(offset[0]) - offset[1]) / graphHeight * plotAreaHeight);
 
         double v = offset[0] + graphWidth / POINTS;
         for (int i = 1; i < POINTS; v += graphWidth / POINTS, i++) {
-            double posY = plotAreaHeight-(function.calculate(v) - offset[1]) / graphHeight * plotAreaHeight;
+            double posY = plotAreaHeight - (function.calculate(v) - offset[1]) / graphHeight * plotAreaHeight;
             Line l = lines.get(i - 1);
-            l.setEndX(i*0.01*plotAreaWidth);
+            l.setEndX(i * 0.01 * plotAreaWidth);
             l.setEndY(posY);
             l = lines.get(i);
-            l.setStartX(i*plotAreaWidth/POINTS);
+            l.setStartX(i * plotAreaWidth / POINTS);
             l.setStartY(posY);
 
         }
-        lines.get(POINTS-1).setEndX(plotAreaWidth);
-        lines.get(POINTS-1).setEndY(plotAreaHeight-(function.calculate(offset[0] + graphWidth) - offset[1]) / graphHeight * plotAreaHeight);
+        lines.get(POINTS - 1).setEndX(plotAreaWidth);
+        lines.get(POINTS - 1).setEndY(plotAreaHeight - (function.calculate(offset[0] + graphWidth) - offset[1]) / graphHeight * plotAreaHeight);
     }
 
     public Function getFunction() {
@@ -58,6 +58,7 @@ public class PlotFunction {
             l.setVisible(isFunctionVisible);
         }
     }
+
     public void changeFunctionVisibility() {
         changeFunctionVisibility(!isFunctionVisible);
     }
@@ -68,7 +69,7 @@ public class PlotFunction {
         for (int i = 0; i < POINTS; i++) {
             Line temp = new Line();
             temp.setFill(color);
-            temp.setStrokeWidth(root.getWidth()/200);
+            temp.setStrokeWidth(root.getWidth() / 200);
             temp.setStroke(color);
             lines.add(temp);
             root.getChildren().add(temp);

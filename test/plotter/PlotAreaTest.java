@@ -1,4 +1,5 @@
 package plotter;
+
 import com.example.plotter.PlotArea;
 import org.junit.jupiter.api.function.Executable;
 import org.mariuszgromada.math.mxparser.*;
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 public class PlotAreaTest {
 
     @Test
@@ -21,7 +23,7 @@ public class PlotAreaTest {
                 pa.addFunction(new Function("f(x) = 5//x"));
             }
         });
-        
+
     }
 
     @Test

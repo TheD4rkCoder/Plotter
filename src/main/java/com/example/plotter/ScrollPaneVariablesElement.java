@@ -25,7 +25,7 @@ public class ScrollPaneVariablesElement {
         String beginArgumentName = Character.toString(65 + index);
         plotArea.addVariable(index, new Argument(beginArgumentName + " = 1"));
         TextField newVariableTextField = new TextField(beginArgumentName + " = 1");
-        newVariableTextField.setPrefWidth(plotArea.getWidth()*0.49-30);
+        newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 30);
         newVariableTextField.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent keyEvent) {

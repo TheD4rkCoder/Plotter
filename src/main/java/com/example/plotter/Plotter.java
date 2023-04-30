@@ -8,8 +8,9 @@ import org.mariuszgromada.math.mxparser.*;
 import java.io.IOException;
 
 public class Plotter extends Application {
-    final double BEGINWIDTH=1200;
-    final double BEGINHEIGHT=800;
+    final double BEGINWIDTH = 1200;
+    final double BEGINHEIGHT = 800;
+
     @Override
     public void start(Stage stage) throws IOException {
         License.iConfirmNonCommercialUse("Plotter");
