@@ -1,4 +1,5 @@
 package plotter;
+
 import org.mariuszgromada.math.mxparser.*;
 
 import org.junit.jupiter.api.DisplayName;
@@ -18,8 +19,8 @@ public class ConstantsAndFunctionsTest {
 
     @Test
     @DisplayName("Test for sin")
-    public void sinTest(){
+    public void sinTest() {
         Expression e = new Expression("sin(pi/2)");
-        assertEquals(1,e.calculate());
+        assertEquals(1, e.calculate());
     }
 }
