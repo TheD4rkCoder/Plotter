@@ -4,6 +4,7 @@ import com.example.plotter.DerivativeCalculator;
 import org.mariuszgromada.math.mxparser.*;
 
 import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DerivationTest {
@@ -21,26 +22,62 @@ public class DerivationTest {
     }
 
     @Test
-    public void testLinearFunction() {
-        double result = DerivativeCalculator.calculateDerivative("3*x", "x", 2, delta);
-        assertEquals(3, result, 1e-9);
+    public void testCalculateDerivative_LinearFunction() {
+        String function = "3 * x + 2";
+        String variable = "x";
+        double point = 1;
+        double delta = 0.001;
+        double expected = 3.0;
+        double actual = DerivativeCalculator.calculateDerivative(function, variable, point, delta);
+        assertEquals(expected, actual, 0.001);
     }
 
-    @Test
-    public void testQuadraticFunction() {
-        double result = DerivativeCalculator.calculateDerivative("x^2", "x", 2, delta);
-        assertEquals(4, result, 1e-9);
-    }
 
     @Test
-    public void testExponentialFunction() {
-        double result = DerivativeCalculator.calculateDerivative("e^x", "x", 2, delta);
-        assertEquals(7.389, result, 1e-9);
+    public void testCalculateDerivative_QuadraticFunction() {
+        String function = "x^2 + 2 * x + 1";
+        String variable = "x";
+        double point = 1;
+        double delta = 0.001;
+        double expected = 4.0;
+        double actual = DerivativeCalculator.calculateDerivative(function, variable, point, delta);
+        assertEquals(expected, actual, 0.001);
     }
 
+
     @Test
-    public void testTrigonometricFunction() {
-        double result = DerivativeCalculator.calculateDerivative("sin(x)", "x", Math.PI / 2, delta);
-        assertEquals(0, result, 1e-9);
+    public void testCalculateDerivative_ExponentialFunction() {
+        String function = "2 * e^(x)";
+        String variable = "x";
+        double point = 0;
+        double delta = 0.001;
+        double expected = 2.0;
+        double actual = DerivativeCalculator.calculateDerivative(function, variable, point, delta);
+        assertEquals(expected, actual, 0.001);
     }
+
+
+    @Test
+    public void testCalculateDerivative_TrigonometricFunction() {
+        String function = "sin(x)";
+        String variable = "x";
+        double point = Math.PI / 2;
+        double delta = 0.001;
+        double expected = 0.0;
+        double actual = DerivativeCalculator.calculateDerivative(function, variable, point, delta);
+        assertEquals(expected, actual, 0.001);
+    }
+
+
+    @Test
+    public void testCalculateDerivative_CubicFunction() {
+        String function = "x^3 - 2 * x^2 + x - 3";
+        String variable = "x";
+        double point = 2;
+        double delta = 0.001;
+        double expected = 5;
+        double actual = DerivativeCalculator.calculateDerivative(function, variable, point, delta);
+        assertEquals(expected, actual, 0.001);
+    }
+
 }

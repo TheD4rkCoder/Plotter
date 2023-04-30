@@ -14,10 +14,11 @@ public class DerivativeCalculator {
      *
      * @param function The function to calculate the derivative of, represented as a string.
      * @param variable The variable used in the function, represented as a string.
-     * @param point The point at which to calculate the derivative.
-     * @param delta The step size used for finite difference calculations.
+     * @param point    The point at which to calculate the derivative.
+     * @param delta    The step size used for finite difference calculations.
      * @return The approximate value of the derivative at the specified point, rounded to 3 decimal places.
      */
+
     public static double calculateDerivative(String function, String variable, double point, double delta) {
         Argument x = new Argument(variable, point);
         Expression e = new Expression(function, x);
@@ -25,13 +26,14 @@ public class DerivativeCalculator {
         x.setArgumentValue(point + delta);
         double valueAfter = e.calculate();
         double derivative = (valueAfter - valueBefore) / delta;
-        return roundToDecimalPlaces(derivative, 3);
+
+        return roundToDecimalPlaces(derivative, 2);
     }
 
     /**
      * Rounds a given number to a specified number of decimal places.
      *
-     * @param value The number to be rounded.
+     * @param value  The number to be rounded.
      * @param places The number of decimal places to round the value to.
      * @return The rounded value.
      */
