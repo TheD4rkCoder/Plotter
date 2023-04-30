@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="j">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/plotter/Buttons.css" afterDir="false" />
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="Button Area and Layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +152,9 @@
       <workItem from="1681826650244" duration="6000" />
       <workItem from="1681883647481" duration="351000" />
       <workItem from="1682060075209" duration="6783000" />
-      <workItem from="1682488946109" duration="3875000" />
+      <workItem from="1682488946109" duration="7364000" />
+      <workItem from="1682590512731" duration="175000" />
+      <workItem from="1682668293133" duration="4795000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681725896036</created>
@@ -212,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681884318153</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Button Area and Layout">
+      <created>1682496658025</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682496658025</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +253,7 @@
     <MESSAGE value="tests for constants and functions" />
     <MESSAGE value="tests for PlotArea" />
     <MESSAGE value="j" />
-    <option name="LAST_COMMIT_MESSAGE" value="j" />
+    <MESSAGE value="Button Area and Layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Button Area and Layout" />
   </component>
 </project>

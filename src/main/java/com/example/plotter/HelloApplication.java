@@ -15,13 +15,14 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class HelloApplication extends Application {
-    final int BEGINWIDTH=300;
+    final double BEGINWIDTH=300;
+    final double BEGINHEIGHT=300;
     @Override
     public void start(Stage stage) throws IOException {
         License.iConfirmNonCommercialUse("Plotter");
 
         Group root = new Group();                           //main Group
-        PlotArea plotArea = new PlotArea(BEGINWIDTH);
+        PlotArea plotArea = new PlotArea(BEGINWIDTH,BEGINHEIGHT);
         Group funktionArea = new Group();
         Group constantArea = new Group();
         Group buttonArea = new Group();
