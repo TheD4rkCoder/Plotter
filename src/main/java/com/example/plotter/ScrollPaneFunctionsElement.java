@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 import org.mariuszgromada.math.mxparser.Function;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 
 public class ScrollPaneFunctionsElement {
@@ -32,18 +33,28 @@ public class ScrollPaneFunctionsElement {
      * @param plotArea The PlotArea to which the function belongs.
      * @param root     The VBox containing the elements of the ScrollPaneFunctionsElement.
      */
-    public ScrollPaneFunctionsElement(int index, PlotArea plotArea, VBox root) {
-        indexes.add(index, index);
-        this.index = index;
-        this.plotArea = plotArea;
+    public ScrollPaneFunctionsElement(int index, PlotArea plotArea, VBox root, Layout layout) {
+
         StringBuilder beginFunctionName = new StringBuilder(new String()); //= Character.toString(97 + ((index > 3) ? index + 1 : index)%26);
-        int ind = index;
+        int ind = indexes.size();
+        indexes.add(index, index);
         while (ind >= 0) {
             beginFunctionName.append(Character.toString(97 + ((ind % 24 > 3) ? (ind % 24 > 21) ? ind % 24 + 2 : ind % 24 + 1 : ind % 24)));
             ind -= 24;
         }
-        plotArea.addFunction(index, new Function(beginFunctionName + "(x) = x"));
-        TextField newFunctionTextField = new TextField(beginFunctionName + "(x)= x");
+        beginFunctionName.append("(x) = x");
+        init(index, plotArea, root, layout, beginFunctionName.toString());
+    }
+    public ScrollPaneFunctionsElement(int index, PlotArea plotArea, VBox root, Layout layout, String equation) { // layout for adding a new Function for the derivative
+        init(index, plotArea, root, layout, equation);
+    }
+
+    private void init(int index, PlotArea plotArea, VBox root, Layout layout, String equation) {
+        indexes.add(index, index);
+        this.index = index;
+        this.plotArea = plotArea;
+        plotArea.addFunction(index, new Function(equation));
+        TextField newFunctionTextField = new TextField(equation);
         newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
         newFunctionTextField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
@@ -67,10 +78,7 @@ public class ScrollPaneFunctionsElement {
             if (funcParts.length != 2) {
                 return;
             }
-            newFunctionTextField.setText(funcParts[0] + "= der(" + funcParts[1] + ", x)");
-            Function f = new Function(newFunctionTextField.getText());
-            plotArea.removeFunction(indexes.get(index));
-            plotArea.addFunction(indexes.get(index), f);
+            layout.newFunction("der" + funcParts[0] + "= der(" + funcParts[0] + ", x)");
         });
         Button visibilityButton = new Button("\uD83D\uDC41");
         visibilityButton.setStyle("-fx-background-color: #CCFF99");

@@ -34,7 +34,7 @@ public class ScrollPaneVariablesElement {
         this.index = index;
         this.plotArea = plotArea;
         StringBuilder beginArgumentName = new StringBuilder(new String()); //Character.toString(65 + index);
-        int ind = index;
+        int ind = indexes.size();
         while (ind >= 0) {
             beginArgumentName.append(Character.toString(65 + (ind % 26)));
             ind -= 26;

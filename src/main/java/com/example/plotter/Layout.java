@@ -8,6 +8,7 @@
  */
 package com.example.plotter;
 
+import javafx.scene.Cursor;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
@@ -19,7 +20,7 @@ public class Layout extends Group {
     private TextField selectedTextField;
     private final VBox functions = new VBox();
     private final VBox constants = new VBox();
-
+    private PlotArea plotArea;
     /**
      * Constructs a Layout object with the given dimensions.
      *
@@ -27,7 +28,7 @@ public class Layout extends Group {
      * @param height The height of the layout.
      */
     public Layout(double width, double height) {
-        PlotArea plotArea = new PlotArea(width * 0.666 - 4, height - 4);
+        plotArea = new PlotArea(width * 0.666 - 4, height - 4);
         this.getChildren().add(plotArea);
         plotArea.setLayoutX(2);
         plotArea.setLayoutY(2);
@@ -50,16 +51,12 @@ public class Layout extends Group {
         functions.getChildren().add(addFunctionButton);
         addFunctionButton.setStyle("-fx-background-color: #CCFF99");
         addFunctionButton.setOnAction(actionEvent -> {
-
-            HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions).getContent();
-            newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
-            functions.getChildren().add(functions.getChildren().size() - 1, newRow);
+            newFunction();
         });
         Button addVariableButton = new Button("+");
         constants.getChildren().add(addVariableButton);
         addVariableButton.setStyle("-fx-background-color: #CCFF99");
         addVariableButton.setOnAction(actionEvent -> {
-
             HBox newRow = new ScrollPaneVariablesElement(constants.getChildren().size() - 1, plotArea, constants).getContent();
             newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
             constants.getChildren().add(constants.getChildren().size() - 1, newRow);
@@ -145,12 +142,23 @@ public class Layout extends Group {
         for (int y = 0; y < 4; y++) {
             for (int x = 0; x < 3; x++) {
                 this.getChildren().add(operation[x][y]);
+                operation[x][y].setFocusTraversable(false);
                 operation[x][y].setPrefWidth(width / 10);
                 operation[x][y].setPrefHeight(height * 0.09);
                 operation[x][y].setLayoutX(width * (0.666 + 0.111 * x) + 4);
                 operation[x][y].setLayoutY(height * (0.55 + 0.1 * y));
             }
         }
+    }
+    public void newFunction() {
+        HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this).getContent();
+        newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
+        functions.getChildren().add(functions.getChildren().size() - 1, newRow);
+    }
+    public void newFunction(String equation) {
+        HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this, equation).getContent();
+        newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
+        functions.getChildren().add(functions.getChildren().size() - 1, newRow);
     }
 
     /**
