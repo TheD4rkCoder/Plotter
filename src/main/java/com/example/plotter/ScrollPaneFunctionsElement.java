@@ -34,16 +34,20 @@ public class ScrollPaneFunctionsElement {
         indexes.add(index, index);
         this.index = index;
         this.plotArea = plotArea;
-        String beginFunctionName = Character.toString(97 + index);
+        StringBuilder beginFunctionName = new StringBuilder(new String()); //= Character.toString(97 + ((index > 3) ? index + 1 : index)%26);
+        int ind = index;
+        while (ind >= 0) {
+            beginFunctionName.append(Character.toString(97 + ((ind % 24 > 3) ? (ind % 24 > 21) ? ind % 24 + 2 : ind % 24 + 1 : ind % 24)));
+            ind -= 24;
+        }
         plotArea.addFunction(index, new Function(beginFunctionName + "(x) = x"));
         TextField newFunctionTextField = new TextField(beginFunctionName + "(x)= x");
-        newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 130);
+        newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
         newFunctionTextField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
                 Function f = new Function(newFunctionTextField.getText());
                 plotArea.removeFunction(indexes.get(index));
                 plotArea.addFunction(indexes.get(index), f);
-                // todo still need to test if the function is even valid
             }
         });
 

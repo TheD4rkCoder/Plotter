@@ -68,9 +68,10 @@ public class PlotArea extends Group {
                 initialMouseDragCoords[1] = mouse.getY();
             }
         });
-        this.setOnScroll(scrollEvent -> changePlottedArea(0, 0, 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
         this.height = beginHeight;
         this.width = beginWidth;
+        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * scrollEvent.getDeltaY(), -0.01 * plotCoordinatesHeight * ( 1 - scrollEvent.getY() / height) * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
+
         this.getChildren().add(new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY));
         axisLines[0] = new Line(0, beginHeight / 2, beginWidth, beginHeight / 2);
         axisLines[0].setStrokeWidth(beginHeight / 200);
@@ -83,6 +84,7 @@ public class PlotArea extends Group {
         for (int i = 0; i < 2 * MAX_NUMBER_OF_GRIDLINES; i++) {
             Line tempLine = new Line();
             tempLine.setFill(Color.DARKGRAY);
+            tempLine.setStrokeWidth(0.2);
             gridLines.add(tempLine);
             if (i < MAX_NUMBER_OF_GRIDLINES) {
                 tempLine.setStartY(0);

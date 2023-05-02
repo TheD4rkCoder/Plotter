@@ -19,7 +19,7 @@ public class PlotFunction {
     private Function function;
     private boolean isFunctionVisible = true;
     private ArrayList<Line> lines = new ArrayList<>();
-    private final int POINTS = 100;
+    private final int POINTS = 1000;
     Random random = new Random();
 
     /**
@@ -52,7 +52,7 @@ public class PlotFunction {
         for (int i = 1; i < POINTS; v += graphWidth / POINTS, i++) {
             double posY = plotAreaHeight - (function.calculate(v) - offset[1]) / graphHeight * plotAreaHeight;
             Line l = lines.get(i - 1);
-            l.setEndX(i * 0.01 * plotAreaWidth);
+            l.setEndX((double) i / POINTS * plotAreaWidth);
             l.setEndY(posY);
             l = lines.get(i);
             l.setStartX(i * plotAreaWidth / POINTS);

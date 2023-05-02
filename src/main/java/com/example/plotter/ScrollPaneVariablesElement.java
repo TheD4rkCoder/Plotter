@@ -33,7 +33,12 @@ public class ScrollPaneVariablesElement {
         indexes.add(index, index);
         this.index = index;
         this.plotArea = plotArea;
-        String beginArgumentName = Character.toString(65 + index);
+        StringBuilder beginArgumentName = new StringBuilder(new String()); //Character.toString(65 + index);
+        int ind = index;
+        while (ind >= 0) {
+            beginArgumentName.append(Character.toString(65 + (ind % 26)));
+            ind -= 26;
+        }
         plotArea.addVariable(index, new Argument(beginArgumentName + " = 1"));
         TextField newVariableTextField = new TextField(beginArgumentName + " = 1");
         newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 30);
