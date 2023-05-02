@@ -7,6 +7,8 @@
  */
 package com.example.plotter;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -71,8 +73,23 @@ public class ScrollPaneFunctionsElement {
             plotArea.addFunction(indexes.get(index), f);
         });
         Button visibilityButton = new Button("\uD83D\uDC41");
-        visibilityButton.setOnAction(actionEvent -> plotArea.changeFunctionVisibility(indexes.get(index)));
+        visibilityButton.setStyle("-fx-background-color: #CCFF99");
+        visibilityButton.setOnAction(actionEvent -> {
+            plotArea.changeFunctionVisibility(indexes.get(index));
+            if (!visibilityButton.getStyle().contains("-fx-background-color: #FF0F0F")) {
+                visibilityButton.setStyle("-fx-background-color: #FF0F0F");
+            } else {
+                visibilityButton.setStyle("-fx-background-color: #CCFF99");
+
+            }
+        });
         Button functionAnalysisInformationButton = new Button("i");
+        functionAnalysisInformationButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                // todo label with function-analysis data
+            }
+        });
         content = new HBox(newFunctionTextField, derivationButton, deleteButton, visibilityButton, functionAnalysisInformationButton);
 
 

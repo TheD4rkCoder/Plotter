@@ -9,7 +9,6 @@
     -fx-background: rgb(225, 228, 203);
     -fx-font-weight: bold;
 }
-
 /**
  * The custom-button CSS class defines the style for custom buttons in the Plotter application.
  * It sets the font, padding, and background color for the buttons.
@@ -37,11 +36,13 @@
  * It sets the text color, border color, border radius, padding, and background color.
  */
 .label {
-    -fx-text-fill: rgb(49, 89, 23);
-    -fx-border-color: rgb(49, 89, 23);
-    -fx-border-radius: 5;
+    -fx-font: 10px "Serif";
+    -fx-background: rgb(0, 0, 0, 0);
+    -fx-font-weight: normal;
+    -fx-border-width: 0;
+    -fx-text-fill: rgb(20, 40, 20);
     -fx-padding: 3 6 6 6;
-    -fx-background-color: #CCFF99;
+    /*-fx-background-color: #CCFF99;*/
 
 }
 

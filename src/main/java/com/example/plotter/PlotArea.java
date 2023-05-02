@@ -21,7 +21,7 @@ import org.mariuszgromada.math.mxparser.Function;
 import java.util.ArrayList;
 
 public class PlotArea extends Group {
-    private final int MAX_NUMBER_OF_GRIDLINES = 100;
+    private final int MAX_NUMBER_OF_GRIDLINES = 20;
     private final double width;
     private double plotCoordinatesWidth = 200;
     private final double height;
@@ -70,7 +70,7 @@ public class PlotArea extends Group {
         });
         this.height = beginHeight;
         this.width = beginWidth;
-        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * scrollEvent.getDeltaY(), -0.01 * plotCoordinatesHeight * ( 1 - scrollEvent.getY() / height) * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
+        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * scrollEvent.getDeltaY(), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
 
         this.getChildren().add(new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY));
         axisLines[0] = new Line(0, beginHeight / 2, beginWidth, beginHeight / 2);
@@ -82,6 +82,10 @@ public class PlotArea extends Group {
         axisLines[1].setFill(Color.WHITE);
         this.getChildren().add(axisLines[1]);
         for (int i = 0; i < 2 * MAX_NUMBER_OF_GRIDLINES; i++) {
+            Label tempLabel = new Label();
+            labelsForAxis.add(tempLabel);
+
+            this.getChildren().add(tempLabel);
             Line tempLine = new Line();
             tempLine.setFill(Color.DARKGRAY);
             tempLine.setStrokeWidth(0.2);
@@ -199,16 +203,27 @@ public class PlotArea extends Group {
         double distanceBetweenGridlinesX = plotCoordinatesWidth, distanceToFirstLineX;
         double distanceBetweenGridlinesY = plotCoordinatesHeight, distanceToFirstLineY;
         while (distanceBetweenGridlinesX > MAX_NUMBER_OF_GRIDLINES) {
-            distanceBetweenGridlinesX /= 10;
+            distanceBetweenGridlinesX *= 0.1;
         }
         while (distanceBetweenGridlinesX < MAX_NUMBER_OF_GRIDLINES * 0.1) {
             distanceBetweenGridlinesX *= 10;
         }
+        if (distanceBetweenGridlinesX < MAX_NUMBER_OF_GRIDLINES * 0.2) {
+            distanceBetweenGridlinesX *= 5;
+        } else if (distanceBetweenGridlinesX < MAX_NUMBER_OF_GRIDLINES >> 1) {
+            distanceBetweenGridlinesX *= 2;
+        }
+
         while (distanceBetweenGridlinesY > MAX_NUMBER_OF_GRIDLINES) {
             distanceBetweenGridlinesY /= 10;
         }
         while (distanceBetweenGridlinesY < MAX_NUMBER_OF_GRIDLINES * 0.1) {
             distanceBetweenGridlinesY *= 10;
+        }
+        if (distanceBetweenGridlinesY < MAX_NUMBER_OF_GRIDLINES * 0.2) {
+            distanceBetweenGridlinesY *= 5;
+        } else if (distanceBetweenGridlinesY < MAX_NUMBER_OF_GRIDLINES >> 1) {
+            distanceBetweenGridlinesY *= 2;
         }
         distanceBetweenGridlinesX = plotCoordinatesWidth / distanceBetweenGridlinesX;
         distanceToFirstLineX = (-offset[0]) % distanceBetweenGridlinesX;
@@ -218,14 +233,19 @@ public class PlotArea extends Group {
         distanceToFirstLineY = (-offset[1]) % distanceBetweenGridlinesY;
         distanceToFirstLineY = distanceToFirstLineY / plotCoordinatesHeight * height;
         distanceBetweenGridlinesY = distanceBetweenGridlinesY / plotCoordinatesHeight * height;
+
         double d = distanceToFirstLineX;
         for (int i = 0; i < MAX_NUMBER_OF_GRIDLINES; d += distanceBetweenGridlinesX, i++) {
             if (d < width) {
                 gridLines.get(i).setStartX(d);
                 gridLines.get(i).setEndX(d);
+                labelsForAxis.get(i).setText(Double.toString(Math.round((offset[0] + distanceToFirstLineX / width * plotCoordinatesWidth + distanceBetweenGridlinesX / width * plotCoordinatesWidth * i)*100000000)/100000000.0));
+                labelsForAxis.get(i).setLayoutX(d - 2);
+                labelsForAxis.get(i).setLayoutY(height - 20);
             } else {
                 gridLines.get(i).setStartX(-10);
                 gridLines.get(i).setEndX(-10);
+                labelsForAxis.get(i).setLayoutX(-100);
             }
         }
         d = distanceToFirstLineY;
@@ -233,10 +253,13 @@ public class PlotArea extends Group {
             if (d < height) {
                 gridLines.get(i).setStartY(height - d);
                 gridLines.get(i).setEndY(height - d);
+                labelsForAxis.get(i).setText(Double.toString(Math.round((offset[1] + distanceToFirstLineY / height * plotCoordinatesHeight + distanceBetweenGridlinesY / height * plotCoordinatesHeight * (i-MAX_NUMBER_OF_GRIDLINES))*10000000)/10000000.0));
+                labelsForAxis.get(i).setLayoutX(20);
+                labelsForAxis.get(i).setLayoutY(height - d);
             } else {
                 gridLines.get(i).setStartY(-10);
                 gridLines.get(i).setEndY(-10);
-
+                labelsForAxis.get(i).setLayoutX(-100);
             }
         }
         for (PlotFunction f : functions) {

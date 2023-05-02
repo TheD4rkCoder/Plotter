@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="small fixes">
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="zoom fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/plotter/PlotAreaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +154,7 @@
       <workItem from="1682011772217" duration="679000" />
       <workItem from="1682488953719" duration="3888000" />
       <workItem from="1683020330402" duration="55000" />
-      <workItem from="1683021743900" duration="5785000" />
+      <workItem from="1683021743900" duration="10522000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681725896036</created>
@@ -221,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682877277677</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="zoom fixed">
+      <created>1683036532560</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683036532560</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +249,7 @@
     <MESSAGE value="tests for PlotArea" />
     <MESSAGE value="PlotArea" />
     <MESSAGE value="now it is usable" />
-    <option name="LAST_COMMIT_MESSAGE" value="now it is usable" />
+    <MESSAGE value="zoom fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="zoom fixed" />
   </component>
 </project>
