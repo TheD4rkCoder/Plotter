@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -50,6 +51,7 @@ public class Layout extends Group {
         scrollPaneFunctions.setContent(functions);
         scrollPaneFunctions.setPrefWidth(width * 0.334 - 8);
         scrollPaneFunctions.setPrefHeight(height * 0.2);
+        scrollPaneFunctions.setStyle("-fx-background-radius: 7; -fx-border-radius: 7;");  //add borders
         this.getChildren().add(scrollPaneFunctions);
         ScrollPane scrollPaneVariables = new ScrollPane();
         scrollPaneVariables.setLayoutX(width * 0.666 + 4);
@@ -57,6 +59,7 @@ public class Layout extends Group {
         scrollPaneVariables.setContent(constants);
         scrollPaneVariables.setPrefWidth(width * 0.334 - 8);
         scrollPaneVariables.setPrefHeight(height * 0.2);
+        scrollPaneVariables.setStyle("-fx-background-radius: 7; -fx-border-radius: 7;");  //add borders
         this.getChildren().add(scrollPaneVariables);
         Button addFunctionButton = new Button("+");
         functions.getChildren().add(addFunctionButton);

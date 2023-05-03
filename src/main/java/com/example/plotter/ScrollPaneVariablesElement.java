@@ -33,7 +33,7 @@ public class ScrollPaneVariablesElement {
         indexes.add(index, index);
         this.index = index;
         this.plotArea = plotArea;
-        StringBuilder beginArgumentName = new StringBuilder(new String()); //Character.toString(65 + index);
+        StringBuilder beginArgumentName = new StringBuilder(new String());
         int ind = indexes.size();
         while (ind >= 0) {
             beginArgumentName.append(Character.toString(65 + (ind % 26)));
@@ -41,7 +41,8 @@ public class ScrollPaneVariablesElement {
         }
         plotArea.addVariable(index, new Argument(beginArgumentName + " = 1"));
         TextField newVariableTextField = new TextField(beginArgumentName + " = 1");
-        newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 30);
+        newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 50);
+
         newVariableTextField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
                 Argument a = new Argument(newVariableTextField.getText());
@@ -62,9 +63,8 @@ public class ScrollPaneVariablesElement {
             }
         });
         content = new HBox(newVariableTextField, deleteButton);
-
-
     }
+
 
     /**
      * Returns the HBox containing the elements of the ScrollPaneVariablesElement.
