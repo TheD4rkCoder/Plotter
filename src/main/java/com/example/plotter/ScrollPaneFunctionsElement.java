@@ -52,6 +52,12 @@ public class ScrollPaneFunctionsElement {
         indexes.add(index, index);
         this.index = index;
         this.plotArea = plotArea;
+        Button visibilityButton = new Button("\uD83D\uDC41");
+        Button derivationButton = new Button("f'");
+        Button deleteButton = new Button("\uD83D\uDDD1");
+        Button functionAnalysisInformationButton = new Button("i");
+
+
         plotArea.addFunction(index, new Function(equation));
         TextField newFunctionTextField = new TextField(equation);
         newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
@@ -60,10 +66,10 @@ public class ScrollPaneFunctionsElement {
                 Function f = new Function(newFunctionTextField.getText());
                 plotArea.removeFunction(indexes.get(index));
                 plotArea.addFunction(indexes.get(index), f);
+                visibilityButton.setStyle("-fx-background-color: #CCFF99");
             }
         });
 
-        Button deleteButton = new Button("\uD83D\uDDD1");
         deleteButton.setOnAction(actionEvent -> {
             root.getChildren().remove(content);
             plotArea.removeFunction(indexes.get(index));
@@ -71,7 +77,6 @@ public class ScrollPaneFunctionsElement {
                 indexes.set(i, indexes.get(i) - 1);
             }
         });
-        Button derivationButton = new Button("f'");
         derivationButton.setOnAction(actionEvent -> {
             String[] funcParts = newFunctionTextField.getText().split("=");
             if (funcParts.length != 2) {
@@ -79,7 +84,6 @@ public class ScrollPaneFunctionsElement {
             }
             layout.newFunction("der" + funcParts[0] + "= der(" + funcParts[0] + ", x)");
         });
-        Button visibilityButton = new Button("\uD83D\uDC41");
         visibilityButton.setStyle("-fx-background-color: #CCFF99");
         visibilityButton.setOnAction(actionEvent -> {
             plotArea.changeFunctionVisibility(indexes.get(index));
@@ -90,7 +94,6 @@ public class ScrollPaneFunctionsElement {
 
             }
         });
-        Button functionAnalysisInformationButton = new Button("i");
         functionAnalysisInformationButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

@@ -46,6 +46,7 @@ public class ScrollPaneVariablesElement {
             if (keyEvent.getCode() == KeyCode.ENTER) {
                 Argument a = new Argument(newVariableTextField.getText());
                 if (!a.checkSyntax()) {
+                    plotArea.showErrorWindow();
                     return;
                 }
                 plotArea.removeVariable(indexes.get(index));

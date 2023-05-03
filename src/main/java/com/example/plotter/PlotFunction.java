@@ -20,6 +20,7 @@ public class PlotFunction {
     private boolean isFunctionVisible = true;
     private ArrayList<Line> lines = new ArrayList<>();
     private final int POINTS = 1000;
+    private final int POINTS_FOR_DERIVATIVES = 100;
     Random random = new Random();
 
     /**
@@ -42,25 +43,33 @@ public class PlotFunction {
      * @param plotAreaHeight The height of the plot area.
      */
     public void recalculateLinesPosition(double[] offset, double graphWidth, double graphHeight, double plotAreaWidth, double plotAreaHeight) {
+
         if (!isFunctionVisible) {
             return;
+        }
+
+        int numOfPoints;
+        if (function.getFunctionName().length() >= 3 && function.getFunctionName().substring(0, 3).equals("der")) {
+            numOfPoints = POINTS_FOR_DERIVATIVES;
+        } else {
+            numOfPoints = POINTS;
         }
         lines.get(0).setStartX(0);
         lines.get(0).setStartY(plotAreaHeight - (function.calculate(offset[0]) - offset[1]) / graphHeight * plotAreaHeight);
 
-        double v = offset[0] + graphWidth / POINTS;
-        for (int i = 1; i < POINTS; v += graphWidth / POINTS, i++) {
+        double v = offset[0] + graphWidth / numOfPoints;
+        for (int i = 1; i < numOfPoints; v += graphWidth / numOfPoints, i++) {
             double posY = plotAreaHeight - (function.calculate(v) - offset[1]) / graphHeight * plotAreaHeight;
             Line l = lines.get(i - 1);
-            l.setEndX((double) i / POINTS * plotAreaWidth);
+            l.setEndX((double) i / numOfPoints * plotAreaWidth);
             l.setEndY(posY);
             l = lines.get(i);
-            l.setStartX(i * plotAreaWidth / POINTS);
+            l.setStartX(i * plotAreaWidth / numOfPoints);
             l.setStartY(posY);
 
         }
-        lines.get(POINTS - 1).setEndX(plotAreaWidth);
-        lines.get(POINTS - 1).setEndY(plotAreaHeight - (function.calculate(offset[0] + graphWidth) - offset[1]) / graphHeight * plotAreaHeight);
+        lines.get(numOfPoints - 1).setEndX(plotAreaWidth);
+        lines.get(numOfPoints - 1).setEndY(plotAreaHeight - (function.calculate(offset[0] + graphWidth) - offset[1]) / graphHeight * plotAreaHeight);
     }
 
     /**

@@ -1,0 +1,26 @@
+
+.root {
+    -fx-base: rgb(50, 50, 50);
+    -fx-background: rgb(40, 40, 40);
+}
+
+
+
+.button {
+    -fx-text-fill: #c6d6f7;
+    -fx-border-color: rgb(49, 89, 160);
+    -fx-background-color: rgb(30, 60, 110);
+    -fx-border-width: 3;
+}
+
+.label {
+    -fx-text-fill: #c6d6f7;
+}
+
+.custom-button {
+    -fx-background-color: #5c5c5c;
+}
+.button1 {
+    -fx-text-fill: #DFB951;
+    -fx-background-color: #006464;
+}
