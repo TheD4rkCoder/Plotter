@@ -22,9 +22,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class Layout extends Group {
-    private TextField selectedTextField;
     private final VBox functions = new VBox();
     private final VBox constants = new VBox();
+    private TextField selectedTextField;
     private PlotArea plotArea;
     private boolean darkModeEnabled = false;
     private Rectangle background;
@@ -160,12 +160,12 @@ public class Layout extends Group {
         // Labels
         Label functionTitle = new Label("Funktionen");
         functionTitle.setLayoutX(width * 0.666 + 4);
-        functionTitle.setLayoutY(height*0.01);
+        functionTitle.setLayoutY(height * 0.01);
         functionTitle.setStyle("-fx-font-size: 24");
         this.getChildren().add(functionTitle);
         Label variableTitle = new Label("Variablen");
         variableTitle.setLayoutX(width * 0.666 + 4);
-        variableTitle.setLayoutY(height*0.26);
+        variableTitle.setLayoutY(height * 0.26);
         variableTitle.setStyle("-fx-font-size: 24");
         this.getChildren().add(variableTitle);
 

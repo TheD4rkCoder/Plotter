@@ -16,12 +16,30 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class PlotFunction {
-    private Function function;
-    private boolean isFunctionVisible = true;
-    private ArrayList<Line> lines = new ArrayList<>();
+    private final Function function;
+    private final ArrayList<Line> lines = new ArrayList<>();
     private final int POINTS = 1000;
-    private final int POINTS_FOR_DERIVATIVES = 100;
     Random random = new Random();
+    private boolean isFunctionVisible = true;
+
+    /**
+     * Constructs a PlotFunction object with the given function and plot area.
+     *
+     * @param function The Function object to be plotted.
+     * @param root     The PlotArea object where the function will be displayed.
+     */
+    public PlotFunction(Function function, PlotArea root) {
+        this.function = function;
+        Color color = Color.color(random.nextDouble(0, 1), random.nextDouble(0, 1), random.nextDouble(0, 1));
+        for (int i = 0; i < POINTS; i++) {
+            Line temp = new Line();
+            temp.setFill(color);
+            temp.setStrokeWidth(root.getWidth() / 200);
+            temp.setStroke(color);
+            lines.add(temp);
+            root.getChildren().add(temp);
+        }
+    }
 
     /**
      * Returns the list of lines representing the function's curve.
@@ -49,7 +67,8 @@ public class PlotFunction {
         }
 
         int numOfPoints;
-        if (function.getFunctionName().length() >= 3 && function.getFunctionName().substring(0, 3).equals("der")) {
+        if (function.getFunctionName().length() >= 3 && function.getFunctionName().startsWith("der")) {
+            int POINTS_FOR_DERIVATIVES = 100;
             numOfPoints = POINTS_FOR_DERIVATIVES;
         } else {
             numOfPoints = POINTS;
@@ -110,24 +129,5 @@ public class PlotFunction {
      */
     public void changeFunctionVisibility() {
         changeFunctionVisibility(!isFunctionVisible);
-    }
-
-    /**
-     * Constructs a PlotFunction object with the given function and plot area.
-     *
-     * @param function The Function object to be plotted.
-     * @param root     The PlotArea object where the function will be displayed.
-     */
-    public PlotFunction(Function function, PlotArea root) {
-        this.function = function;
-        Color color = Color.color(random.nextDouble(0, 1), random.nextDouble(0, 1), random.nextDouble(0, 1));
-        for (int i = 0; i < POINTS; i++) {
-            Line temp = new Line();
-            temp.setFill(color);
-            temp.setStrokeWidth(root.getWidth() / 200);
-            temp.setStroke(color);
-            lines.add(temp);
-            root.getChildren().add(temp);
-        }
     }
 }

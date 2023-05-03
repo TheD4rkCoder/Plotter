@@ -8,17 +8,14 @@
  */
 package com.example.plotter;
 
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
@@ -29,30 +26,20 @@ import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Function;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class PlotArea extends Group {
     private final int MAX_NUMBER_OF_GRIDLINES = 20;
     private final double width;
-    private double plotCoordinatesWidth = 200;
     private final double height;
-    private double plotCoordinatesHeight = 200;
     private final Line[] axisLines = new Line[2];
     private final ArrayList<Line> gridLines = new ArrayList<>();
-
     private final double[] offset = {-100.0, -100.0};
     //private ArrayList<Circle> points = new ArrayList<>(); // tba
     private final ArrayList<Label> labelsForAxis = new ArrayList<>(); //todo in drawPlotArea
     private final ArrayList<PlotFunction> functions = new ArrayList<>();
     private final ArrayList<Argument> variables = new ArrayList<>();
-
-    public double getWidth() {
-        return width;
-    }
-
-    public double getHeight() {
-        return height;
-    }
+    private double plotCoordinatesWidth = 200;
+    private double plotCoordinatesHeight = 200;
 
     /**
      * Creates a new PlotArea with the specified dimensions.
@@ -111,6 +98,14 @@ public class PlotArea extends Group {
             this.getChildren().add(tempLine);
         }
         drawPlotArea();
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     /**
@@ -302,23 +297,18 @@ public class PlotArea extends Group {
     /**
      * Changes the visibility of a function at the specified index.
      *
-     * @param
      * @param index      The index of the function whose visibility to change.
      * @param visibility The new visibility state of the function (true for visible, false for hidden).
      */
     public void changeFunctionVisibility(int index, boolean visibility) {
         functions.get(index).changeFunctionVisibility(visibility);
     }
+
     public void showErrorWindow() {
 
         Stage stage = new Stage();
         Button b = new Button("ok");
-        b.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                stage.close();
-            }
-        });
+        b.setOnAction(actionEvent -> stage.close());
         Label l = new Label("Syntax error!");
         l.setPadding(new Insets(10));
         b.setPadding(new Insets(10, 20, 10, 20));
@@ -332,6 +322,7 @@ public class PlotArea extends Group {
 
         stage.show();
     }
+
     /**
      * Toggles the visibility of a function at the specified index.
      *
@@ -340,13 +331,14 @@ public class PlotArea extends Group {
     public void changeFunctionVisibility(int index) {
         functions.get(index).changeFunctionVisibility();
     }
+
     public void toggleDarkMode(boolean darkMode) {
         if (darkMode) {
-            ((Rectangle)(this.getChildren().get(0))).setFill(Color.rgb(30, 30, 30));
+            ((Rectangle) (this.getChildren().get(0))).setFill(Color.rgb(30, 30, 30));
 
 
         } else {
-            ((Rectangle)(this.getChildren().get(0))).setFill(Color.LIGHTGRAY);
+            ((Rectangle) (this.getChildren().get(0))).setFill(Color.LIGHTGRAY);
 
         }
     }
