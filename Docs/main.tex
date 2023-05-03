@@ -1,0 +1,66 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[ngerman]{babel}
+\usepackage{fancyhdr}
+\usepackage{xurl}
+\usepackage{titling}
+
+\newcommand{\bardots}{\smash{\parbox[b]{1.2em}{\rule{1.2em}{0.2ex}\\[-1ex]\dots}}}
+\newcommand{\justbar}{\smash{\parbox[b]{1.2em}{\rule{1.2em}{0.2ex}\\[-1ex]\phantom{\dots}}}}
+\newcommand{\justdots}{\smash{\parbox[b]{1.2em}{\dots}}}
+
+\newcommand{\CustomTitle}[9]{
+    \thispagestyle{empty}
+    \vspace*{\stretch{1}}
+    {\parindent0cm \rule{\linewidth}{.7ex}}
+    \begin{flushright}
+        \vspace*{\stretch{1}}
+        \sffamily\bfseries\huge
+        #1\\
+        \vspace*{\stretch{1}}
+        \sffamily\bfseries\small
+        #2\\
+        \vspace*{\stretch{1}}
+        \sffamily\bfseries\small
+        #3
+    \end{flushright}
+    \rule{\linewidth}{.7ex}
+
+    \vspace*{\stretch{1}}
+    \begin{center}
+        \includegraphics[width=2in]{Resources/Logo.png} \\
+        \vspace*{\stretch{1}}
+        \textbf{\Large Dokumantation}\\
+
+        \vspace*{\stretch{2}}
+        \textbf{\large Informatik}\\
+        \textbf{\large Klasse 4AT}
+
+        \vspace*{\stretch{1}}
+        \textbf{\large Professor: Rainer Ulrich}  \\[1mm]
+
+        \vspace*{\stretch{1}}
+        \textbf{\large Brixen, den 03. Mai 2023}\\
+        \vspace*{\stretch{0.25}}
+    \end{center}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Grafischer Darstellungsrechner}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+\CustomTitle
+{Grafischer Darstellungsrechner}
+{Authors: Priller Patrick, Mairhofer David, Pernthaler Daniel}
+{\href{mailto:stpripat@bx.fallmerayer.it}{stpripat@bx.fallmerayer.it}, \href{mailto:stmaidav@bx.fallmerayer.it}{stmaidav@bx.fallmerayer.it}, \href{mailto:stperdan@bx.fallmayer.it}{stperdan@bx.fallmerayer.it}}
+
+\section[Test]
+
+\end{document}
