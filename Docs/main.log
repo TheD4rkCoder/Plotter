@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.13)  3 MAY 2023 09:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.13)  3 MAY 2023 10:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -244,33 +244,71 @@ Package hyperref Info: Link coloring OFF on input line 57.
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 64.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 68.
  (C:\Users\prill\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<Resources/Logo.png, id=6, 160.6pt x 150.5625pt>
+<Resources/Logo.png, id=54, 160.6pt x 150.5625pt>
 File: Resources/Logo.png Graphic file (type png)
 <use Resources/Logo.png>
-Package pdftex.def Info: Resources/Logo.png  used on input line 64.
+Package pdftex.def Info: Resources/Logo.png  used on input line 68.
 (pdftex.def)             Requested size: 144.54pt x 135.50957pt.
  [1
 
-{C:/Users/prill/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Resources/Logo.png>] (main.aux)
+{C:/Users/prill/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Resources/Logo.png>] (main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.78 \clearpage
+                [1
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 97.
+ (C:\Users\prill\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+<Resources/kanban_board_example.png, id=89, 3011.25pt x 1806.75pt>
+File: Resources/kanban_board_example.png Graphic file (type png)
+<use Resources/kanban_board_example.png>
+Package pdftex.def Info: Resources/kanban_board_example.png  used on input line 119.
+(pdftex.def)             Requested size: 345.0pt x 206.98618pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] [4 <./Resources/kanban_board_example.png
+
+pdfTeX warning: pdflatex (file ./Resources/kanban_board_example.png): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
+>] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 61C4143BE48495CA8A07C55DA9F1D0B6;1654.
  ) 
 Here is how much of TeX's memory you used:
- 9688 strings out of 478338
- 157882 string characters out of 2836699
- 464407 words of memory out of 3000000
- 27999 multiletter control sequences out of 15000+600000
- 475409 words of font info for 36 fonts, out of 8000000 for 9000
+ 9769 strings out of 478338
+ 159527 string characters out of 2836699
+ 470480 words of memory out of 3000000
+ 28053 multiletter control sequences out of 15000+600000
+ 477254 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,5n,77p,363b,445s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0900.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk>
-Output written on main.pdf (1 page, 49324 bytes).
+ 72i,11n,77p,817b,453s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0900.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk>
+Output written on main.pdf (5 pages, 404094 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 377 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
 
