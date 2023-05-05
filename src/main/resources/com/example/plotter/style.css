@@ -58,29 +58,4 @@
     -fx-padding: 5;
 }
 
-.dark-mode {
-    -fx-base: rgb(50, 50, 50);
-    -fx-background: rgb(40, 40, 40);
-}
-
-
-
-.dark-mode .button {
-    -fx-text-fill: #c6d6f7;
-    -fx-border-color: rgb(49, 89, 23);
-    -fx-background-color: rgb(45, 80, 160);
-}
-
-.dark-mode .label {
-    -fx-text-fill: #c6d6f7;
-}
-
-.dark-mode .custom-button {
-    -fx-background-color: #5c5c5c;
-}
-
-.dark-mode .button1 {
-    -fx-text-fill: #DFB951;
-    -fx-background-color: #006464;
-}
 

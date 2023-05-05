@@ -16,11 +16,11 @@ import org.mariuszgromada.math.mxparser.Argument;
 
 import java.util.ArrayList;
 
-public class ScrollPaneVariablesElement {
+public class ScrollPaneVariablesElement extends HBox {
     private static final ArrayList<Integer> indexes = new ArrayList<>();
     private int index;
     private PlotArea plotArea;
-    private HBox content;
+    private TextField newVariableTextField;
 
     /**
      * Constructor for creating a new ScrollPaneVariablesElement.
@@ -34,13 +34,13 @@ public class ScrollPaneVariablesElement {
         this.index = index;
         this.plotArea = plotArea;
         StringBuilder beginArgumentName = new StringBuilder(new String()); //Character.toString(65 + index);
-        int ind = indexes.size();
+        int ind = indexes.size()-1;
         while (ind >= 0) {
-            beginArgumentName.append(Character.toString(65 + (ind % 26)));
-            ind -= 26;
+            beginArgumentName.append(Character.toString(65 + ((ind % 25 > 1) ? (ind % 25 + 1) : (ind % 25))));
+            ind -= 25;
         }
         plotArea.addVariable(index, new Argument(beginArgumentName + " = 1"));
-        TextField newVariableTextField = new TextField(beginArgumentName + " = 1");
+        newVariableTextField = new TextField(beginArgumentName + " = 1");
         newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 30);
         newVariableTextField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
@@ -55,23 +55,15 @@ public class ScrollPaneVariablesElement {
         });
         Button deleteButton = new Button("\uD83D\uDDD1");
         deleteButton.setOnAction(actionEvent -> {
-            root.getChildren().remove(content);
+            root.getChildren().remove(this);
             plotArea.removeVariable(indexes.get(index));
             for (int i = index; i < indexes.size(); i++) {
                 indexes.set(i, indexes.get(i) - 1);
             }
         });
-        content = new HBox(newVariableTextField, deleteButton);
-
-
+        this.getChildren().addAll(newVariableTextField, deleteButton);
     }
-
-    /**
-     * Returns the HBox containing the elements of the ScrollPaneVariablesElement.
-     *
-     * @return The HBox containing the TextField and delete button for the ScrollPaneVariablesElement.
-     */
-    public HBox getContent() {
-        return content;
+    public void resizeInCorrelationToPlotArea() {
+        newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 30);
     }
 }

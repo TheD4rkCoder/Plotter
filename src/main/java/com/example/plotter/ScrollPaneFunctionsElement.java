@@ -9,22 +9,25 @@ package com.example.plotter;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import org.mariuszgromada.math.mxparser.Function;
+//import org.matheclipse.core.eval.ExprEvaluator; // todo
+//import org.matheclipse.core.expression.Expr;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 
-public class ScrollPaneFunctionsElement {
+public class ScrollPaneFunctionsElement extends HBox{
     private static final ArrayList<Integer> indexes = new ArrayList<>();
     private int index;
     private PlotArea plotArea;
-    private HBox content;
+    private TextField newFunctionTextField;
 
     /**
      * Constructor for creating a new ScrollPaneFunctionsElement.
@@ -55,11 +58,10 @@ public class ScrollPaneFunctionsElement {
         Button visibilityButton = new Button("\uD83D\uDC41");
         Button derivationButton = new Button("f'");
         Button deleteButton = new Button("\uD83D\uDDD1");
-        Button functionAnalysisInformationButton = new Button("i");
-
+        Button functionAnalysisInformationButton = new Button("i"); // todo
 
         plotArea.addFunction(index, new Function(equation));
-        TextField newFunctionTextField = new TextField(equation);
+        newFunctionTextField = new TextField(equation);
         newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
         newFunctionTextField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
@@ -71,7 +73,7 @@ public class ScrollPaneFunctionsElement {
         });
 
         deleteButton.setOnAction(actionEvent -> {
-            root.getChildren().remove(content);
+            root.getChildren().remove(this);
             plotArea.removeFunction(indexes.get(index));
             for (int i = index; i < indexes.size(); i++) {
                 indexes.set(i, indexes.get(i) - 1);
@@ -100,17 +102,21 @@ public class ScrollPaneFunctionsElement {
                 // todo label with function-analysis data
             }
         });
-        content = new HBox(newFunctionTextField, derivationButton, deleteButton, visibilityButton, functionAnalysisInformationButton);
-
-
+        this.getChildren().addAll(newFunctionTextField, derivationButton, deleteButton, visibilityButton, functionAnalysisInformationButton);
     }
+    public void resizeInCorrelationToPlotArea() {
+        newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
+    }
+    /*
+    private String getDerivativeString(String functionString) {
+        Expr functionExpr = ExprEvaluator.get().evaluate(functionString);
 
-    /**
-     * Returns the HBox containing the elements of the ScrollPaneFunctionsElement.
-     *
-     * @return The HBox containing the TextField and buttons for the ScrollPaneFunctionsElement.
+        // Compute the derivative of the function
+        Expr derivativeExpr = functionExpr.diff("x");
+
+        // Print the derivative function as a string
+        String derivativeString = derivativeExpr.toString();
+    }
      */
-    public HBox getContent() {
-        return content;
-    }
+
 }

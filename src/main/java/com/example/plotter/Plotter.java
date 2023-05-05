@@ -8,6 +8,8 @@
 package com.example.plotter;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.mariuszgromada.math.mxparser.*;
@@ -36,6 +38,18 @@ public class Plotter extends Application {
         Layout root = new Layout(BEGINWIDTH, BEGINHEIGHT);  // main Group
 
         Scene scene = new Scene(root, BEGINWIDTH, BEGINHEIGHT);
+        scene.widthProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
+                root.resize(scene.getWidth(), scene.getHeight());
+            }
+        });
+        scene.heightProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
+                root.resize(scene.getWidth(), scene.getHeight());
+            }
+        });
         // stage.setFullScreen(true);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 

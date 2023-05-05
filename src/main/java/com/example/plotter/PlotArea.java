@@ -33,12 +33,13 @@ import java.util.List;
 
 public class PlotArea extends Group {
     private final int MAX_NUMBER_OF_GRIDLINES = 20;
-    private final double width;
+    private double width;
     private double plotCoordinatesWidth = 200;
-    private final double height;
+    private double height;
     private double plotCoordinatesHeight = 200;
     private final Line[] axisLines = new Line[2];
     private final ArrayList<Line> gridLines = new ArrayList<>();
+    private final Rectangle background;
 
     private final double[] offset = {-100.0, -100.0};
     //private ArrayList<Circle> points = new ArrayList<>(); // tba
@@ -81,9 +82,9 @@ public class PlotArea extends Group {
         });
         this.height = beginHeight;
         this.width = beginWidth;
-        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * scrollEvent.getDeltaY(), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
-
-        this.getChildren().add(new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY));
+        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
+        background = new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY);
+        this.getChildren().add(background);
         axisLines[0] = new Line(0, beginHeight / 2, beginWidth, beginHeight / 2);
         axisLines[0].setStrokeWidth(beginHeight / 400);
         axisLines[0].setStroke(Color.DARKGRAY);
@@ -289,6 +290,13 @@ public class PlotArea extends Group {
         drawPlotArea();
     }
 
+    public void setPlottedArea(double deltaX, double deltaY, double plotCoordsWidth, double plotCoordsHeight) {
+        this.offset[0] = deltaX;
+        this.offset[1] = deltaY;
+        this.plotCoordinatesWidth = plotCoordsWidth;
+        this.plotCoordinatesHeight = plotCoordsHeight;
+    }
+
     /**
      * Resizes the plotting area to the specified dimensions.
      *
@@ -296,6 +304,22 @@ public class PlotArea extends Group {
      * @param newHeight The new height of the plotting area.
      */
     public void resize(double newWidth, double newHeight) {
+        this.width = newWidth;
+        this.height = newHeight;
+        this.background.setWidth(newWidth);
+        this.background.setHeight(newHeight);
+        this.axisLines[0].setEndX(width);
+        this.axisLines[1].setEndY(height);
+
+        for (int i = 0; i < 2 * MAX_NUMBER_OF_GRIDLINES; i++) {
+            Line tempLine = gridLines.get(i);
+            if (i < MAX_NUMBER_OF_GRIDLINES) {
+                tempLine.setEndY(height);
+            } else {
+                tempLine.setEndX(width);
+            }
+        }
+        drawPlotArea();
         // todo
     }
 
@@ -309,6 +333,7 @@ public class PlotArea extends Group {
     public void changeFunctionVisibility(int index, boolean visibility) {
         functions.get(index).changeFunctionVisibility(visibility);
     }
+
     public void showErrorWindow() {
 
         Stage stage = new Stage();
@@ -332,6 +357,7 @@ public class PlotArea extends Group {
 
         stage.show();
     }
+
     /**
      * Toggles the visibility of a function at the specified index.
      *
@@ -340,13 +366,12 @@ public class PlotArea extends Group {
     public void changeFunctionVisibility(int index) {
         functions.get(index).changeFunctionVisibility();
     }
+
     public void toggleDarkMode(boolean darkMode) {
         if (darkMode) {
-            ((Rectangle)(this.getChildren().get(0))).setFill(Color.rgb(30, 30, 30));
-
-
+            ((Rectangle) (this.getChildren().get(0))).setFill(Color.rgb(30, 30, 30));
         } else {
-            ((Rectangle)(this.getChildren().get(0))).setFill(Color.LIGHTGRAY);
+            ((Rectangle) (this.getChildren().get(0))).setFill(Color.LIGHTGRAY);
 
         }
     }
