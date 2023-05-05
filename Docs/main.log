@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.13)  5 MAY 2023 10:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.13)  5 MAY 2023 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -248,7 +248,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 68
  (C:\Users\prill\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<Resources/Logo.png, id=178, 160.6pt x 150.5625pt>
+<Resources/Logo.png, id=190, 160.6pt x 150.5625pt>
 File: Resources/Logo.png Graphic file (type png)
 <use Resources/Logo.png>
 Package pdftex.def Info: Resources/Logo.png  used on input line 68.
@@ -264,55 +264,65 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 ....5}Lizenzinformationen}{8}{subsection.9.5}
+l.44 ...stagebuch (Umsetzung)}{11}{subsection.9.2}
                                                   % [1
 
 ])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [2]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 99.
- (C:\Users\prill\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [3
+ [2] [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 115.
+ (C:\Users\prill\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 [4]
-<Resources/kanban_board_example.png, id=252, 3011.25pt x 1806.75pt>
+Overfull \hbox (15.94577pt too wide) in paragraph at lines 148--149
+\T1/cmr/m/n/10 und JavaFX-Anwendungen er-leich-tern, ein-schlieÿ-lich Code-Vervollständigung,
+ []
+
+[5] [6]
+<Resources/kanban_board_example.png, id=277, 3011.25pt x 1806.75pt>
 File: Resources/kanban_board_example.png Graphic file (type png)
 <use Resources/kanban_board_example.png>
-Package pdftex.def Info: Resources/kanban_board_example.png  used on input line 125.
+Package pdftex.def Info: Resources/kanban_board_example.png  used on input line 173.
 (pdftex.def)             Requested size: 345.0pt x 206.98618pt.
- [5 <./Resources/kanban_board_example.png
+ [7 <./Resources/kanban_board_example.png
 
 pdfTeX warning: pdflatex (file ./Resources/kanban_board_example.png): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
->] [6]
-<Resources/use-case-diagram.png, id=265, 390.70969pt x 369.63094pt>
+>]
+Overfull \hbox (9.9764pt too wide) in paragraph at lines 196--197
+[]\T1/cmr/bx/n/10 Transparenz\T1/cmr/m/n/10 : Durch die Vi-sua-li-sie-rung des Ar-beits-ab-laufs auf dem Kanban-
+ []
+
+[8] [9]
+<Resources/use-case-diagram.png, id=293, 390.70969pt x 369.63094pt>
 File: Resources/use-case-diagram.png Graphic file (type png)
 <use Resources/use-case-diagram.png>
-Package pdftex.def Info: Resources/use-case-diagram.png  used on input line 158.
+Package pdftex.def Info: Resources/use-case-diagram.png  used on input line 225.
 (pdftex.def)             Requested size: 276.00105pt x 261.12001pt.
- [7 <./Resources/use-case-diagram.png>] [8] (main.aux)
+ [10 <./Resources/use-case-diagram.png>] [11] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F657155A84FEA2FD1B83B736C0EABA0C;6180.
+(rerunfilecheck)             Checksum: E4EF33AD874A907F23E08529162E3DB8;6726.
  ) 
 Here is how much of TeX's memory you used:
- 9844 strings out of 478338
- 160732 string characters out of 2836699
- 476561 words of memory out of 3000000
- 28091 multiletter control sequences out of 15000+600000
- 477254 words of font info for 39 fonts, out of 8000000 for 9000
+ 9859 strings out of 478338
+ 160922 string characters out of 2836699
+ 477564 words of memory out of 3000000
+ 28099 multiletter control sequences out of 15000+600000
+ 477589 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,12n,77p,817b,568s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0900.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk>
-Output written on main.pdf (9 pages, 532407 bytes).
+ <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx0900.pk> <C:\Users\prill\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk>
+Output written on main.pdf (12 pages, 546813 bytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 384 words of extra memory for PDF output out of 10000 (max. 10000000)
 

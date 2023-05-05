@@ -532,6 +532,7 @@ INPUT main.toc
 INPUT main.toc
 OUTPUT main.toc
 INPUT C:\Users\prill\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\prill\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT C:\Users\prill\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\prill\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\prill\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
@@ -556,6 +557,8 @@ INPUT .\main.out
 INPUT .\main.out
 INPUT C:\Users\prill\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
 INPUT C:\Users\prill\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+INPUT C:\Users\prill\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\prill\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\prill\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
 INPUT C:\Users\prill\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
 INPUT C:\Users\prill\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
