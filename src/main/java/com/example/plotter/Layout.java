@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -53,21 +54,19 @@ public class Layout extends Group {
         plotArea.setLayoutX(2);
         plotArea.setLayoutY(2);
 
-        ScrollPane scrollPaneFunctions = new ScrollPane();
+        scrollPaneFunctions = new ScrollPane();
         scrollPaneFunctions.setLayoutX(width * 0.666 + 4);
         scrollPaneFunctions.setLayoutY(height * 0.05);
         scrollPaneFunctions.setContent(functions);
         scrollPaneFunctions.setPrefWidth(width * 0.334 - 8);
         scrollPaneFunctions.setPrefHeight(height * 0.2);
-        scrollPaneFunctions.setStyle("-fx-border-radius: 5");
         this.getChildren().add(scrollPaneFunctions);
-        ScrollPane scrollPaneVariables = new ScrollPane();
+        scrollPaneVariables = new ScrollPane();
         scrollPaneVariables.setLayoutX(width * 0.666 + 4);
         scrollPaneVariables.setLayoutY(height * 0.3);
         scrollPaneVariables.setContent(constants);
         scrollPaneVariables.setPrefWidth(width * 0.334 - 8);
         scrollPaneVariables.setPrefHeight(height * 0.2);
-        scrollPaneVariables.setStyle("-fx-background-radius: 7; -fx-border-radius: 7;");  //add borders
         this.getChildren().add(scrollPaneVariables);
         Button addFunctionButton = new Button("+");
         functions.getChildren().add(addFunctionButton);
@@ -77,7 +76,7 @@ public class Layout extends Group {
         Button addVariableButton = new Button("+");
         constants.getChildren().add(addVariableButton);
         addVariableButton.setOnAction(actionEvent -> {
-            HBox newRow = new ScrollPaneVariablesElement(constants.getChildren().size() - 1, plotArea, constants).getContent();
+            HBox newRow = new ScrollPaneVariablesElement(constants.getChildren().size() - 1, plotArea, constants);
             newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
             constants.getChildren().add(constants.getChildren().size() - 1, newRow);
         });
@@ -229,11 +228,16 @@ public class Layout extends Group {
      * Resizes the layout and its components based on the new dimensions.
      */
     public void resize(double width, double height) {
+        background.setWidth(width);
+        background.setHeight(height);
         plotArea.resize(width * 0.666 - 4, height - 4);
         for (Node n : functions.getChildren()) {
             if (n instanceof ScrollPaneFunctionsElement) {
                 ((ScrollPaneFunctionsElement) n).resizeInCorrelationToPlotArea();
-            } else if (n instanceof ScrollPaneVariablesElement) {
+            }
+        }
+        for (Node n : constants.getChildren()) {
+            if (n instanceof ScrollPaneVariablesElement) {
                 ((ScrollPaneVariablesElement) n).resizeInCorrelationToPlotArea();
             }
         }
