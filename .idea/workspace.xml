@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="Grid Labels">
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="darkmode, Titles, errorwindow bei Variable-Syntaxerrors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Plotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Plotter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -39,9 +43,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RunManager" selected="Application.Plotter">
@@ -154,7 +160,14 @@
       <workItem from="1682011772217" duration="679000" />
       <workItem from="1682488953719" duration="3888000" />
       <workItem from="1683020330402" duration="55000" />
-      <workItem from="1683021743900" duration="13386000" />
+      <workItem from="1683021743900" duration="13547000" />
+      <workItem from="1683054079989" duration="792000" />
+      <workItem from="1683093501816" duration="11686000" />
+      <workItem from="1683118637418" duration="1493000" />
+      <workItem from="1683135586312" duration="730000" />
+      <workItem from="1683141348772" duration="85000" />
+      <workItem from="1683218135245" duration="1310000" />
+      <workItem from="1683270137327" duration="3784000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681725896036</created>
@@ -233,7 +246,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683041269318</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="derivation in a new function-line">
+      <created>1683043965115</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683043965115</updated>
+    </task>
+    <task id="LOCAL-00013" summary="derivation in a new function-line">
+      <created>1683044031569</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1683044031569</updated>
+    </task>
+    <task id="LOCAL-00014" summary="darkmode, Titles, errorwindow bei Variable-Syntaxerrors">
+      <created>1683105211370</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683105211370</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +292,12 @@
     <MESSAGE value="now it is usable" />
     <MESSAGE value="zoom fixed" />
     <MESSAGE value="Grid Labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grid Labels" />
+    <MESSAGE value="derivation in a new function-line" />
+    <MESSAGE value="darkmode, Titles, errorwindow bei Variable-Syntaxerrors" />
+    <option name="LAST_COMMIT_MESSAGE" value="darkmode, Titles, errorwindow bei Variable-Syntaxerrors" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

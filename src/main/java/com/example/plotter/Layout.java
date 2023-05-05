@@ -8,19 +8,36 @@
  */
 package com.example.plotter;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Cursor;
 import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
 public class Layout extends Group {
     private TextField selectedTextField;
     private final VBox functions = new VBox();
     private final VBox constants = new VBox();
     private PlotArea plotArea;
+    private boolean darkModeEnabled = false;
+    private Rectangle background;
+    private Button darkModeToggleButton;
+    private Button[][] operation = new Button[3][4];
+    private ScrollPane scrollPaneFunctions;
+    private ScrollPane scrollPaneVariables;
+    private Label functionTitle;
+    private Label variableTitle;
+
     /**
      * Constructs a Layout object with the given dimensions.
      *
@@ -28,6 +45,9 @@ public class Layout extends Group {
      * @param height The height of the layout.
      */
     public Layout(double width, double height) {
+        background = new Rectangle(0, 0, width, height);
+        background.setFill(Color.WHITE);
+        this.getChildren().add(background);
         plotArea = new PlotArea(width * 0.666 - 4, height - 4);
         this.getChildren().add(plotArea);
         plotArea.setLayoutX(2);
@@ -39,6 +59,7 @@ public class Layout extends Group {
         scrollPaneFunctions.setContent(functions);
         scrollPaneFunctions.setPrefWidth(width * 0.334 - 8);
         scrollPaneFunctions.setPrefHeight(height * 0.2);
+        scrollPaneFunctions.setStyle("-fx-border-radius: 5");
         this.getChildren().add(scrollPaneFunctions);
         ScrollPane scrollPaneVariables = new ScrollPane();
         scrollPaneVariables.setLayoutX(width * 0.666 + 4);
@@ -46,25 +67,22 @@ public class Layout extends Group {
         scrollPaneVariables.setContent(constants);
         scrollPaneVariables.setPrefWidth(width * 0.334 - 8);
         scrollPaneVariables.setPrefHeight(height * 0.2);
+        scrollPaneVariables.setStyle("-fx-background-radius: 7; -fx-border-radius: 7;");  //add borders
         this.getChildren().add(scrollPaneVariables);
         Button addFunctionButton = new Button("+");
         functions.getChildren().add(addFunctionButton);
-        addFunctionButton.setStyle("-fx-background-color: #CCFF99");
         addFunctionButton.setOnAction(actionEvent -> {
             newFunction();
         });
         Button addVariableButton = new Button("+");
         constants.getChildren().add(addVariableButton);
-        addVariableButton.setStyle("-fx-background-color: #CCFF99");
         addVariableButton.setOnAction(actionEvent -> {
             HBox newRow = new ScrollPaneVariablesElement(constants.getChildren().size() - 1, plotArea, constants).getContent();
             newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
             constants.getChildren().add(constants.getChildren().size() - 1, newRow);
         });
 
-        //todo buttons
-
-        Button[][] operation = new Button[3][4];
+        // buttons
         operation[0][0] = new Button("sin");
         operation[0][0].setOnAction(actionEvent -> {
             if (selectedTextField != null) {
@@ -143,28 +161,109 @@ public class Layout extends Group {
             for (int x = 0; x < 3; x++) {
                 this.getChildren().add(operation[x][y]);
                 operation[x][y].setFocusTraversable(false);
-                operation[x][y].setPrefWidth(width / 10);
+                operation[x][y].setPrefWidth(width * 0.1);
                 operation[x][y].setPrefHeight(height * 0.09);
                 operation[x][y].setLayoutX(width * (0.666 + 0.111 * x) + 4);
                 operation[x][y].setLayoutY(height * (0.55 + 0.1 * y));
             }
         }
+        // Labels
+        functionTitle = new Label("Funktionen");
+        functionTitle.setLayoutX(width * 0.666 + 4);
+        functionTitle.setLayoutY(height * 0.01);
+        functionTitle.setStyle("-fx-font-size: 24");
+        this.getChildren().add(functionTitle);
+        variableTitle = new Label("Variablen");
+        variableTitle.setLayoutX(width * 0.666 + 4);
+        variableTitle.setLayoutY(height * 0.26);
+        variableTitle.setStyle("-fx-font-size: 24");
+        this.getChildren().add(variableTitle);
+
+        darkModeToggleButton = new Button("\u263E");
+        darkModeToggleButton.setPrefWidth(width * 0.1);
+        darkModeToggleButton.setPrefHeight(height * 0.03);
+        darkModeToggleButton.setLayoutX(width * 0.666 + 4);
+        darkModeToggleButton.setLayoutY(height * 0.95);
+
+        darkModeToggleButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                if (darkModeToggleButton.getText().equals("\u263C")) {
+                    darkModeToggleButton.setText("\u263E");
+                } else {
+                    darkModeToggleButton.setText("\u263C");
+                }
+                toggleDarkMode();
+            }
+        });
+        this.getChildren().add(darkModeToggleButton);
     }
+
     public void newFunction() {
-        HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this).getContent();
+        HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this);
         newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
         functions.getChildren().add(functions.getChildren().size() - 1, newRow);
     }
+
     public void newFunction(String equation) {
-        HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this, equation).getContent();
+        HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this, equation);
         newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
         functions.getChildren().add(functions.getChildren().size() - 1, newRow);
+    }
+
+    public void toggleDarkMode() {
+        darkModeEnabled = !darkModeEnabled;
+        plotArea.toggleDarkMode(darkModeEnabled);
+        if (darkModeEnabled) {
+            background.setFill(Color.rgb(20, 20, 20));
+            this.getStylesheets().remove(getClass().getResource("style.css").toExternalForm());
+            this.getStylesheets().add(getClass().getResource("darkModeStyle.css").toExternalForm());
+        } else {
+            background.setFill(Color.WHITE);
+            this.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            this.getStylesheets().remove(getClass().getResource("darkModeStyle.css").toExternalForm());
+        }
     }
 
     /**
      * Resizes the layout and its components based on the new dimensions.
      */
-    public void resize() {
-        // Implementation...
+    public void resize(double width, double height) {
+        plotArea.resize(width * 0.666 - 4, height - 4);
+        for (Node n : functions.getChildren()) {
+            if (n instanceof ScrollPaneFunctionsElement) {
+                ((ScrollPaneFunctionsElement) n).resizeInCorrelationToPlotArea();
+            } else if (n instanceof ScrollPaneVariablesElement) {
+                ((ScrollPaneVariablesElement) n).resizeInCorrelationToPlotArea();
+            }
+        }
+        // Buttons
+
+        darkModeToggleButton.setPrefWidth(width * 0.1);
+        darkModeToggleButton.setPrefHeight(height * 0.03);
+        darkModeToggleButton.setLayoutX(width * 0.666 + 4);
+        darkModeToggleButton.setLayoutY(height * 0.95);
+        for (int y = 0; y < 4; y++) {
+            for (int x = 0; x < 3; x++) {
+                operation[x][y].setPrefWidth(width * 0.1);
+                operation[x][y].setPrefHeight(height * 0.09);
+                operation[x][y].setLayoutX(width * (0.666 + 0.111 * x) + 4);
+                operation[x][y].setLayoutY(height * (0.55 + 0.1 * y));
+            }
+        }
+        scrollPaneFunctions.setLayoutX(width * 0.666 + 4);
+        scrollPaneFunctions.setLayoutY(height * 0.05);
+        scrollPaneFunctions.setPrefWidth(width * 0.334 - 8);
+        scrollPaneFunctions.setPrefHeight(height * 0.2);
+
+        scrollPaneVariables.setLayoutX(width * 0.666 + 4);
+        scrollPaneVariables.setLayoutY(height * 0.3);
+        scrollPaneVariables.setPrefWidth(width * 0.334 - 8);
+        scrollPaneVariables.setPrefHeight(height * 0.2);
+
+        functionTitle.setLayoutX(width * 0.666 + 4);
+        functionTitle.setLayoutY(height * 0.01);
+        variableTitle.setLayoutX(width * 0.666 + 4);
+        variableTitle.setLayoutY(height * 0.26);
     }
 }

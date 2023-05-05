@@ -16,11 +16,30 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class PlotFunction {
-    private Function function;
-    private boolean isFunctionVisible = true;
-    private ArrayList<Line> lines = new ArrayList<>();
+    private final Function function;
+    private final ArrayList<Line> lines = new ArrayList<>();
     private final int POINTS = 1000;
     Random random = new Random();
+    private boolean isFunctionVisible = true;
+
+    /**
+     * Constructs a PlotFunction object with the given function and plot area.
+     *
+     * @param function The Function object to be plotted.
+     * @param root     The PlotArea object where the function will be displayed.
+     */
+    public PlotFunction(Function function, PlotArea root) {
+        this.function = function;
+        Color color = Color.color(random.nextDouble(0, 1), random.nextDouble(0, 1), random.nextDouble(0, 1));
+        for (int i = 0; i < POINTS; i++) {
+            Line temp = new Line();
+            temp.setFill(color);
+            temp.setStrokeWidth(root.getWidth() / 200);
+            temp.setStroke(color);
+            lines.add(temp);
+            root.getChildren().add(temp);
+        }
+    }
 
     /**
      * Returns the list of lines representing the function's curve.
@@ -42,25 +61,34 @@ public class PlotFunction {
      * @param plotAreaHeight The height of the plot area.
      */
     public void recalculateLinesPosition(double[] offset, double graphWidth, double graphHeight, double plotAreaWidth, double plotAreaHeight) {
+
         if (!isFunctionVisible) {
             return;
+        }
+
+        int numOfPoints;
+        if (function.getFunctionName().length() >= 3 && function.getFunctionName().startsWith("der")) {
+            int POINTS_FOR_DERIVATIVES = 100;
+            numOfPoints = POINTS_FOR_DERIVATIVES;
+        } else {
+            numOfPoints = POINTS;
         }
         lines.get(0).setStartX(0);
         lines.get(0).setStartY(plotAreaHeight - (function.calculate(offset[0]) - offset[1]) / graphHeight * plotAreaHeight);
 
-        double v = offset[0] + graphWidth / POINTS;
-        for (int i = 1; i < POINTS; v += graphWidth / POINTS, i++) {
+        double v = offset[0] + graphWidth / numOfPoints;
+        for (int i = 1; i < numOfPoints; v += graphWidth / numOfPoints, i++) {
             double posY = plotAreaHeight - (function.calculate(v) - offset[1]) / graphHeight * plotAreaHeight;
             Line l = lines.get(i - 1);
-            l.setEndX((double) i / POINTS * plotAreaWidth);
+            l.setEndX((double) i / numOfPoints * plotAreaWidth);
             l.setEndY(posY);
             l = lines.get(i);
-            l.setStartX(i * plotAreaWidth / POINTS);
+            l.setStartX(i * plotAreaWidth / numOfPoints);
             l.setStartY(posY);
 
         }
-        lines.get(POINTS - 1).setEndX(plotAreaWidth);
-        lines.get(POINTS - 1).setEndY(plotAreaHeight - (function.calculate(offset[0] + graphWidth) - offset[1]) / graphHeight * plotAreaHeight);
+        lines.get(numOfPoints - 1).setEndX(plotAreaWidth);
+        lines.get(numOfPoints - 1).setEndY(plotAreaHeight - (function.calculate(offset[0] + graphWidth) - offset[1]) / graphHeight * plotAreaHeight);
     }
 
     /**
@@ -101,24 +129,5 @@ public class PlotFunction {
      */
     public void changeFunctionVisibility() {
         changeFunctionVisibility(!isFunctionVisible);
-    }
-
-    /**
-     * Constructs a PlotFunction object with the given function and plot area.
-     *
-     * @param function The Function object to be plotted.
-     * @param root     The PlotArea object where the function will be displayed.
-     */
-    public PlotFunction(Function function, PlotArea root) {
-        this.function = function;
-        Color color = Color.color(random.nextDouble(0, 1), random.nextDouble(0, 1), random.nextDouble(0, 1));
-        for (int i = 0; i < POINTS; i++) {
-            Line temp = new Line();
-            temp.setFill(color);
-            temp.setStrokeWidth(root.getWidth() / 200);
-            temp.setStroke(color);
-            lines.add(temp);
-            root.getChildren().add(temp);
-        }
     }
 }

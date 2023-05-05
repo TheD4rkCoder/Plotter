@@ -8,26 +8,38 @@
  */
 package com.example.plotter;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Function;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlotArea extends Group {
     private final int MAX_NUMBER_OF_GRIDLINES = 20;
-    private final double width;
+    private double width;
     private double plotCoordinatesWidth = 200;
-    private final double height;
+    private double height;
     private double plotCoordinatesHeight = 200;
     private final Line[] axisLines = new Line[2];
     private final ArrayList<Line> gridLines = new ArrayList<>();
+    private final Rectangle background;
 
     private final double[] offset = {-100.0, -100.0};
     //private ArrayList<Circle> points = new ArrayList<>(); // tba
@@ -70,16 +82,16 @@ public class PlotArea extends Group {
         });
         this.height = beginHeight;
         this.width = beginWidth;
-        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * scrollEvent.getDeltaY(), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
-
-        this.getChildren().add(new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY));
+        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
+        background = new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY);
+        this.getChildren().add(background);
         axisLines[0] = new Line(0, beginHeight / 2, beginWidth, beginHeight / 2);
-        axisLines[0].setStrokeWidth(beginHeight / 200);
-        axisLines[0].setFill(Color.WHITE);
+        axisLines[0].setStrokeWidth(beginHeight / 400);
+        axisLines[0].setStroke(Color.DARKGRAY);
         this.getChildren().add(axisLines[0]);
         axisLines[1] = new Line(beginWidth / 2, 0, beginWidth / 2, beginHeight);
-        axisLines[1].setStrokeWidth(beginWidth / 200);
-        axisLines[1].setFill(Color.WHITE);
+        axisLines[1].setStrokeWidth(beginWidth / 400);
+        axisLines[1].setStroke(Color.DARKGRAY);
         this.getChildren().add(axisLines[1]);
         for (int i = 0; i < 2 * MAX_NUMBER_OF_GRIDLINES; i++) {
             Label tempLabel = new Label();
@@ -87,7 +99,7 @@ public class PlotArea extends Group {
 
             this.getChildren().add(tempLabel);
             Line tempLine = new Line();
-            tempLine.setFill(Color.DARKGRAY);
+            tempLine.setStroke(Color.DARKGRAY);
             tempLine.setStrokeWidth(0.2);
             gridLines.add(tempLine);
             if (i < MAX_NUMBER_OF_GRIDLINES) {
@@ -123,6 +135,7 @@ public class PlotArea extends Group {
 
         functions.add(index, new PlotFunction(function, this));
         if (!function.checkSyntax()) {
+            showErrorWindow();
             changeFunctionVisibility(index, false);
         }
         drawPlotArea();
@@ -161,7 +174,8 @@ public class PlotArea extends Group {
      */
     public void addVariable(int index, Argument argument) {
         if (!argument.checkSyntax()) {
-            argument = new Argument("rxeydtcugvbih = 1"); // no clue what the error is
+            showErrorWindow();
+            argument = new Argument("rxeydtcugvbih = 1"); // no clue what the error could be, but better save than sorry
         }
         for (PlotFunction f : functions) {
             f.getFunction().addArguments(argument);
@@ -199,32 +213,9 @@ public class PlotArea extends Group {
         axisLines[1].setStartX(yAxisPos);
         axisLines[1].setEndX(yAxisPos);
 
-        // GridLines
-        double distanceBetweenGridlinesX = plotCoordinatesWidth, distanceToFirstLineX;
-        double distanceBetweenGridlinesY = plotCoordinatesHeight, distanceToFirstLineY;
-        while (distanceBetweenGridlinesX > MAX_NUMBER_OF_GRIDLINES) {
-            distanceBetweenGridlinesX *= 0.1;
-        }
-        while (distanceBetweenGridlinesX < MAX_NUMBER_OF_GRIDLINES * 0.1) {
-            distanceBetweenGridlinesX *= 10;
-        }
-        if (distanceBetweenGridlinesX < MAX_NUMBER_OF_GRIDLINES * 0.2) {
-            distanceBetweenGridlinesX *= 5;
-        } else if (distanceBetweenGridlinesX < MAX_NUMBER_OF_GRIDLINES >> 1) {
-            distanceBetweenGridlinesX *= 2;
-        }
-
-        while (distanceBetweenGridlinesY > MAX_NUMBER_OF_GRIDLINES) {
-            distanceBetweenGridlinesY /= 10;
-        }
-        while (distanceBetweenGridlinesY < MAX_NUMBER_OF_GRIDLINES * 0.1) {
-            distanceBetweenGridlinesY *= 10;
-        }
-        if (distanceBetweenGridlinesY < MAX_NUMBER_OF_GRIDLINES * 0.2) {
-            distanceBetweenGridlinesY *= 5;
-        } else if (distanceBetweenGridlinesY < MAX_NUMBER_OF_GRIDLINES >> 1) {
-            distanceBetweenGridlinesY *= 2;
-        }
+        // GridLines + Labels for coordinates
+        double distanceBetweenGridlinesX = getNumberOfGridLinesWithCurrentZoomFactor(plotCoordinatesWidth), distanceToFirstLineX;
+        double distanceBetweenGridlinesY = getNumberOfGridLinesWithCurrentZoomFactor(plotCoordinatesHeight), distanceToFirstLineY;
         distanceBetweenGridlinesX = plotCoordinatesWidth / distanceBetweenGridlinesX;
         distanceToFirstLineX = (-offset[0]) % distanceBetweenGridlinesX;
         distanceToFirstLineX = distanceToFirstLineX / plotCoordinatesWidth * width;
@@ -239,7 +230,7 @@ public class PlotArea extends Group {
             if (d < width) {
                 gridLines.get(i).setStartX(d);
                 gridLines.get(i).setEndX(d);
-                labelsForAxis.get(i).setText(Double.toString(Math.round((offset[0] + distanceToFirstLineX / width * plotCoordinatesWidth + distanceBetweenGridlinesX / width * plotCoordinatesWidth * i)*100000000)/100000000.0));
+                labelsForAxis.get(i).setText(Double.toString(Math.round((offset[0] + distanceToFirstLineX / width * plotCoordinatesWidth + distanceBetweenGridlinesX / width * plotCoordinatesWidth * i) * 100000000) / 100000000.0));
                 labelsForAxis.get(i).setLayoutX(d - 2);
                 labelsForAxis.get(i).setLayoutY(height - 20);
             } else {
@@ -253,7 +244,7 @@ public class PlotArea extends Group {
             if (d < height) {
                 gridLines.get(i).setStartY(height - d);
                 gridLines.get(i).setEndY(height - d);
-                labelsForAxis.get(i).setText(Double.toString(Math.round((offset[1] + distanceToFirstLineY / height * plotCoordinatesHeight + distanceBetweenGridlinesY / height * plotCoordinatesHeight * (i-MAX_NUMBER_OF_GRIDLINES))*10000000)/10000000.0));
+                labelsForAxis.get(i).setText(Double.toString(Math.round((offset[1] + distanceToFirstLineY / height * plotCoordinatesHeight + distanceBetweenGridlinesY / height * plotCoordinatesHeight * (i - MAX_NUMBER_OF_GRIDLINES)) * 10000000) / 10000000.0));
                 labelsForAxis.get(i).setLayoutX(20);
                 labelsForAxis.get(i).setLayoutY(height - d);
             } else {
@@ -262,9 +253,25 @@ public class PlotArea extends Group {
                 labelsForAxis.get(i).setLayoutX(-100);
             }
         }
+
         for (PlotFunction f : functions) {
             f.recalculateLinesPosition(offset, plotCoordinatesWidth, plotCoordinatesHeight, width, height);
         }
+    }
+
+    private double getNumberOfGridLinesWithCurrentZoomFactor(double coordinatesWidth) {
+        while (coordinatesWidth > MAX_NUMBER_OF_GRIDLINES) {
+            coordinatesWidth *= 0.1;
+        }
+        while (coordinatesWidth < MAX_NUMBER_OF_GRIDLINES * 0.1) {
+            coordinatesWidth *= 10;
+        }
+        if (coordinatesWidth < MAX_NUMBER_OF_GRIDLINES * 0.2) {
+            coordinatesWidth *= 5;
+        } else if (coordinatesWidth < MAX_NUMBER_OF_GRIDLINES >> 1) {
+            coordinatesWidth *= 2;
+        }
+        return coordinatesWidth;
     }
 
     /**
@@ -283,6 +290,13 @@ public class PlotArea extends Group {
         drawPlotArea();
     }
 
+    public void setPlottedArea(double deltaX, double deltaY, double plotCoordsWidth, double plotCoordsHeight) {
+        this.offset[0] = deltaX;
+        this.offset[1] = deltaY;
+        this.plotCoordinatesWidth = plotCoordsWidth;
+        this.plotCoordinatesHeight = plotCoordsHeight;
+    }
+
     /**
      * Resizes the plotting area to the specified dimensions.
      *
@@ -290,6 +304,22 @@ public class PlotArea extends Group {
      * @param newHeight The new height of the plotting area.
      */
     public void resize(double newWidth, double newHeight) {
+        this.width = newWidth;
+        this.height = newHeight;
+        this.background.setWidth(newWidth);
+        this.background.setHeight(newHeight);
+        this.axisLines[0].setEndX(width);
+        this.axisLines[1].setEndY(height);
+
+        for (int i = 0; i < 2 * MAX_NUMBER_OF_GRIDLINES; i++) {
+            Line tempLine = gridLines.get(i);
+            if (i < MAX_NUMBER_OF_GRIDLINES) {
+                tempLine.setEndY(height);
+            } else {
+                tempLine.setEndX(width);
+            }
+        }
+        drawPlotArea();
         // todo
     }
 
@@ -304,6 +334,30 @@ public class PlotArea extends Group {
         functions.get(index).changeFunctionVisibility(visibility);
     }
 
+    public void showErrorWindow() {
+
+        Stage stage = new Stage();
+        Button b = new Button("ok");
+        b.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                stage.close();
+            }
+        });
+        Label l = new Label("Syntax error!");
+        l.setPadding(new Insets(10));
+        b.setPadding(new Insets(10, 20, 10, 20));
+        VBox vb = new VBox(l, b);
+        vb.setAlignment(Pos.CENTER);
+        Scene scene = new Scene(vb, 200, 100);
+        stage.setTitle("Error");
+        stage.setScene(scene);
+        stage.initStyle(StageStyle.UTILITY);
+        stage.setAlwaysOnTop(true);
+
+        stage.show();
+    }
+
     /**
      * Toggles the visibility of a function at the specified index.
      *
@@ -311,5 +365,14 @@ public class PlotArea extends Group {
      */
     public void changeFunctionVisibility(int index) {
         functions.get(index).changeFunctionVisibility();
+    }
+
+    public void toggleDarkMode(boolean darkMode) {
+        if (darkMode) {
+            ((Rectangle) (this.getChildren().get(0))).setFill(Color.rgb(30, 30, 30));
+        } else {
+            ((Rectangle) (this.getChildren().get(0))).setFill(Color.LIGHTGRAY);
+
+        }
     }
 }
