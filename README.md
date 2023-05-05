@@ -24,7 +24,7 @@ Plotter is a Java-based graphical function plotting application that allows user
 ### Building and Running
 
 1. Clone the repository:
-git clone https://github.com/yourusername/plotter.git
+git clone https://github.com/TheD4rkCoder/Plotter
 cd plotter
 2. Build the project with Maven:
 mvn clean install
