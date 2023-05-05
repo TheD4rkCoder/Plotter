@@ -5,6 +5,12 @@
 }
 
 
+.scroll-pane{
+    -fx-background-color: rgb(50, 50, 50);
+    -fx-focus-color: rgb(50, 50, 50);
+    -fx-background: rgb(0, 0, 0, 0);
+    -fx-background-radius: 5;
+}
 
 .button {
     -fx-text-fill: #c6d6f7;
