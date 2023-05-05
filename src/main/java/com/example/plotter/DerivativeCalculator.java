@@ -1,29 +1,24 @@
-/**
- * DerivativeCalculator is a utility class for calculating the numerical derivative
- * of a mathematical function using the finite difference method.
- * It utilizes the mXparser library for parsing and evaluating mathematical expressions.
- *
- * @author Plotter
- * @version 1.0
- */
 package com.example.plotter;
 
 import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Expression;
 
-
+/**
+ * This class provides methods to calculate the derivative of a given function
+ * using the finite difference method.
+ */
 public class DerivativeCalculator {
 
-
     /**
-     * Calculates the numerical derivative of a given function at a specified point.
+     * Calculates the numerical derivative of the given function at a specific point.
      *
-     * @param function The function as a string.
-     * @param variable The variable name in the function.
+     * @param function The function to calculate the derivative of, represented as a string.
+     * @param variable The variable used in the function, represented as a string.
      * @param point    The point at which to calculate the derivative.
-     * @param delta    The finite difference used for calculating the derivative.
-     * @return The numerical derivative value, rounded to 2 decimal places.
+     * @param delta    The step size used for finite difference calculations.
+     * @return The approximate value of the derivative at the specified point, rounded to 3 decimal places.
      */
+
     public static double calculateDerivative(String function, String variable, double point, double delta) {
         Argument x = new Argument(variable, point);
         Expression e = new Expression(function, x);
@@ -35,13 +30,12 @@ public class DerivativeCalculator {
         return roundToDecimalPlaces(derivative, 2);
     }
 
-
     /**
-     * Rounds a double value to the specified number of decimal places.
+     * Rounds a given number to a specified number of decimal places.
      *
-     * @param value  The double value to round.
-     * @param places The number of decimal places to round to.
-     * @return The rounded double value.
+     * @param value  The number to be rounded.
+     * @param places The number of decimal places to round the value to.
+     * @return The rounded value.
      */
     public static double roundToDecimalPlaces(double value, int places) {
         double scale = Math.pow(10, places);

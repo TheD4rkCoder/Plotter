@@ -38,7 +38,7 @@ public class ScrollPaneFunctionsElement extends HBox{
      */
     public ScrollPaneFunctionsElement(int index, PlotArea plotArea, VBox root, Layout layout) {
 
-        StringBuilder beginFunctionName = new StringBuilder(new String()); //= Character.toString(97 + ((index > 3) ? index + 1 : index)%26);
+        StringBuilder beginFunctionName = new StringBuilder(); //= Character.toString(97 + ((index > 3) ? index + 1 : index)%26);
         int ind = indexes.size();
         while (ind >= 0) {
             beginFunctionName.append(Character.toString(97 + ((ind % 24 > 3) ? (ind % 24 > 21) ? ind % 24 + 2 : ind % 24 + 1 : ind % 24)));
@@ -47,6 +47,7 @@ public class ScrollPaneFunctionsElement extends HBox{
         beginFunctionName.append("(x) = x");
         init(index, plotArea, root, layout, beginFunctionName.toString());
     }
+
     public ScrollPaneFunctionsElement(int index, PlotArea plotArea, VBox root, Layout layout, String equation) { // layout for adding a new Function for the derivative
         init(index, plotArea, root, layout, equation);
     }

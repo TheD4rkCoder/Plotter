@@ -10,6 +10,7 @@ package com.example.plotter;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Cursor;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -17,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -51,8 +53,7 @@ public class Layout extends Group {
         plotArea.setLayoutX(2);
         plotArea.setLayoutY(2);
 
-
-        scrollPaneFunctions = new ScrollPane();
+        ScrollPane scrollPaneFunctions = new ScrollPane();
         scrollPaneFunctions.setLayoutX(width * 0.666 + 4);
         scrollPaneFunctions.setLayoutY(height * 0.05);
         scrollPaneFunctions.setContent(functions);
@@ -60,12 +61,13 @@ public class Layout extends Group {
         scrollPaneFunctions.setPrefHeight(height * 0.2);
         scrollPaneFunctions.setStyle("-fx-border-radius: 5");
         this.getChildren().add(scrollPaneFunctions);
-        scrollPaneVariables = new ScrollPane();
+        ScrollPane scrollPaneVariables = new ScrollPane();
         scrollPaneVariables.setLayoutX(width * 0.666 + 4);
         scrollPaneVariables.setLayoutY(height * 0.3);
         scrollPaneVariables.setContent(constants);
         scrollPaneVariables.setPrefWidth(width * 0.334 - 8);
         scrollPaneVariables.setPrefHeight(height * 0.2);
+        scrollPaneVariables.setStyle("-fx-background-radius: 7; -fx-border-radius: 7;");  //add borders
         this.getChildren().add(scrollPaneVariables);
         Button addFunctionButton = new Button("+");
         functions.getChildren().add(addFunctionButton);
@@ -75,7 +77,7 @@ public class Layout extends Group {
         Button addVariableButton = new Button("+");
         constants.getChildren().add(addVariableButton);
         addVariableButton.setOnAction(actionEvent -> {
-            HBox newRow = new ScrollPaneVariablesElement(constants.getChildren().size() - 1, plotArea, constants);
+            HBox newRow = new ScrollPaneVariablesElement(constants.getChildren().size() - 1, plotArea, constants).getContent();
             newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
             constants.getChildren().add(constants.getChildren().size() - 1, newRow);
         });

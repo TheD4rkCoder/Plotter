@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 import org.mariuszgromada.math.mxparser.*;
 
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * The Plotter class extends the JavaFX Application class and is responsible for
@@ -23,6 +24,16 @@ import java.io.IOException;
 public class Plotter extends Application {
     final double BEGINWIDTH = 1200;  // The initial width of the window
     final double BEGINHEIGHT = 800;  // The initial height of the window
+
+    /**
+     * The main method is the entry point for the JavaFX application.
+     * It launches the application, calling the start method.
+     *
+     * @param args Command-line arguments.
+     */
+    public static void main(String[] args) {
+        launch();
+    }
 
     /**
      * The start method is called when the JavaFX application is launched.
@@ -51,23 +62,12 @@ public class Plotter extends Application {
             }
         });
         // stage.setFullScreen(true);
-        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
 
         stage.setMinHeight(400);
         stage.setMinWidth(600);
         stage.setTitle("Plotter");
         stage.setScene(scene);
         stage.show();
-    }
-
-
-    /**
-     * The main method is the entry point for the JavaFX application.
-     * It launches the application, calling the start method.
-     *
-     * @param args Command-line arguments.
-     */
-    public static void main(String[] args) {
-        launch();
     }
 }
