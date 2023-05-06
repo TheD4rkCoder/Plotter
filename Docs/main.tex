@@ -81,6 +81,22 @@
 
 \subsection{Projektziele}
 
+In diesem Projekt verfolgen wir das Ziel, eine benutzerfreundliche und leistungsfähige grafische Funktionen-Plotting-Anwendung zu entwickeln, die es Benutzern ermöglicht, mathematische Funktionen und ihre Ableitungen zu visualisieren und zu analysieren. Um dieses Ziel zu erreichen, haben wir uns folgende spezifische Ziele gesetzt:
+
+\begin{itemize}
+\item Entwicklung einer benutzerfreundlichen Oberfläche, die es Benutzern ermöglicht, Funktionen einfach einzugeben und zu bearbeiten.
+\item Unterstützung einer breiten Palette von mathematischen Funktionen, einschließlich linearer, quadratischer, exponentieller und trigonometrischer Funktionen.
+\item Integration von APIs wie mxParser und JScience, um die Funktionalität und Benutzerfreundlichkeit der Anwendung zu erweitern.
+\item Implementierung von Funktionen zur Berechnung und Anzeige von Ableitungen und Kurvendiskussionen.
+\item Bereitstellung von Werkzeugen zur Anpassung der Darstellung von Funktionen und des Plotbereichs.
+\item Ermöglichung von Zoomen und Verschieben des Plotbereichs, um die Anzeige von Funktionen flexibel zu gestalten.
+\item Entwicklung eines effektiven Testverfahrens, um sicherzustellen, dass die Anwendung korrekt funktioniert und benutzerfreundlich ist.
+\item Erstellung einer umfassenden Dokumentation, die den Entwicklungsprozess, die Systemarchitektur und die Benutzung der Anwendung beschreibt.
+\end{itemize}
+
+Durch das Erreichen dieser Ziele wollen wir eine leistungsstarke und benutzerfreundliche Plotter-Anwendung schaffen, die sowohl für den Bildungsbereich als auch für professionelle Anwender wertvoll ist und die Visualisierung und Analyse von mathematischen Funktionen vereinfacht.
+
+
 \subsection{Unsere Vision}
 Unsere Vision für das Plotter-Projekt war es, eine benutzerfreundliche und leistungsfähige Java-basierte grafische Funktionen-Plotting-Anwendung zu entwickeln, die es Benutzern ermöglicht, mathematische Funktionen und ihre Ableitungen zu visualisieren. Wir wollten eine breite Palette von Funktionen unterstützen, einschließlich linearer, quadratischer, exponentieller und trigonometrischer Funktionen. Dabei sollte die Anwendung die mxParser-Bibliothek verwenden, um mathematische Ausdrücke zu analysieren und ihre Werte zu berechnen.
 
@@ -98,15 +114,47 @@ In unserem Plotter-Projekt haben wir verschiedene APIs in Betracht gezogen, um d
 
 mxParser ist eine vielseitige und leistungsfähige Bibliothek zur Analyse und Berechnung mathematischer Ausdrücke. Die Bibliothek ist in Java geschrieben und unterstützt eine breite Palette von Funktionen, einschließlich algebraischer, trigonometrischer, exponentieller und logarithmischer Funktionen. Wir haben mxParser in unserem Plotter-Projekt verwendet, um mathematische Ausdrücke zu analysieren und ihre Werte zu berechnen. Die offizielle Website von mxParser bietet umfassende Dokumentation und Beispiele zur Verwendung der Bibliothek: \url{http://mathparser.org/}
 
-\newpage
-
 \subsubsection{JScience}
 
 JScience ist eine umfangreiche Java-Bibliothek, die verschiedene wissenschaftliche Disziplinen abdeckt, darunter Mathematik, Physik, Chemie und Informatik. Die Bibliothek bietet eine Reihe von Funktionen, die für unser Plotter-Projekt nützlich sein könnten, wie z.B. Unterstützung für komplexe Zahlen, Einheitenkonversion und lineare Algebra. JScience könnte verwendet werden, um die Funktionalität unserer Anwendung zu erweitern und die Unterstützung für zusätzliche mathematische Funktionen und Operationen zu verbessern. Weitere Informationen zu JScience finden Sie auf der offiziellen Website: \url{http://jscience.org/}\\
 
 Durch die Integration dieser APIs in unser Plotter-Projekt können wir die Benutzererfahrung und die Funktionalität unserer Anwendung weiter verbessern und eine breitere Palette von mathematischen Funktionen und Operationen unterstützen.
 
+\newpage
+
 \subsection{Technologien und Tools}
+
+Bei der Entwicklung des Plotters haben wir eine Reihe von Technologien und Tools verwendet, um eine solide und benutzerfreundliche Anwendung zu erstellen. In diesem Abschnitt werden die wichtigsten Technologien und Tools vorgestellt, die wir im Projekt eingesetzt haben:
+
+\subsection{Programmiersprache und Plattform}
+
+\begin{itemize}
+\item \textbf{Java}: Wir haben uns für die Programmiersprache Java entschieden, da sie plattformübergreifend, objektorientiert und gut geeignet für die Entwicklung von grafischen Anwendungen ist. Java bietet eine breite Palette von Bibliotheken und Frameworks, die die Implementierung der benötigten Funktionen erleichtern.
+
+\item \textbf{JavaFX}: Für die Erstellung der grafischen Benutzeroberfläche haben wir JavaFX verwendet, ein modernes Framework für die Entwicklung von Desktop-Anwendungen in Java. JavaFX ermöglicht die Erstellung von ansprechenden und interaktiven Benutzeroberflächen und bietet viele nützliche UI-Komponenten, die für unser Projekt relevant sind.
+\end{itemize}
+
+\subsection{APIs und Bibliotheken}
+
+\begin{itemize}
+\item \textbf{mxParser}: Diese leistungsfähige Bibliothek wird verwendet, um mathematische Ausdrücke zu analysieren und ihre Werte zu berechnen. mxParser unterstützt eine Vielzahl von Funktionen, was es uns ermöglicht, eine breite Palette von mathematischen Funktionen in unserer Anwendung zu unterstützen.
+
+\item \textbf{JScience}: JScience ist eine umfangreiche Java-Bibliothek, die verschiedene wissenschaftliche Disziplinen abdeckt. Durch die Integration von JScience in unser Projekt könnten wir die Funktionalität unserer Anwendung erweitern und zusätzliche mathematische Funktionen und Operationen unterstützen.
+\end{itemize}
+
+\subsection{Entwicklungsumgebung und Tools}
+
+\begin{itemize}
+\item \textbf{IntelliJ IDEA}: Wir haben die IntelliJ IDEA-Entwicklungsumgebung verwendet, um unseren Code zu schreiben, zu testen und zu debuggen. IntelliJ IDEA bietet eine Vielzahl von Funktionen, die die Entwicklung von Java- und JavaFX-Anwendungen erleichtern, einschließlich Code-Vervollständigung, Refactoring-Tools und Integration mit Versionskontrollsystemen wie Git.
+
+\item \textbf{Maven}: Maven ist ein Build-Management-Tool, das wir verwendet haben, um den Build-Prozess zu automatisieren und die Abhängigkeiten unseres Projekts zu verwalten. Maven erleichtert die Integration von externen Bibliotheken wie mxParser und JScience und stellt sicher, dass unser Projekt auf verschiedenen Plattformen und Systemen konsistent gebaut und ausgeführt werden kann.
+
+\newpage
+
+\item \textbf{Git}: Für die Versionskontrolle und das Teamwork haben wir Git verwendet. Git ermöglicht es uns, Änderungen am Code nachzuvollziehen, verschiedene Versionen der Anwendung zu verwalten und die Zusammenarbeit zwischen Teammitgliedern zu erleichtern.
+\end{itemize}
+
+Durch die Kombination dieser Technologien und Tools konnten wir eine leistungsfähige und benutzerfreundliche Anwendung entwickeln, die es Benutzern ermöglicht, mathematische Funktionen effizient zu visualisieren und zu analysieren.
 
 \newpage
 
@@ -129,9 +177,32 @@ Die folgende Abbildung zeigt ein Beispiel für ein Kandan-Board:
 
 Insgesamt bietet Kandan eine einfache und effektive Möglichkeit, den Fortschritt unseres Plotter-Projekts zu verwalten und sicherzustellen, dass wir kontinuierlich Verbesserungen vornehmen und auf unsere Ziele hinarbeiten.
 
-\subsection{Anwendung von Kanban im Projekt}
+\newpage
+
+\subsection{Anwendung von Kanban}
+
+Im Verlauf unseres Projekts haben wir uns für das Vorgehensmodell Kanban entschieden, um den Entwicklungsprozess zu organisieren und zu steuern. Kanban ist eine agile Methode, die auf kontinuierlicher Verbesserung und Flexibilität basiert. Es hilft, den Arbeitsfluss zu visualisieren, Engpässe zu identifizieren und die Produktivität des Teams zu steigern.
+
+Wir haben ein Kanban-Board verwendet, um unsere Aufgaben und den Fortschritt im Projekt darzustellen. Unser Kanban-Board war in mehrere Spalten unterteilt, die den verschiedenen Phasen des Arbeitsablaufs entsprechen, z.B. 'To Do', 'In Progress', 'Review' und 'Done'. Jede Aufgabe wurde als Karte auf dem Board dargestellt, und wir haben die Karten zwischen den Spalten verschoben, um den Fortschritt der Aufgaben zu visualisieren.
+
+Um den Entwicklungsprozess effektiv zu gestalten, haben wir unser Programm in kleinere Teile aufgeteilt, die wir Vorgänge (in Jira, dem von uns verwendeten Projektmanagement-Tool, genannt) nennen. Dies hat dazu beigetragen, dass wir uns auf bestimmte Aspekte der Anwendung konzentrieren und diese unabhängig voneinander entwickeln konnten.
+
+In regelmäßigen Stand-up-Meetings haben wir den Status unserer Aufgaben überprüft, Engpässe identifiziert und die Prioritäten im Projekt angepasst. Dadurch konnten wir sicherstellen, dass die wichtigsten Aufgaben stets im Fokus standen und effektiv bearbeitet wurden.
 
 \subsection{Vorteile und Erfahrungen}
+
+Durch die Anwendung von Kanban in unserem Projekt haben wir verschiedene Vorteile erfahren:
+
+\begin{itemize}
+\item \textbf{Flexibilität}: Kanban hat es uns ermöglicht, schnell auf Änderungen im Projektumfeld oder in den Anforderungen zu reagieren. Dadurch konnten wir unsere Prioritäten anpassen und sicherstellen, dass wir uns auf die wichtigsten Aspekte des Projekts konzentrierten.
+\item \textbf{Transparenz}: Durch die Visualisierung des Arbeitsablaufs auf dem Kanban-Board konnten alle Teammitglieder den aktuellen Status der Aufgaben und den Fortschritt des Projekts einsehen. Dies hat zu einer besseren Kommunikation und Zusammenarbeit im Team geführt.
+\item \textbf{Effizienz}: Die Anwendung von Kanban und die Aufteilung des Programms in kleinere Vorgänge haben dazu beigetragen, Engpässe im Arbeitsablauf zu identifizieren und zu beseitigen. Dies hat die Produktivität des Teams gesteigert und dazu geführt, dass Aufgaben schneller und effizienter abgeschlossen wurden.
+\item \textbf{Kontinuierliche Verbesserung}: Die regelmäßigen Stand-up-Meetings und die Möglichkeit, den Arbeitsablauf anzupassen, haben dazu beigetragen, kontinuierliche Verbesserungen im Projektprozess zu fördern. Dadurch konnten wir mögliche Probleme frühzeitig erkennen und Lösungen entwickeln, um diese zu beheben.
+\end{itemize}
+
+\newpage
+
+Insgesamt hat die Anwendung von Kanban in unserem Projekt dazu beigetragen, einen effizienten und flexiblen Entwicklungsprozess zu gestalten, der es uns ermöglichte, eine erfolgreiche und benutzerfreundliche Anwendung zu entwickeln.
 
 \section{Anforderungsanalyse}
 
@@ -166,11 +237,52 @@ Das Diagramm veranschaulicht die verschiedenen Aktionen, die ein Benutzer ausfü
 
 \subsection{Übersicht}
 
+Die Systemarchitektur des Projekts ist in zwei Hauptkomponenten unterteilt: das Frontend und das Backend. Das Frontend ist für die Benutzeroberfläche und die Interaktionen mit dem Benutzer verantwortlich, während das Backend die Berechnungen und die Verarbeitung der eingegebenen mathematischen Funktionen übernimmt. Zusammen bieten sie eine effektive und benutzerfreundliche Anwendung zum Plotten von mathematischen Funktionen und ihren Ableitungen.
+
 \subsection{Frontend}
 
+Das Frontend der Anwendung ist mit JavaFX implementiert, einer leistungsstarken und flexiblen Bibliothek für die Erstellung grafischer Benutzeroberflächen. Es bietet eine Vielzahl von UI-Komponenten und Steuerelementen, die für die Implementierung der Anwendung erforderlich sind, einschließlich Szenen, Gruppen, Schaltflächen, Eingabefelder und mehr. Das Frontend ist für die Organisation und Darstellung der Benutzeroberfläche verantwortlich, einschließlich der Eingabefelder für Funktionen, Schaltflächen für mathematische Operationen und Anzeige der Funktionsplots im Plotbereich.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Resources/gui_screenshot.png}
+\caption{Screenshot der Benutzeroberfläche der Anwendung}
+\label{fig:gui_screenshot}
+\end{figure}
 \subsection{Backend}
 
+\newpage
+
+Das Backend der Anwendung ist für die Verarbeitung der eingegebenen mathematischen Funktionen, Berechnung der Ableitungen und Aktualisierung des Plotbereichs verantwortlich. Es verwendet die mxparser-Bibliothek, um mathematische Ausdrücke zu parsen und auszuwerten, und die Hauptklassen der Anwendung, um die grafischen Darstellungen der Funktionen und ihrer Ableitungen zu erzeugen. Die Klassen DerivativeCalculator, PlotFunction und PlotArea sind die Hauptkomponenten des Backends und arbeiten zusammen, um die gewünschte Funktionalität bereitzustellen.
+
 \subsection{Klassendiagramm}
+
+Das Klassendiagramm zeigt die Struktur und die Beziehungen zwischen den Hauptklassen der Anwendung. Es hilft dabei, die Verantwortlichkeiten jeder Klasse und die Interaktionen zwischen den Klassen besser zu verstehen. 
+
+\begin{itemize}
+\item \textbf{DerivativeCalculator}: Diese Klasse ist verantwortlich für die Berechnung der Ableitungen der eingegebenen mathematischen Funktionen. Sie verwendet die mxparser-Bibliothek und interagiert mit der PlotFunction-Klasse, um die Ableitungen zu berechnen und bereitzustellen.
+\item \textbf{Layout}: Diese Klasse ist ein benutzerdefiniertes JavaFX Group-Objekt, das die Benutzeroberfläche der Anwendung organisiert. Es enthält die Komponenten wie Eingabefelder, Schaltflächen und den Plotbereich und stellt sicher, dass diese Elemente auf dem Bildschirm richtig angeordnet sind.
+
+\item \textbf{PlotArea}: Diese Klasse ist ein benutzerdefiniertes JavaFX Group-Objekt, das den Plotbereich der Anwendung darstellt. Es verwaltet das Hinzufügen, Entfernen und Aktualisieren von Funktionen, Variablen und Gitterlinien im Plotbereich.
+
+\item \textbf{PlotFunction}: Die PlotFunction-Klasse verwaltet die grafische Darstellung einer mathematischen Funktion. Sie berechnet die Positionen der Liniensegmente, die die Kurve der Funktion approximieren, und steuert die Sichtbarkeit der Funktion im Plotbereich.
+
+\item \textbf{Plotter}: Die Plotter-Klasse ist die Hauptklasse der JavaFX-Anwendung und steuert den gesamten Programmablauf. Sie verwendet die mxparser-Bibliothek, um die eingegebenen mathematischen Funktionen zu analysieren und auszuwerten.
+
+\item \textbf{ScrollPaneFunctionsElement}: Diese Klasse stellt ein einzelnes Funktionselement in der ScrollPane dar, einschließlich eines Textfelds zur Eingabe der Funktion und Schaltflächen zum Berechnen der Ableitung, Löschen der Funktion, Steuern der Sichtbarkeit und Anzeigen der Funktionsanalyse.
+
+\item \textbf{ScrollPaneVariablesElement}: Diese Klasse stellt ein einzelnes Variablenelement in der ScrollPane dar, einschließlich eines Textfelds zur Eingabe des Variablenwerts und einer Schaltfläche zum Löschen der Variable.
+\end{itemize}
+
+Die Klassen interagieren miteinander, um die Hauptfunktionalitäten der Anwendung bereitzustellen. Die Plotter-Klasse agiert als zentraler Koordinator, der die anderen Klassen steuert und verwaltet, um das Plotten von Funktionen, Berechnung von Ableitungen und Aktualisierung der Benutzeroberfläche zu ermöglichen.\\
+Im Folgenden finden Sie das Klassendiagramm für das Projekt:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Resources/class_diagram.png}
+\caption{Klassendiagramm der Hauptklassen}
+\label{fig:class_diagram}
+\end{figure}
 
 \section{Umsetzung (Programmierung)}
 

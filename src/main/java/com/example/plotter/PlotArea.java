@@ -64,21 +64,15 @@ public class PlotArea extends Group {
     public PlotArea(double beginWidth, double beginHeight) {
         super();
         double[] initialMouseDragCoords = new double[2];
-        this.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouse) {
-                initialMouseDragCoords[0] = mouse.getX();
-                initialMouseDragCoords[1] = mouse.getY();
+        this.setOnMousePressed(mouse -> {
+            initialMouseDragCoords[0] = mouse.getX();
+            initialMouseDragCoords[1] = mouse.getY();
 
-            }
         });
-        this.setOnMouseDragged(new EventHandler<>() {
-            @Override
-            public void handle(MouseEvent mouse) {
-                changePlottedArea((initialMouseDragCoords[0] - mouse.getX()) / width * plotCoordinatesWidth, (mouse.getY() - initialMouseDragCoords[1]) / height * plotCoordinatesHeight, 1, 1);
-                initialMouseDragCoords[0] = mouse.getX();
-                initialMouseDragCoords[1] = mouse.getY();
-            }
+        this.setOnMouseDragged(mouse -> {
+            changePlottedArea((initialMouseDragCoords[0] - mouse.getX()) / width * plotCoordinatesWidth, (mouse.getY() - initialMouseDragCoords[1]) / height * plotCoordinatesHeight, 1, 1);
+            initialMouseDragCoords[0] = mouse.getX();
+            initialMouseDragCoords[1] = mouse.getY();
         });
         this.height = beginHeight;
         this.width = beginWidth;
