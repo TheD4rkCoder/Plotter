@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  6 MAY 2023 17:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  7 MAY 2023 01:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -260,7 +260,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 ...stagebuch (Umsetzung)}{14}{subsection.9.2}
+l.44 ...stagebuch (Umsetzung)}{19}{subsection.9.2}
                                                   % [1
 
 ])
@@ -318,25 +318,69 @@ Package pdftex.def Info: Resources/gui_screenshot.png  used on input line 248.
 <Resources/class_diagram.png, id=315, 752.0597pt x 736.25063pt>
 File: Resources/class_diagram.png Graphic file (type png)
 <use Resources/class_diagram.png>
-Package pdftex.def Info: Resources/class_diagram.png  used on input line 282.
+Package pdftex.def Info: Resources/class_diagram.png  used on input line 283.
 (pdftex.def)             Requested size: 345.0pt x 337.75818pt.
- [13 <./Resources/class_diagram.png>] [14] (./main.aux)
+ [13 <./Resources/class_diagram.png>]
+<Resources/ui_prototype.png, id=323, 973.38657pt x 668.4975pt>
+File: Resources/ui_prototype.png Graphic file (type png)
+<use Resources/ui_prototype.png>
+Package pdftex.def Info: Resources/ui_prototype.png  used on input line 298.
+(pdftex.def)             Requested size: 345.0pt x 236.93575pt.
+ [14 <./Resources/ui_prototype.png>] [15]
+Overfull \hbox (84.15134pt too wide) in paragraph at lines 331--334
+\T1/cmtt/m/n/10 --add-modules javafx.controls,javafx.fxml -jar target/plotter-1.0-SNAPSHOT.jar 
+ []
+
+<Resources/example_function.png, id=334, 301.8778pt x 149.05687pt>
+File: Resources/example_function.png Graphic file (type png)
+<use Resources/example_function.png>
+Package pdftex.def Info: Resources/example_function.png  used on input line 341.
+(pdftex.def)             Requested size: 241.49895pt x 119.24338pt.
+[16 <./Resources/example_function.png>]
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 349.
+
+
+LaTeX Font Warning: Command \large invalid in math mode on input line 350.
+
+<Resources/example_buttons.png, id=346, 100.87688pt x 32.37094pt>
+File: Resources/example_buttons.png Graphic file (type png)
+<use Resources/example_buttons.png>
+Package pdftex.def Info: Resources/example_buttons.png  used on input line 355.
+(pdftex.def)             Requested size: 172.5pt x 55.35486pt.
+<Resources/example_linear.png, id=347, 903.375pt x 624.08156pt>
+File: Resources/example_linear.png Graphic file (type png)
+<use Resources/example_linear.png>
+Package pdftex.def Info: Resources/example_linear.png  used on input line 368.
+(pdftex.def)             Requested size: 276.00105pt x 190.67313pt.
+[17 <./Resources/example_buttons.png> <./Resources/example_linear.png>]
+<Resources/example_quadratic.png, id=360, 904.88063pt x 625.58719pt>
+File: Resources/example_quadratic.png Graphic file (type png)
+<use Resources/example_quadratic.png>
+Package pdftex.def Info: Resources/example_quadratic.png  used on input line 376.
+(pdftex.def)             Requested size: 276.00105pt x 190.80858pt.
+<Resources/example_trigonometric.png, id=361, 903.375pt x 623.32875pt>
+File: Resources/example_trigonometric.png Graphic file (type png)
+<use Resources/example_trigonometric.png>
+Package pdftex.def Info: Resources/example_trigonometric.png  used on input line 383.
+(pdftex.def)             Requested size: 276.00105pt x 190.44313pt.
+ [18 <./Resources/example_quadratic.png> <./Resources/example_trigonometric.png>] [19] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E4EF33AD874A907F23E08529162E3DB8;6726.
+(rerunfilecheck)             Checksum: 2491DF581487EA3F9088580AC43AE7CE;6721.
  ) 
 Here is how much of TeX's memory you used:
- 9865 strings out of 475071
- 157954 string characters out of 5782907
- 520985 words of memory out of 5000000
- 31075 multiletter control sequences out of 15000+600000
+ 9933 strings out of 475071
+ 159592 string characters out of 5782907
+ 521251 words of memory out of 5000000
+ 31117 multiletter control sequences out of 15000+600000
  477589 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,77p,754b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (15 pages, 766820 bytes).
+ 72i,12n,77p,808b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (20 pages, 988037 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 333 compressed objects within 4 object streams
- 66 named destinations out of 1000 (max. 500000)
- 394 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 452 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
