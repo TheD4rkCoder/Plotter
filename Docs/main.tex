@@ -233,49 +233,15 @@ Das folgende Diagramm zeigt das Use-Case-Diagramm für unseren Plotter:
 
 Das Diagramm veranschaulicht die verschiedenen Aktionen, die ein Benutzer ausführen kann, um mit der Anwendung zu interagieren und mathematische Funktionen zu visualisieren und zu analysieren.
 
-\newpage
-
 \section{Systemarchitektur}
 
-\subsection{Hauptklassen und ihre Verantwortlichkeiten}
+\subsection{Übersicht}
 
-Das Projekt besteht aus den folgenden Hauptklassen:
+Die Systemarchitektur des Projekts ist in zwei Hauptkomponenten unterteilt: das Frontend und das Backend. Das Frontend ist für die Benutzeroberfläche und die Interaktionen mit dem Benutzer verantwortlich, während das Backend die Berechnungen und die Verarbeitung der eingegebenen mathematischen Funktionen übernimmt. Zusammen bieten sie eine effektive und benutzerfreundliche Anwendung zum Plotten von mathematischen Funktionen und ihren Ableitungen.
 
-\begin{itemize}
-\item \textbf{DerivativeCalculator.java}: Diese Klasse stellt Methoden zur Verfügung, um die Ableitung einer gegebenen Funktion mit der Methode der finiten Differenzen zu berechnen.
-\item \textbf{Layout.java}: Layout ist eine benutzerdefinierte JavaFX-Gruppe, die die Benutzeroberflächenkomponenten für die Plotter-Anwendung organisiert. Sie verwaltet die Platzierung der Plotbereiche, Scrollbereiche für Funktionen und Konstanten sowie Schaltflächen für verschiedene mathematische Operationen.
-\item \textbf{PlotArea.java}: PlotArea ist eine benutzerdefinierte JavaFX-Gruppe, die einen 2D-Plotbereich für mathematische Funktionen darstellt. Sie bietet Funktionen zum Hinzufügen, Entfernen und Aktualisieren von Funktionen, Variablen und Rasterschnitten. Es unterstützt auch das Scrollen, Zoomen und Ziehen des Plotbereichs.
-\item \textbf{PlotFunction.java}: PlotFunction ist eine Klasse zur Verwaltung der grafischen Darstellung einer mathematischen Funktion. Sie berechnet die Positionen der Liniensegmente, die die Kurve der Funktion annähern und die Funktionssichtbarkeit steuern.
-\item \textbf{Plotter.java}: Plotter ist eine JavaFX-Anwendung zur grafischen Darstellung mathematischer Funktionen. Sie verwendet die mxparser-Bibliothek zum Parsen und Auswerten der Funktionen.
-\item \textbf{ScrollPaneFunctionsElement.java}: ScrollPaneFunctionsElement stellt ein einzelnes Funktionselement in der Scrollansicht dar, einschließlich eines Eingabefelds (TextField) für die Eingabe und Schaltflächen für die Ableitungsrechnung, Löschung, Sichtbarkeit und Funktionsanalyse.
-\item \textbf{ScrollPaneVariablesElement.java}: ScrollPaneVariablesElement stellt ein einzelnes Variablenelement in der Scrollansicht dar, einschließlich eines Eingabefelds (TextField) für die Eingabe und einer Schaltfläche zum Löschen.
-\end{itemize}
+\subsection{Frontend}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{Resources/class_diagram.png}
-\caption{Klassendiagramm der Hauptklassen}
-\label{fig:class_diagram}
-\end{figure}
-
-\subsection{Hauptkomponenten der Anwendung und ihre Interaktionen}
-
-Die Hauptkomponenten der Anwendung sind in den oben genannten Klassen implementiert. Die Komponenten arbeiten zusammen, um eine benutzerfreundliche Oberfläche für das Plotten von Funktionen zu bieten. Die Funktionen werden mithilfe der mxparser-Bibliothek analysiert und ausgewertet, während JavaFX für die Erstellung und Verwaltung der grafischen Benutzeroberfläche verwendet wird.
-
-Die Plotter-Anwendung empfängt die vom Benutzer eingegebenen Funktionen und verarbeitet sie mithilfe der PlotFunction- und DerivativeCalculator-Klassen, um die grafischen Darstellungen der Funktionen und ihrer Ableitungen zu erzeugen. Die ScrollPaneFunctionsElement- und ScrollPaneVariablesElement-Klassen stellen Steuerelemente zur Verfügung, um die Funktionen und Variablen im Plotbereich zu bearbeiten. Die Layout-Klasse organisiert die Benutzeroberfläche und stellt sicher, dass die Komponenten auf dem Bildschirm richtig angeordnet sind.
-
-\subsection{Verwendete externe Bibliotheken oder APIs und deren Zweck im Projekt}
-
-In diesem Projekt werden die folgenden externen Bibliotheken und APIs verwendet:
-
-\begin{itemize}
-\item \textbf{mxparser}: Die mxparser-Bibliothek wird verwendet, um mathematische Ausdrücke zu parsen und auszuwerten. Sie bietet Funktionen zum Analysieren und Auswerten der vom Benutzer eingegebenen Funktionen.
-
-\item \textbf{JavaFX}: JavaFX wird für die Erstellung und Verwaltung der grafischen Benutzeroberfläche des Projekts verwendet. Es bietet eine Vielzahl von UI-Komponenten und Steuerelementen, die für die Implementierung der Anwendung erforderlich sind, einschließlich Szenen, Gruppen, Schaltflächen, Eingabefelder und mehr.
-
-\end{itemize}
-
-Zusammen ermöglichen diese externen Bibliotheken und APIs eine effektive Umsetzung der Anwendung und erleichtern die Interaktion zwischen den Hauptkomponenten der Anwendung.
+Das Frontend der Anwendung ist mit JavaFX implementiert, einer leistungsstarken und flexiblen Bibliothek für die Erstellung grafischer Benutzeroberflächen. Es bietet eine Vielzahl von UI-Komponenten und Steuerelementen, die für die Implementierung der Anwendung erforderlich sind, einschließlich Szenen, Gruppen, Schaltflächen, Eingabefelder und mehr. Das Frontend ist für die Organisation und Darstellung der Benutzeroberfläche verantwortlich, einschließlich der Eingabefelder für Funktionen, Schaltflächen für mathematische Operationen und Anzeige der Funktionsplots im Plotbereich.
 
 \begin{figure}[h]
 \centering
@@ -283,14 +249,40 @@ Zusammen ermöglichen diese externen Bibliotheken und APIs eine effektive Umsetz
 \caption{Screenshot der Benutzeroberfläche der Anwendung}
 \label{fig:gui_screenshot}
 \end{figure}
-
-\subsection{Übersicht}
-
-\subsection{Frontend}
-
 \subsection{Backend}
 
+\newpage
+
+Das Backend der Anwendung ist für die Verarbeitung der eingegebenen mathematischen Funktionen, Berechnung der Ableitungen und Aktualisierung des Plotbereichs verantwortlich. Es verwendet die mxparser-Bibliothek, um mathematische Ausdrücke zu parsen und auszuwerten, und die Hauptklassen der Anwendung, um die grafischen Darstellungen der Funktionen und ihrer Ableitungen zu erzeugen. Die Klassen DerivativeCalculator, PlotFunction und PlotArea sind die Hauptkomponenten des Backends und arbeiten zusammen, um die gewünschte Funktionalität bereitzustellen.
+
 \subsection{Klassendiagramm}
+
+Das Klassendiagramm zeigt die Struktur und die Beziehungen zwischen den Hauptklassen der Anwendung. Es hilft dabei, die Verantwortlichkeiten jeder Klasse und die Interaktionen zwischen den Klassen besser zu verstehen. 
+
+\begin{itemize}
+\item \textbf{DerivativeCalculator}: Diese Klasse ist verantwortlich für die Berechnung der Ableitungen der eingegebenen mathematischen Funktionen. Sie verwendet die mxparser-Bibliothek und interagiert mit der PlotFunction-Klasse, um die Ableitungen zu berechnen und bereitzustellen.
+\item \textbf{Layout}: Diese Klasse ist ein benutzerdefiniertes JavaFX Group-Objekt, das die Benutzeroberfläche der Anwendung organisiert. Es enthält die Komponenten wie Eingabefelder, Schaltflächen und den Plotbereich und stellt sicher, dass diese Elemente auf dem Bildschirm richtig angeordnet sind.
+
+\item \textbf{PlotArea}: Diese Klasse ist ein benutzerdefiniertes JavaFX Group-Objekt, das den Plotbereich der Anwendung darstellt. Es verwaltet das Hinzufügen, Entfernen und Aktualisieren von Funktionen, Variablen und Gitterlinien im Plotbereich.
+
+\item \textbf{PlotFunction}: Die PlotFunction-Klasse verwaltet die grafische Darstellung einer mathematischen Funktion. Sie berechnet die Positionen der Liniensegmente, die die Kurve der Funktion approximieren, und steuert die Sichtbarkeit der Funktion im Plotbereich.
+
+\item \textbf{Plotter}: Die Plotter-Klasse ist die Hauptklasse der JavaFX-Anwendung und steuert den gesamten Programmablauf. Sie verwendet die mxparser-Bibliothek, um die eingegebenen mathematischen Funktionen zu analysieren und auszuwerten.
+
+\item \textbf{ScrollPaneFunctionsElement}: Diese Klasse stellt ein einzelnes Funktionselement in der ScrollPane dar, einschließlich eines Textfelds zur Eingabe der Funktion und Schaltflächen zum Berechnen der Ableitung, Löschen der Funktion, Steuern der Sichtbarkeit und Anzeigen der Funktionsanalyse.
+
+\item \textbf{ScrollPaneVariablesElement}: Diese Klasse stellt ein einzelnes Variablenelement in der ScrollPane dar, einschließlich eines Textfelds zur Eingabe des Variablenwerts und einer Schaltfläche zum Löschen der Variable.
+\end{itemize}
+
+Die Klassen interagieren miteinander, um die Hauptfunktionalitäten der Anwendung bereitzustellen. Die Plotter-Klasse agiert als zentraler Koordinator, der die anderen Klassen steuert und verwaltet, um das Plotten von Funktionen, Berechnung von Ableitungen und Aktualisierung der Benutzeroberfläche zu ermöglichen.\\
+Im Folgenden finden Sie das Klassendiagramm für das Projekt:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Resources/class_diagram.png}
+\caption{Klassendiagramm der Hauptklassen}
+\label{fig:class_diagram}
+\end{figure}
 
 \section{Umsetzung (Programmierung)}
 
