@@ -82,7 +82,7 @@ public class PlotArea extends Group {
         });
         this.height = beginHeight;
         this.width = beginWidth;
-        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), 1 + 0.01 * scrollEvent.getDeltaY(), 1 + 0.01 * scrollEvent.getDeltaY()));
+        this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), 1 + 0.01 * ((scrollEvent.getDeltaY() <= -100) ? -99 : scrollEvent.getDeltaY()), 1 + 0.01 * ((scrollEvent.getDeltaY() <= -100) ? -99 : scrollEvent.getDeltaY())));
         background = new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY);
         this.getChildren().add(background);
         axisLines[0] = new Line(0, beginHeight / 2, beginWidth, beginHeight / 2);
