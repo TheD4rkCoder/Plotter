@@ -233,7 +233,56 @@ Das folgende Diagramm zeigt das Use-Case-Diagramm für unseren Plotter:
 
 Das Diagramm veranschaulicht die verschiedenen Aktionen, die ein Benutzer ausführen kann, um mit der Anwendung zu interagieren und mathematische Funktionen zu visualisieren und zu analysieren.
 
+\newpage
+
 \section{Systemarchitektur}
+
+\subsection{Hauptklassen und ihre Verantwortlichkeiten}
+
+Das Projekt besteht aus den folgenden Hauptklassen:
+
+\begin{itemize}
+\item \textbf{DerivativeCalculator.java}: Diese Klasse stellt Methoden zur Verfügung, um die Ableitung einer gegebenen Funktion mit der Methode der finiten Differenzen zu berechnen.
+\item \textbf{Layout.java}: Layout ist eine benutzerdefinierte JavaFX-Gruppe, die die Benutzeroberflächenkomponenten für die Plotter-Anwendung organisiert. Sie verwaltet die Platzierung der Plotbereiche, Scrollbereiche für Funktionen und Konstanten sowie Schaltflächen für verschiedene mathematische Operationen.
+\item \textbf{PlotArea.java}: PlotArea ist eine benutzerdefinierte JavaFX-Gruppe, die einen 2D-Plotbereich für mathematische Funktionen darstellt. Sie bietet Funktionen zum Hinzufügen, Entfernen und Aktualisieren von Funktionen, Variablen und Rasterschnitten. Es unterstützt auch das Scrollen, Zoomen und Ziehen des Plotbereichs.
+\item \textbf{PlotFunction.java}: PlotFunction ist eine Klasse zur Verwaltung der grafischen Darstellung einer mathematischen Funktion. Sie berechnet die Positionen der Liniensegmente, die die Kurve der Funktion annähern und die Funktionssichtbarkeit steuern.
+\item \textbf{Plotter.java}: Plotter ist eine JavaFX-Anwendung zur grafischen Darstellung mathematischer Funktionen. Sie verwendet die mxparser-Bibliothek zum Parsen und Auswerten der Funktionen.
+\item \textbf{ScrollPaneFunctionsElement.java}: ScrollPaneFunctionsElement stellt ein einzelnes Funktionselement in der Scrollansicht dar, einschließlich eines Eingabefelds (TextField) für die Eingabe und Schaltflächen für die Ableitungsrechnung, Löschung, Sichtbarkeit und Funktionsanalyse.
+\item \textbf{ScrollPaneVariablesElement.java}: ScrollPaneVariablesElement stellt ein einzelnes Variablenelement in der Scrollansicht dar, einschließlich eines Eingabefelds (TextField) für die Eingabe und einer Schaltfläche zum Löschen.
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Resources/class_diagram.png}
+\caption{Klassendiagramm der Hauptklassen}
+\label{fig:class_diagram}
+\end{figure}
+
+\subsection{Hauptkomponenten der Anwendung und ihre Interaktionen}
+
+Die Hauptkomponenten der Anwendung sind in den oben genannten Klassen implementiert. Die Komponenten arbeiten zusammen, um eine benutzerfreundliche Oberfläche für das Plotten von Funktionen zu bieten. Die Funktionen werden mithilfe der mxparser-Bibliothek analysiert und ausgewertet, während JavaFX für die Erstellung und Verwaltung der grafischen Benutzeroberfläche verwendet wird.
+
+Die Plotter-Anwendung empfängt die vom Benutzer eingegebenen Funktionen und verarbeitet sie mithilfe der PlotFunction- und DerivativeCalculator-Klassen, um die grafischen Darstellungen der Funktionen und ihrer Ableitungen zu erzeugen. Die ScrollPaneFunctionsElement- und ScrollPaneVariablesElement-Klassen stellen Steuerelemente zur Verfügung, um die Funktionen und Variablen im Plotbereich zu bearbeiten. Die Layout-Klasse organisiert die Benutzeroberfläche und stellt sicher, dass die Komponenten auf dem Bildschirm richtig angeordnet sind.
+
+\subsection{Verwendete externe Bibliotheken oder APIs und deren Zweck im Projekt}
+
+In diesem Projekt werden die folgenden externen Bibliotheken und APIs verwendet:
+
+\begin{itemize}
+\item \textbf{mxparser}: Die mxparser-Bibliothek wird verwendet, um mathematische Ausdrücke zu parsen und auszuwerten. Sie bietet Funktionen zum Analysieren und Auswerten der vom Benutzer eingegebenen Funktionen.
+
+\item \textbf{JavaFX}: JavaFX wird für die Erstellung und Verwaltung der grafischen Benutzeroberfläche des Projekts verwendet. Es bietet eine Vielzahl von UI-Komponenten und Steuerelementen, die für die Implementierung der Anwendung erforderlich sind, einschließlich Szenen, Gruppen, Schaltflächen, Eingabefelder und mehr.
+
+\end{itemize}
+
+Zusammen ermöglichen diese externen Bibliotheken und APIs eine effektive Umsetzung der Anwendung und erleichtern die Interaktion zwischen den Hauptkomponenten der Anwendung.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Resources/gui_screenshot.png}
+\caption{Screenshot der Benutzeroberfläche der Anwendung}
+\label{fig:gui_screenshot}
+\end{figure}
 
 \subsection{Übersicht}
 
