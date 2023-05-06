@@ -18,7 +18,8 @@ import java.util.Random;
 public class PlotFunction {
     private final Function function;
     private final ArrayList<Line> lines = new ArrayList<>();
-    private final int POINTS = 1000;
+    private final int POINTS = 2000;
+    private final int POINTS_FOR_DERIVATIVES = 200;
     Random random = new Random();
     private boolean isFunctionVisible = true;
 
@@ -34,7 +35,7 @@ public class PlotFunction {
         for (int i = 0; i < POINTS; i++) {
             Line temp = new Line();
             temp.setFill(color);
-            temp.setStrokeWidth(root.getWidth() / 200);
+            temp.setStrokeWidth(root.getWidth() / 400);
             temp.setStroke(color);
             lines.add(temp);
             root.getChildren().add(temp);
@@ -68,7 +69,6 @@ public class PlotFunction {
 
         int numOfPoints;
         if (function.getFunctionName().length() >= 3 && function.getFunctionName().startsWith("der")) {
-            int POINTS_FOR_DERIVATIVES = 100;
             numOfPoints = POINTS_FOR_DERIVATIVES;
         } else {
             numOfPoints = POINTS;
@@ -78,7 +78,11 @@ public class PlotFunction {
 
         double v = offset[0] + graphWidth / numOfPoints;
         for (int i = 1; i < numOfPoints; v += graphWidth / numOfPoints, i++) {
-            double posY = plotAreaHeight - (function.calculate(v) - offset[1]) / graphHeight * plotAreaHeight;
+            double value = function.calculate(v);
+            if (!Double.isFinite(value)) {
+                continue;
+            }
+            double posY = plotAreaHeight - (value - offset[1]) / graphHeight * plotAreaHeight;
             Line l = lines.get(i - 1);
             l.setEndX((double) i / numOfPoints * plotAreaWidth);
             l.setEndY(posY);
