@@ -205,12 +205,41 @@ Durch die Anwendung von Kanban in unserem Projekt haben wir verschiedene Vorteil
 Insgesamt hat die Anwendung von Kanban in unserem Projekt dazu beigetragen, einen effizienten und flexiblen Entwicklungsprozess zu gestalten, der es uns ermöglichte, eine erfolgreiche und benutzerfreundliche Anwendung zu entwickeln.
 
 \section{Anforderungsanalyse}
-
 \subsection{Funktionale Anforderungen}
+Funktionale Anforderungen beschreiben die Funktionalitäten, die das System bieten soll, um die gewünschten Ziele zu erreichen. Für das Plotter-Projekt umfassen die funktionalen Anforderungen:
+
+\begin{itemize}
+	\item Eingabe einer mathematischen Funktion durch den Benutzer.
+	\item Grafische Darstellung der eingegebenen Funktion auf einer zweidimensionalen Zeichenfläche.
+	\item Verschieben und Zoomen der Zeichenfläche zur besseren Analyse der Funktion.
+	\item Hinzufügen und Entfernen von Funktionen.
+	\item Möglichkeit zur Bearbeitung der Funktionen, einschließlich Ableitung und Kurvendiskussion.
+	\item Verwaltung von Variablen und Konstanten in der Funktion.
+	\item Anpassung der Darstellung der Funktion, wie z.B. Farbe und Sichtbarkeit.
+\end{itemize}
 
 \subsection{Nicht funktionale Anforderungen}
+Nicht funktionale Anforderungen beziehen sich auf die Qualitätsaspekte eines Systems und legen fest, wie gut die funktionalen Anforderungen erfüllt werden. Für das Plotter-Projekt umfassen die nicht funktionalen Anforderungen:
+
+\begin{itemize}
+	\item Benutzerfreundlichkeit: Die Anwendung sollte einfach und intuitiv zu bedienen sein.
+	\item Leistung: Die Anwendung sollte effizient arbeiten und in angemessener Zeit eine grafische Darstellung der Funktionen erstellen.
+	\item Skalierbarkeit: Die Anwendung sollte in der Lage sein, mit einer wachsenden Anzahl von Funktionen und Variablen umzugehen.
+	\item Portabilität: Die Anwendung sollte auf verschiedenen Betriebssystemen lauffähig sein.
+	\item Zuverlässigkeit: Die Anwendung sollte stabil und fehlerfrei arbeiten.
+\end{itemize}
+
+\newpage
 
 \subsection{Aktivitätsdiagramm}
+Ein Aktivitätsdiagramm ist eine grafische Darstellung der Arbeitsabläufe und Abläufe innerhalb eines Systems. Es zeigt, wie verschiedene Aktivitäten und Entscheidungen innerhalb des Systems aufeinander folgen und miteinander verknüpft sind.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{Resources/aktivitaetsdiagramm.png}
+	\caption{Aktivitätsdiagramm des Plotter-Projekts}
+	\label{fig:aktivitaetsdiagramm}
+\end{figure}
 
 \newpage
 
@@ -391,22 +420,91 @@ Folgende Beispiele zeigen verschiedene Funktionen, die mit dem Plotter dargestel
 \section{Fazit}
 
 \subsection{Zusammenfassung}
+In diesem Projekt haben wir erfolgreich eine Java-basierte Plotter-Anwendung entwickelt, die es Benutzern ermöglicht, mathematische Funktionen und ihre Ableitungen grafisch darzustellen. Wir haben das flexible und leicht verständliche Kanban-System zur Verwaltung unserer Arbeitsabläufe verwendet. Durch den Einsatz von APIs wie mxParser und JavaFX haben wir eine effiziente und benutzerfreundliche Anwendung erstellt, die eine breite Palette von Funktionen unterstützt.
 
 \subsection{Erreichte Ziele}
+Die wichtigsten erreichten Ziele sind:
+\begin{itemize}
+	\item Erstellung einer benutzerfreundlichen grafischen Benutzeroberfläche.
+	\item Implementierung von Funktionen zum Hinzufügen, Entfernen und Anzeigen von Funktionen und deren Ableitungen.
+	\item Bereitstellung von Funktionen zur Anpassung der Darstellung des Plottbereichs und zum Zoomen.
+	\item Erfolgreiche Integration externer APIs und Bibliotheken, wie mxParser und JavaFX, zur Verbesserung der Anwendung.
+\end{itemize}
 
 \subsection{Zukünftige Erweiterungen}
+Mögliche zukünftige Erweiterungen der Plotter-Anwendung könnten sein:
+\begin{itemize}
+	\item Hinzufügen weiterer Funktionstypen, wie parametrische und Polarkurven.
+	\item Implementierung von Funktionen zur Analyse von Funktionen, wie Nullstellen, Extremwerte und Wendepunkte.
+	\item Verbesserung der Leistung und Effizienz der Anwendung, insbesondere bei der Darstellung komplexer Funktionen und bei der Interaktion mit dem Plottbereich.
+	\item Erweiterung der Anwendung um 3D-Plotting-Funktionen, um dreidimensionale Funktionen und Oberflächen darzustellen.
+\end{itemize}
+
+\newpage
 
 \section{Anhang}
 
 \subsection{Arbeitstagebuch (Planung)}
+[Platzhalter]
 
 \subsection{Arbeitstagebuch (Umsetzung)}
+[Platzhalter]
 
 \subsection{Quellcode}
+Der Quellcode für das Plotter-Projekt ist auf GitHub verfügbar:
+\url{https://github.com/TheD4rkCoder/Plotter/tree/master/src/main/java/com/example/plotter}
+
+\clearpage
 
 \subsection{Screenshots}
+Folgende Screenshots können in den Anhang aufgenommen werden:
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Resources/startbildschirm.png}
+	\caption{Startbildschirm: Leer, ohne Funktionen, im weißen Modus}
+	\label{fig:startbildschirm}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Resources/eingabe_darstellung.png}
+	\caption{Eingabe und Darstellung der Funktion $sec(x)$}
+	\label{fig:eingabe_darstellung}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Resources/anwendung.png}
+	\caption{Ableitung der $sec(x)$ Funktion und Ausblenden}
+	\label{fig:anwendung}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Resources/zoom.png}
+	\caption{Zoom: Gezoomte Ansicht der $sec(x)$ Funktion}
+	\label{fig:zoom}
+\end{figure}
+
+\clearpage
 
 \subsection{Lizenzinformationen}
+Dieses Projekt steht unter der MIT-Lizenz, die eine permissive Open-Source-Lizenz ist. Die MIT-Lizenz ermöglicht die uneingeschränkte Nutzung, Kopie, Modifikation und Weiterverteilung des Projekts, solange die Lizenzbestimmungen eingehalten werden.
+
+Die MIT-Lizenz hat folgende Bedingungen:
+
+\begin{enumerate}
+	\item Die Urheberrechts- und Lizenzinformationen müssen in allen Kopien oder wesentlichen Teilen des Projekts enthalten sein.
+	\item Die Software wird ``wie sie ist'' bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Garantie, einschließlich, aber nicht beschränkt auf, die Garantie der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Schutzrechten.
+	\item In keinem Fall haften die Autoren oder Inhaber von Urheberrechten für Schäden oder sonstige Haftungsansprüche, die sich aus oder im Zusammenhang mit der Software oder deren Verwendung oder anderem Handeln mit der Software ergeben.
+\end{enumerate}
+
+Für weitere Informationen zur MIT-Lizenz können Sie auf folgenden Link verweisen: \url{https://opensource.org/licenses/MIT}
+
+Durch die Verwendung der MIT-Lizenz wird sichergestellt, dass das Projekt frei zugänglich ist und von anderen Entwicklern zur Zusammenarbeit, Verbesserung und Erweiterung des Projekts verwendet werden kann.
+
+\subsection{Abbildungsverzeichnis}
+\listoffigures
 
 
 \end{document}
