@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1683419766 "c:/Users/Patrick/Desktop/temp/Plotter/Docs/main.tex" "main.pdf" "main" 1683419770
+["pdflatex"] 1683419913 "c:/Users/Patrick/Desktop/temp/Plotter/Docs/main.tex" "main.pdf" "main" 1683419916
   "Resources/Logo.png" 1683310671 15551 921d9b0f70aafee58aef8c60151009dc ""
   "Resources/aktivitaetsdiagramm.png" 1683419676 101196 6a294995d4ea170ffdfbb66346bb1d80 ""
   "Resources/anwendung.png" 1683417482 120724 464b7ad6a55cec3c3e76b71ab610a508 ""
@@ -16,7 +16,7 @@
   "Resources/ui_prototype.png" 1683411347 34913 c0575ecd4a8249c8a36a9c9cbbe83c58 ""
   "Resources/use-case-diagram.png" 1683310671 99325 84658976cadb70563e3341c96b19aa9a ""
   "Resources/zoom.png" 1683417514 91775 cc356ef373a1c0c1c6f5b31328a8b619 ""
-  "c:/Users/Patrick/Desktop/temp/Plotter/Docs/main.tex" 1683419762 34608 b601f0af7329c17602443597fd4e8413 ""
+  "c:/Users/Patrick/Desktop/temp/Plotter/Docs/main.tex" 1683419908 34620 87745c3d6f5e4e72f0b81aec333a9ef6 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1665682104 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1665682104 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1665683901 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -101,11 +101,11 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1665692128 4635141 23220546ee3b05387077c1debfa3f0c7 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1665692275 3058756 56156d30f2115149541316ec3ef2fcf6 ""
   "c:/texlive/2022/texmf.cnf" 1665692078 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1683419770 9982 5d9c2a852ca502a6374b53a7558ec315 "pdflatex"
-  "main.lof" 1683419770 1604 03e95c123e6343caad13b0b1312e1c56 "pdflatex"
-  "main.out" 1683419770 6884 ff8a1f5d3f6af82f9844b683866693ff "pdflatex"
-  "main.tex" 1683419762 34608 b601f0af7329c17602443597fd4e8413 ""
-  "main.toc" 1683419770 3923 759c824d7fd1889309ef1cb509d6d43b "pdflatex"
+  "main.aux" 1683419916 9982 eddd2200936b32b3fcc64fe6a83330e2 "pdflatex"
+  "main.lof" 1683419916 1604 03e95c123e6343caad13b0b1312e1c56 "pdflatex"
+  "main.out" 1683419916 6884 ff8a1f5d3f6af82f9844b683866693ff "pdflatex"
+  "main.tex" 1683419908 34620 87745c3d6f5e4e72f0b81aec333a9ef6 ""
+  "main.toc" 1683419916 3923 ac6f95999072c590710190d71518aa86 "pdflatex"
   (generated)
   "main.aux"
   "main.lof"
