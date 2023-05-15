@@ -24,6 +24,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Function;
+
 import java.util.ArrayList;
 
 public class PlotArea extends Group {
@@ -219,9 +220,13 @@ public class PlotArea extends Group {
             if (d < width) {
                 gridLines.get(i).setStartX(d);
                 gridLines.get(i).setEndX(d);
-                labelsForAxis.get(i).setText(Double.toString(Math.round((offset[0] + distanceToFirstLineX / width * plotCoordinatesWidth + distanceBetweenGridlinesX / width * plotCoordinatesWidth * i) * 100000000) / 100000000.0));
-                labelsForAxis.get(i).setLayoutX(d - 2);
-                labelsForAxis.get(i).setLayoutY(height - 20);
+                if (i != MAX_NUMBER_OF_GRIDLINES - 1) {
+                    labelsForAxis.get(i).setText(Double.toString(Math.round((offset[0] + distanceToFirstLineX / width * plotCoordinatesWidth + distanceBetweenGridlinesX / width * plotCoordinatesWidth * i) * 100000000) / 100000000.0));
+                    labelsForAxis.get(i).setLayoutX(d - 2);
+                    labelsForAxis.get(i).setLayoutY(height - 20);
+                } else {
+                    labelsForAxis.get(i).setLayoutX(-100);
+                }
             } else {
                 gridLines.get(i).setStartX(-10);
                 gridLines.get(i).setEndX(-10);
@@ -233,9 +238,13 @@ public class PlotArea extends Group {
             if (d < height) {
                 gridLines.get(i).setStartY(height - d);
                 gridLines.get(i).setEndY(height - d);
-                labelsForAxis.get(i).setText(Double.toString(Math.round((offset[1] + distanceToFirstLineY / height * plotCoordinatesHeight + distanceBetweenGridlinesY / height * plotCoordinatesHeight * (i - MAX_NUMBER_OF_GRIDLINES)) * 10000000) / 10000000.0));
-                labelsForAxis.get(i).setLayoutX(20);
-                labelsForAxis.get(i).setLayoutY(height - d);
+                if (i != MAX_NUMBER_OF_GRIDLINES) {
+                    labelsForAxis.get(i).setText(Double.toString(Math.round((offset[1] + distanceToFirstLineY / height * plotCoordinatesHeight + distanceBetweenGridlinesY / height * plotCoordinatesHeight * (i - MAX_NUMBER_OF_GRIDLINES)) * 10000000) / 10000000.0));
+                    labelsForAxis.get(i).setLayoutX(20);
+                    labelsForAxis.get(i).setLayoutY(height - d);
+                } else {
+                    labelsForAxis.get(i).setLayoutX(-100);
+                }
             } else {
                 gridLines.get(i).setStartY(-10);
                 gridLines.get(i).setEndY(-10);

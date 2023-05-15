@@ -26,8 +26,11 @@
 .button {
     -fx-text-fill: rgb(45, 80, 160);
     -fx-border-color: rgb(49, 120, 220);
+    -fx-background-radius: 5;
+    -fx-background-insets: 2, 2, 2, 2;
     -fx-background-color: #c6d6f7;
     -fx-border-width: 3;
+    -fx-border-insets: -1;
     -fx-border-radius: 5;
     -fx-padding: 3 6 6 6;
 }

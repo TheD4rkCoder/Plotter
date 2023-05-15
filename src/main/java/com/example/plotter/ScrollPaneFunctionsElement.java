@@ -60,7 +60,7 @@ public class ScrollPaneFunctionsElement extends HBox{
         plotArea.addFunction(index, new Function(equation));
         newFunctionTextField = new TextField(equation);
         newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
-        newFunctionTextField.setPrefHeight(35);
+        newFunctionTextField.setPrefHeight(33);
         newFunctionTextField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
                 Function f = new Function(newFunctionTextField.getText());
