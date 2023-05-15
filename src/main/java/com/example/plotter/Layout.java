@@ -254,14 +254,14 @@ public class Layout extends Group {
             }
         }
         scrollPaneFunctions.setLayoutX(width * 0.666 + 4);
-        scrollPaneFunctions.setLayoutY(height * 0.05);
+        scrollPaneFunctions.setLayoutY(height * 0.01 + 30);
         scrollPaneFunctions.setPrefWidth(width * 0.334 - 8);
-        scrollPaneFunctions.setPrefHeight(height * 0.2);
+        scrollPaneFunctions.setPrefHeight((height-60) * 0.22);
 
         scrollPaneVariables.setLayoutX(width * 0.666 + 4);
-        scrollPaneVariables.setLayoutY(height * 0.3);
+        scrollPaneVariables.setLayoutY(height * 0.26 + 30);
         scrollPaneVariables.setPrefWidth(width * 0.334 - 8);
-        scrollPaneVariables.setPrefHeight(height * 0.2);
+        scrollPaneVariables.setPrefHeight((height-60) * 0.22);
 
         functionTitle.setLayoutX(width * 0.666 + 4);
         functionTitle.setLayoutY(height * 0.01);
