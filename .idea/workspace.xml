@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="Plotarea Sclaling Textfields">
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="label fixes, button background fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +168,7 @@
       <workItem from="1683403559429" duration="329000" />
       <workItem from="1683893568195" duration="274000" />
       <workItem from="1684136621129" duration="5066000" />
-      <workItem from="1684146931856" duration="1576000" />
+      <workItem from="1684146931856" duration="3959000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681725896036</created>
@@ -304,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684145319818</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="label fixes, button background fix">
+      <created>1684156682933</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684156682933</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +360,8 @@
     <MESSAGE value="resizing" />
     <MESSAGE value="styling" />
     <MESSAGE value="Plotarea Sclaling Textfields" />
-    <option name="LAST_COMMIT_MESSAGE" value="Plotarea Sclaling Textfields" />
+    <MESSAGE value="label fixes, button background fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="label fixes, button background fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -34,8 +34,6 @@ public class Layout extends Group {
     private ScrollPane scrollPaneVariables;
     private Label functionTitle;
     private Label variableTitle;
-    private Label[] plotScaleEditLabels = new Label[4];
-    private TextField[] plotScaleEditTextFields = new TextField[4];
 
     /**
      * Constructs a Layout object with the given dimensions.
@@ -51,39 +49,8 @@ public class Layout extends Group {
         this.getChildren().add(plotArea);
         plotArea.setLayoutX(2);
         plotArea.setLayoutY(2);
-        plotScaleEditLabels[0] = new Label("Min X:");
-        plotScaleEditLabels[1] = new Label("Width:");
-        plotScaleEditLabels[2] = new Label("Min Y:");
-        plotScaleEditLabels[3] = new Label("Height:");
-        plotScaleEditTextFields[0] = new TextField("-50");
-        plotScaleEditTextFields[1] = new TextField("100");
-        plotScaleEditTextFields[2] = new TextField("-50");
-        plotScaleEditTextFields[3] = new TextField("100");
 
-        for (int i = 0; i < 4; i++) {
-            plotScaleEditTextFields[i].setStyle("-fx-font: 10px \"Serif\"");
-            plotScaleEditTextFields[i].setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent actionEvent) {
-                    try
-                    {
-                        double deltaX = Double.parseDouble(plotScaleEditTextFields[0].getText());
-                        double width = Double.parseDouble(plotScaleEditTextFields[1].getText());
-                        double deltaY =Double.parseDouble(plotScaleEditTextFields[2].getText());
-                        double height =Double.parseDouble(plotScaleEditTextFields[3].getText());
-                        if (width <= 0 || height <= 0) {
-                            throw  new NumberFormatException();
-                        }
-                        plotArea.setPlottedArea(deltaX, deltaY, width, height);
-                    }
-                    catch(NumberFormatException e)
-                    {
-                        plotArea.showErrorWindow();
-                    }
-                }
-            });
-            this.getChildren().addAll(plotScaleEditLabels[i], plotScaleEditTextFields[i]);
-        }
+
 
         scrollPaneFunctions = new ScrollPane();
         scrollPaneFunctions.setLayoutX(width * 0.666 + 4);
@@ -261,7 +228,7 @@ public class Layout extends Group {
     public void resize(double width, double height) {
         background.setWidth(width);
         background.setHeight(height);
-        plotArea.resize(width * 0.666 - 4, height * 0.95 - 4);
+        plotArea.resize(width * 0.666 - 4, height - 4);
         for (Node n : functions.getChildren()) {
             if (n instanceof ScrollPaneFunctionsElement) {
                 ((ScrollPaneFunctionsElement) n).resizeInCorrelationToPlotArea();
@@ -271,15 +238,6 @@ public class Layout extends Group {
             if (n instanceof ScrollPaneVariablesElement) {
                 ((ScrollPaneVariablesElement) n).resizeInCorrelationToPlotArea();
             }
-        }
-        for (int i = 0; i < 4; i++) {
-            plotScaleEditLabels[i].setLayoutY(height * 0.96 + 2);
-            plotScaleEditLabels[i].setLayoutX(2 + 0.166 * i * width);
-            plotScaleEditLabels[i].setPrefHeight(0.03 * height - 2);
-            plotScaleEditTextFields[i].setLayoutY(height * 0.96);
-            plotScaleEditTextFields[i].setLayoutX(40 + 0.166 * (i)*width);
-            plotScaleEditTextFields[i].setPrefWidth(0.166 * width - 40);
-            plotScaleEditTextFields[i].setPrefHeight(0.03 * height - 2);
         }
         // Buttons
 

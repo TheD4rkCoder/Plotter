@@ -16,6 +16,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
@@ -42,6 +43,8 @@ public class PlotArea extends Group {
     private final ArrayList<Label> labelsForAxis = new ArrayList<>(); //todo in drawPlotArea
     private final ArrayList<PlotFunction> functions = new ArrayList<>();
     private final ArrayList<Argument> variables = new ArrayList<>();
+    private Label[] plotScaleEditLabels = new Label[4];
+    private TextField[] plotScaleEditTextFields = new TextField[4];
 
     public double getWidth() {
         return width;
@@ -72,9 +75,36 @@ public class PlotArea extends Group {
         });
         this.height = beginHeight;
         this.width = beginWidth;
+
         this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), 1 + 0.01 * ((scrollEvent.getDeltaY() <= -100) ? -99 : scrollEvent.getDeltaY()), 1 + 0.01 * ((scrollEvent.getDeltaY() <= -100) ? -99 : scrollEvent.getDeltaY())));
         background = new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY);
         this.getChildren().add(background);
+        plotScaleEditLabels[0] = new Label("Min X:");
+        plotScaleEditLabels[1] = new Label("Width:");
+        plotScaleEditLabels[2] = new Label("Min Y:");
+        plotScaleEditLabels[3] = new Label("Height:");
+        plotScaleEditTextFields[0] = new TextField("-50");
+        plotScaleEditTextFields[1] = new TextField("100");
+        plotScaleEditTextFields[2] = new TextField("-50");
+        plotScaleEditTextFields[3] = new TextField("100");
+        for (int i = 0; i < 4; i++) {
+            plotScaleEditTextFields[i].setStyle("-fx-font: 10px \"Serif\"");
+            plotScaleEditTextFields[i].setOnAction(actionEvent -> {
+                try {
+                    double deltaX = Double.parseDouble(plotScaleEditTextFields[0].getText());
+                    double width = Double.parseDouble(plotScaleEditTextFields[1].getText());
+                    double deltaY = Double.parseDouble(plotScaleEditTextFields[2].getText());
+                    double height = Double.parseDouble(plotScaleEditTextFields[3].getText());
+                    if (width <= 0 || height <= 0) {
+                        throw new NumberFormatException();
+                    }
+                    setPlottedArea(deltaX, deltaY, width, height);
+                } catch (NumberFormatException e) {
+                    showErrorWindow();
+                }
+            });
+            this.getChildren().addAll(plotScaleEditLabels[i], plotScaleEditTextFields[i]);
+        }
         axisLines[0] = new Line(0, beginHeight / 2, beginWidth, beginHeight / 2);
         axisLines[0].setStrokeWidth(beginHeight / 400);
         axisLines[0].setStroke(Color.DARKGRAY);
@@ -285,6 +315,10 @@ public class PlotArea extends Group {
         this.offset[1] += deltaY;
         this.plotCoordinatesWidth *= plotCoordsWidthChangeFactor;
         this.plotCoordinatesHeight *= plotCoordsHeightChangeFactor;
+        plotScaleEditTextFields[0].setText(String.format("%f", offset[0]));
+        plotScaleEditTextFields[1].setText(String.format("%f",plotCoordinatesWidth));
+        plotScaleEditTextFields[2].setText(String.format("%f",offset[1]));
+        plotScaleEditTextFields[3].setText(String.format("%f",plotCoordinatesHeight));
         drawPlotArea();
     }
 
@@ -304,11 +338,21 @@ public class PlotArea extends Group {
      */
     public void resize(double newWidth, double newHeight) {
         this.width = newWidth;
-        this.height = newHeight;
+        this.height = newHeight * 0.95;
         this.background.setWidth(newWidth);
         this.background.setHeight(newHeight);
         this.axisLines[0].setEndX(width);
         this.axisLines[1].setEndY(height);
+
+        for (int i = 0; i < 4; i++) {
+            plotScaleEditLabels[i].setLayoutY(newHeight * 0.96);
+            plotScaleEditLabels[i].setLayoutX(0.25 * i * width);
+            plotScaleEditLabels[i].setPrefHeight(0.03 * newHeight - 2);
+            plotScaleEditTextFields[i].setLayoutY(newHeight * 0.96);
+            plotScaleEditTextFields[i].setLayoutX(40 + 0.25 * i * width);
+            plotScaleEditTextFields[i].setPrefWidth(0.25 * width - 42);
+            plotScaleEditTextFields[i].setPrefHeight(0.03 * newHeight - 2);
+        }
 
         for (int i = 0; i < 2 * MAX_NUMBER_OF_GRIDLINES; i++) {
             Line tempLine = gridLines.get(i);
