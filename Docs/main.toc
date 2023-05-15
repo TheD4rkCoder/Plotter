@@ -16,32 +16,33 @@
 \contentsline {section}{\numberline {3}Anforderungsanalyse}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Funktionale Anforderungen}{9}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Nicht funktionale Anforderungen}{9}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Aktivitätsdiagramm}{9}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Use-Case-Diagramm}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Erklärung}{10}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Diagramm}{10}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Systemarchitektur}{11}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Übersicht}{11}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Frontend}{11}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Backend}{11}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Klassendiagramm}{12}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Umsetzung (Programmierung)}{14}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Backend-Entwicklung}{14}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Frontend-Entwicklung}{14}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}UI-Prototyp}{14}{subsubsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.3}Integration von APIs}{14}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Teststrategie}{14}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Benutzung (User Guide)}{14}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Installation und Einrichtung}{14}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Bedieung der Anwendung}{14}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Beispiele}{14}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Fazit}{14}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Zusammenfassung}{14}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Erreichte Ziele}{14}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Zukünftige Erweiterungen}{14}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Anhang}{14}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Arbeitstagebuch (Planung)}{14}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Arbeitstagebuch (Umsetzung)}{14}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Quellcode}{14}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Screenshots}{14}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Lizenzinformationen}{14}{subsection.9.5}%
+\contentsline {subsection}{\numberline {3.3}Aktivitätsdiagramm}{10}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Use-Case-Diagramm}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Erklärung}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Diagramm}{11}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Systemarchitektur}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Übersicht}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Frontend}{12}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Backend}{13}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Klassendiagramm}{13}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Umsetzung (Programmierung)}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}UI-Prototyp}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Backend-Entwicklung}{15}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Frontend-Entwicklung}{16}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Integration von APIs}{16}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Teststrategie}{16}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Benutzung (User Guide)}{17}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Installation und Einrichtung}{17}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Bedienung der Anwendung}{17}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Beispiele}{18}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Fazit}{20}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Zusammenfassung}{20}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Erreichte Ziele}{20}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Zukünftige Erweiterungen}{20}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Anhang}{21}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Arbeitstagebuch (Planung)}{21}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Arbeitstagebuch (Umsetzung)}{21}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Quellcode}{21}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Screenshots}{22}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Lizenzinformationen}{24}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Abbildungsverzeichnis}{25}{subsection.9.6}%
