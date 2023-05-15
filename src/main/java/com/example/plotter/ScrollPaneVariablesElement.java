@@ -42,6 +42,7 @@ public class ScrollPaneVariablesElement extends HBox {
         plotArea.addVariable(index, new Argument(beginArgumentName + " = 1"));
         newVariableTextField = new TextField(beginArgumentName + " = 1");
         newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 30);
+        newVariableTextField.setPrefHeight(35);
         newVariableTextField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
                 Argument a = new Argument(newVariableTextField.getText());

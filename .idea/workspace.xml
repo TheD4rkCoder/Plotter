@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="resizing">
+    <list default="true" id="f7000109-34fd-4532-a95f-e5226975b18c" name="Changes" comment="styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/Layout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/PlotFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/plotter/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneFunctionsElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/plotter/ScrollPaneVariablesElement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +167,9 @@
       <workItem from="1683218135245" duration="1310000" />
       <workItem from="1683270137327" duration="7920000" />
       <workItem from="1683296598320" duration="1791000" />
+      <workItem from="1683403559429" duration="329000" />
+      <workItem from="1683893568195" duration="274000" />
+      <workItem from="1684136621129" duration="4725000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1681725896036</created>
@@ -286,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683277051011</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="styling">
+      <created>1683403617992</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1683403617992</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +345,8 @@
     <MESSAGE value="derivation in a new function-line" />
     <MESSAGE value="darkmode, Titles, errorwindow bei Variable-Syntaxerrors" />
     <MESSAGE value="resizing" />
-    <option name="LAST_COMMIT_MESSAGE" value="resizing" />
+    <MESSAGE value="styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

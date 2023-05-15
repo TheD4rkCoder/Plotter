@@ -13,12 +13,9 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
@@ -27,9 +24,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.mariuszgromada.math.mxparser.Argument;
 import org.mariuszgromada.math.mxparser.Function;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class PlotArea extends Group {
     private final int MAX_NUMBER_OF_GRIDLINES = 20;
@@ -289,6 +284,7 @@ public class PlotArea extends Group {
         this.offset[1] = deltaY;
         this.plotCoordinatesWidth = plotCoordsWidth;
         this.plotCoordinatesHeight = plotCoordsHeight;
+        drawPlotArea();
     }
 
     /**

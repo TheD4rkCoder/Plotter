@@ -7,15 +7,11 @@
  */
 package com.example.plotter;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import org.mariuszgromada.math.mxparser.Function;
 //import org.matheclipse.core.eval.ExprEvaluator; // todo
 //import org.matheclipse.core.expression.Expr;
@@ -59,17 +55,18 @@ public class ScrollPaneFunctionsElement extends HBox{
         Button visibilityButton = new Button("\uD83D\uDC41");
         Button derivationButton = new Button("f'");
         Button deleteButton = new Button("\uD83D\uDDD1");
-        Button functionAnalysisInformationButton = new Button("i"); // todo
+        //Button functionAnalysisInformationButton = new Button("i"); // todo
 
         plotArea.addFunction(index, new Function(equation));
         newFunctionTextField = new TextField(equation);
         newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
+        newFunctionTextField.setPrefHeight(35);
         newFunctionTextField.setOnKeyPressed(keyEvent -> {
             if (keyEvent.getCode() == KeyCode.ENTER) {
                 Function f = new Function(newFunctionTextField.getText());
                 plotArea.removeFunction(indexes.get(index));
                 plotArea.addFunction(indexes.get(index), f);
-                visibilityButton.setStyle("-fx-background-color: #CCFF99");
+                visibilityButton.setStyle("-fx-background-color: #66AA33");
             }
         });
 
@@ -87,23 +84,25 @@ public class ScrollPaneFunctionsElement extends HBox{
             }
             layout.newFunction("der" + funcParts[0] + "= der(" + funcParts[0] + ", x)");
         });
-        visibilityButton.setStyle("-fx-background-color: #CCFF99");
+        visibilityButton.setStyle("-fx-background-color: #66AA33");
         visibilityButton.setOnAction(actionEvent -> {
             plotArea.changeFunctionVisibility(indexes.get(index));
             if (!visibilityButton.getStyle().contains("-fx-background-color: #FF0F0F")) {
                 visibilityButton.setStyle("-fx-background-color: #FF0F0F");
             } else {
-                visibilityButton.setStyle("-fx-background-color: #CCFF99");
+                visibilityButton.setStyle("-fx-background-color: #66AA33");
 
             }
         });
+        /*
         functionAnalysisInformationButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 // todo label with function-analysis data
             }
         });
-        this.getChildren().addAll(newFunctionTextField, derivationButton, deleteButton, visibilityButton, functionAnalysisInformationButton);
+         */
+        this.getChildren().addAll(newFunctionTextField, derivationButton, deleteButton, visibilityButton); // add functionAnalysisButton later
     }
     public void resizeInCorrelationToPlotArea() {
         newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
