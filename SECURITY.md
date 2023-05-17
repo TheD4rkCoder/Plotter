@@ -6,7 +6,7 @@ Currently, we are in the early stages of this project and there is only one vers
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
+| 1.0     | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
