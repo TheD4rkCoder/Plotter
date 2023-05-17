@@ -10,7 +10,7 @@ Currently, we are in the early stages of this project and there is only one vers
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability within Plotter, please send an email to [prillerpatrick@gmail.com] with all the details you have about the issue. Your efforts to responsibly disclose your findings are sincerely appreciated and will be taken into account to improve the security of the project.
+If you discover a security vulnerability within Plotter, please send an email to prillerpatrick@gmail.com with all the details you have about the issue. Your efforts to responsibly disclose your findings are sincerely appreciated and will be taken into account to improve the security of the project.
 
 Please do not disclose publicly any security issues until we have had a chance to investigate it and provide a fix.
 
