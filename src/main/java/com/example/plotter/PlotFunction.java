@@ -83,12 +83,26 @@ public class PlotFunction {
                 continue;
             }
             double posY = plotAreaHeight - (value - offset[1]) / graphHeight * plotAreaHeight;
-            Line l = lines.get(i - 1);
-            l.setEndX((double) i / numOfPoints * plotAreaWidth);
-            l.setEndY(posY);
-            l = lines.get(i);
-            l.setStartX(i * plotAreaWidth / numOfPoints);
-            l.setStartY(posY);
+            Line lPrev = lines.get(i - 1);
+            Line l = lines.get(i);
+            if (posY > plotAreaHeight || posY < 0) {
+                lPrev.setVisible(false);
+                l.setVisible(false);
+                if (i > 1) {
+                    if (posY > plotAreaHeight) {
+                        lines.get(i - 2).setEndY(plotAreaHeight);
+                    } else {
+                        lines.get(i - 2).setEndY(0);
+
+                    }
+                }
+            } else {
+                lPrev.setEndX((double) i / numOfPoints * plotAreaWidth);
+                lPrev.setEndY(posY);
+                l.setVisible(true);
+                l.setStartX(i * plotAreaWidth / numOfPoints);
+                l.setStartY(posY);
+            }
 
         }
         lines.get(numOfPoints - 1).setEndX(plotAreaWidth);
