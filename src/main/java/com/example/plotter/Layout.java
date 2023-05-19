@@ -1,11 +1,3 @@
-/**
- * Layout is a custom JavaFX Group that organizes the UI components for the Plotter application.
- * It manages the placement of the plot area, scroll panes for functions and constants,
- * and buttons for various mathematical operations.
- *
- * @author Plotter
- * @version 1.0
- */
 package com.example.plotter;
 
 import javafx.event.ActionEvent;
@@ -21,6 +13,14 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * Layout is a custom JavaFX Group that organizes the UI components for the Plotter application.
+ * It manages the placement of the plot area, scroll panes for functions and constants,
+ * and buttons for various mathematical operations.
+ *
+ * @author Plotter
+ * @version 1.0
+ */
 public class Layout extends Group {
     private TextField selectedTextField;
     private final VBox functions = new VBox();
@@ -196,18 +196,34 @@ public class Layout extends Group {
         this.getChildren().add(darkModeToggleButton);
     }
 
+    /**
+     * This method creates a new function row in the UI without an initial equation.
+     * It creates a new ScrollPaneFunctionsElement, sets the click listener for the TextField in the row,
+     * and adds the new row to the functions HBox.
+     */
     public void newFunction() {
         HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this);
         newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
         functions.getChildren().add(functions.getChildren().size() - 1, newRow);
     }
 
+    /**
+     * This method creates a new function row in the UI with a given initial equation.
+     * It creates a new ScrollPaneFunctionsElement with the provided equation, sets the click listener for the TextField in the row,
+     * and adds the new row to the functions HBox.
+     *
+     * @param equation The initial equation for the new function row.
+     */
     public void newFunction(String equation) {
         HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this, equation);
         newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
         functions.getChildren().add(functions.getChildren().size() - 1, newRow);
     }
 
+    /**
+     * This method toggles the dark mode of the application.
+     * It changes the darkModeEnabled flag, toggles the dark mode of the plot area, and switches the application's stylesheet.
+     */
     public void toggleDarkMode() {
         darkModeEnabled = !darkModeEnabled;
         plotArea.toggleDarkMode(darkModeEnabled);
@@ -221,6 +237,7 @@ public class Layout extends Group {
             this.getStylesheets().remove(getClass().getResource("darkModeStyle.css").toExternalForm());
         }
     }
+
 
     /**
      * Resizes the layout and its components based on the new dimensions.

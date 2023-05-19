@@ -10,6 +10,14 @@ import org.mariuszgromada.math.mxparser.Expression;
 public class DerivativeCalculator {
 
     /**
+     * Constructs a new DerivativeCalculator instance.
+     * This constructor is used to create an instance of the DerivativeCalculator class.
+     */
+    public DerivativeCalculator() {
+        // Default constructor
+    }
+
+    /**
      * Calculates the numerical derivative of the given function at a specific point.
      *
      * @param function The function to calculate the derivative of, represented as a string.

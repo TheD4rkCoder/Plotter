@@ -1,11 +1,3 @@
-/**
- * PlotFunction is a class for managing the graphical representation of a mathematical function.
- * It calculates the positions of line segments that approximate the function's curve and handles
- * function visibility.
- *
- * @author Plotter
- * @version 1.0
- */
 package com.example.plotter;
 
 import javafx.scene.paint.Color;
@@ -15,11 +7,19 @@ import org.mariuszgromada.math.mxparser.Function;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * PlotFunction is a class for managing the graphical representation of a mathematical function.
+ * It calculates the positions of line segments that approximate the function's curve and handles
+ * function visibility.
+ *
+ * @author Plotter
+ * @version 1.0
+ */
 public class PlotFunction {
     private final Function function;
     private final ArrayList<Line> lines = new ArrayList<>();
     private final int POINTS = 2000;
-    private final int POINTS_FOR_DERIVATIVES = 200;
+    private final int POINTS_FOR_DERIVATIVES = 500;
     Random random = new Random();
     private boolean isFunctionVisible = true;
 

@@ -22,6 +22,13 @@ import java.util.Objects;
  * creating and displaying the main application window.
  */
 public class Plotter extends Application {
+    /**
+     * Constructs a new DerivativeCalculator instance.
+     * This constructor is used to create an instance of the DerivativeCalculator class.
+     */
+    public Plotter() {
+        // Default constructor
+    }
     final double BEGINWIDTH = 1200;  // The initial width of the window
     final double BEGINHEIGHT = 800;  // The initial height of the window
 

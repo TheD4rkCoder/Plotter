@@ -1,10 +1,3 @@
-/**
- * ScrollPaneVariablesElement represents a single variable element in the scroll pane, including a TextField for input,
- * and a button for deletion.
- *
- * @author Plotter
- * @version 1.0
- */
 package com.example.plotter;
 
 import javafx.scene.control.Button;
@@ -16,6 +9,13 @@ import org.mariuszgromada.math.mxparser.Argument;
 
 import java.util.ArrayList;
 
+/**
+ * ScrollPaneVariablesElement represents a single variable element in the scroll pane, including a TextField for input,
+ * and a button for deletion.
+ *
+ * @author Plotter
+ * @version 1.0
+ */
 public class ScrollPaneVariablesElement extends HBox {
     private static final ArrayList<Integer> indexes = new ArrayList<>();
     private int index;
@@ -34,7 +34,7 @@ public class ScrollPaneVariablesElement extends HBox {
         this.index = index;
         this.plotArea = plotArea;
         StringBuilder beginArgumentName = new StringBuilder(new String()); //Character.toString(65 + index);
-        int ind = indexes.size()-1;
+        int ind = indexes.size() - 1;
         while (ind >= 0) {
             beginArgumentName.append(Character.toString(65 + ((ind % 25 > 1) ? (ind % 25 + 1) : (ind % 25))));
             ind -= 25;
@@ -64,7 +64,13 @@ public class ScrollPaneVariablesElement extends HBox {
         });
         this.getChildren().addAll(newVariableTextField, deleteButton);
     }
+
+    /**
+     * Resizes the newVariableTextField in correlation to the width of the plotArea.
+     * The width of the newVariableTextField is set to 49% of the plotArea width minus 30 pixels.
+     */
     public void resizeInCorrelationToPlotArea() {
         newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 30);
     }
+
 }

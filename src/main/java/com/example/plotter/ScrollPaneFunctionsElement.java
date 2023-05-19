@@ -1,10 +1,3 @@
-/**
- * ScrollPaneFunctionsElement represents a single function element in the scroll pane, including a TextField for input,
- * and buttons for derivative calculation, deletion, visibility, and function analysis.
- *
- * @author Plotter
- * @version 1.0
- */
 package com.example.plotter;
 
 import javafx.scene.control.Button;
@@ -18,23 +11,30 @@ import org.mariuszgromada.math.mxparser.Function;
 
 import java.util.ArrayList;
 
-
-public class ScrollPaneFunctionsElement extends HBox{
+/**
+ * ScrollPaneFunctionsElement represents a single function element in the scroll pane, including a TextField for input,
+ * and buttons for derivative calculation, deletion, visibility, and function analysis.
+ *
+ * @author Plotter
+ * @version 1.0
+ */
+public class ScrollPaneFunctionsElement extends HBox {
     private static final ArrayList<Integer> indexes = new ArrayList<>();
     private int index;
     private PlotArea plotArea;
     private TextField newFunctionTextField;
 
     /**
-     * Constructor for creating a new ScrollPaneFunctionsElement.
+     * Constructs a new ScrollPaneFunctionsElement with the specified index, plotArea, root VBox, and layout.
+     * The constructor initializes the function name based on the index, creating a name like "a(x) = x" where 'a' is derived from the index.
      *
-     * @param index    The index of the function in the PlotArea.
-     * @param plotArea The PlotArea to which the function belongs.
-     * @param root     The VBox containing the elements of the ScrollPaneFunctionsElement.
+     * @param index The index of the ScrollPaneFunctionsElement.
+     * @param plotArea The PlotArea associated with the ScrollPaneFunctionsElement.
+     * @param root The root VBox that contains the ScrollPaneFunctionsElement.
+     * @param layout The Layout associated with the ScrollPaneFunctionsElement.
      */
     public ScrollPaneFunctionsElement(int index, PlotArea plotArea, VBox root, Layout layout) {
-
-        StringBuilder beginFunctionName = new StringBuilder(); //= Character.toString(97 + ((index > 3) ? index + 1 : index)%26);
+        StringBuilder beginFunctionName = new StringBuilder();
         int ind = indexes.size();
         while (ind >= 0) {
             beginFunctionName.append(Character.toString(97 + ((ind % 24 > 3) ? (ind % 24 > 21) ? ind % 24 + 2 : ind % 24 + 1 : ind % 24)));
@@ -44,9 +44,20 @@ public class ScrollPaneFunctionsElement extends HBox{
         init(index, plotArea, root, layout, beginFunctionName.toString());
     }
 
-    public ScrollPaneFunctionsElement(int index, PlotArea plotArea, VBox root, Layout layout, String equation) { // layout for adding a new Function for the derivative
+
+    /**
+     * Constructs a new ScrollPaneFunctionsElement with the specified index, plotArea, root VBox, layout, and equation.
+     *
+     * @param index The index of the ScrollPaneFunctionsElement.
+     * @param plotArea The PlotArea associated with the ScrollPaneFunctionsElement.
+     * @param root The root VBox that contains the ScrollPaneFunctionsElement.
+     * @param layout The Layout associated with the ScrollPaneFunctionsElement.
+     * @param equation The equation associated with the ScrollPaneFunctionsElement.
+     */
+    public ScrollPaneFunctionsElement(int index, PlotArea plotArea, VBox root, Layout layout, String equation) {
         init(index, plotArea, root, layout, equation);
     }
+
 
     private void init(int index, PlotArea plotArea, VBox root, Layout layout, String equation) {
         indexes.add(index, index);
@@ -104,19 +115,14 @@ public class ScrollPaneFunctionsElement extends HBox{
          */
         this.getChildren().addAll(newFunctionTextField, derivationButton, deleteButton, visibilityButton); // add functionAnalysisButton later
     }
+
+    /**
+     * Resizes the newFunctionTextField in correlation to the width of the plotArea.
+     * The width of the newFunctionTextField is set to 49% of the plotArea width minus 135 pixels.
+     */
     public void resizeInCorrelationToPlotArea() {
         newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
     }
-    /*
-    private String getDerivativeString(String functionString) {
-        Expr functionExpr = ExprEvaluator.get().evaluate(functionString);
 
-        // Compute the derivative of the function
-        Expr derivativeExpr = functionExpr.diff("x");
-
-        // Print the derivative function as a string
-        String derivativeString = derivativeExpr.toString();
-    }
-     */
 
 }

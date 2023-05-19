@@ -1,11 +1,3 @@
-/**
- * PlotArea is a custom JavaFX Group that represents a 2D plotting area for mathematical functions.
- * It provides functionality to add, remove and update functions, variables, and grid lines.
- * It also supports scrolling, zooming, and dragging the plotting area.
- *
- * @author Plotter
- * @version 1.0
- */
 package com.example.plotter;
 
 import javafx.event.ActionEvent;
@@ -28,6 +20,14 @@ import org.mariuszgromada.math.mxparser.Function;
 
 import java.util.ArrayList;
 
+/**
+ * PlotArea is a custom JavaFX Group that represents a 2D plotting area for mathematical functions.
+ * It provides functionality to add, remove and update functions, variables, and grid lines.
+ * It also supports scrolling, zooming, and dragging the plotting area.
+ *
+ * @author Plotter
+ * @version 1.0
+ */
 public class PlotArea extends Group {
     private final int MAX_NUMBER_OF_GRIDLINES = 20;
     private double width;
@@ -46,13 +46,24 @@ public class PlotArea extends Group {
     private Label[] plotScaleEditLabels = new Label[4];
     private TextField[] plotScaleEditTextFields = new TextField[4];
 
+    /**
+     * This method returns the width of the object.
+     *
+     * @return The width of the object.
+     */
     public double getWidth() {
         return width;
     }
 
+    /**
+     * This method returns the height of the object.
+     *
+     * @return The height of the object.
+     */
     public double getHeight() {
         return height;
     }
+
 
     /**
      * Creates a new PlotArea with the specified dimensions.
@@ -322,6 +333,15 @@ public class PlotArea extends Group {
         drawPlotArea();
     }
 
+    /**
+     * This method sets the plotted area of the graph with the given parameters.
+     * It also calls the drawPlotArea() method to redraw the plot area.
+     *
+     * @param deltaX The change in X direction.
+     * @param deltaY The change in Y direction.
+     * @param plotCoordsWidth The width of the plot coordinates.
+     * @param plotCoordsHeight The height of the plot coordinates.
+     */
     public void setPlottedArea(double deltaX, double deltaY, double plotCoordsWidth, double plotCoordsHeight) {
         this.offset[0] = deltaX;
         this.offset[1] = deltaY;
@@ -369,7 +389,6 @@ public class PlotArea extends Group {
     /**
      * Changes the visibility of a function at the specified index.
      *
-     * @param
      * @param index      The index of the function whose visibility to change.
      * @param visibility The new visibility state of the function (true for visible, false for hidden).
      */
@@ -377,6 +396,10 @@ public class PlotArea extends Group {
         functions.get(index).changeFunctionVisibility(visibility);
     }
 
+    /**
+     * This method shows an error window with a message "Syntax error!".
+     * The window contains an "OK" button that closes the window when clicked.
+     */
     public void showErrorWindow() {
 
         Stage stage = new Stage();
@@ -410,6 +433,12 @@ public class PlotArea extends Group {
         functions.get(index).changeFunctionVisibility();
     }
 
+    /**
+     * This method toggles the dark mode of the application.
+     * It changes the color of the first child of this object's children list based on the darkMode parameter.
+     *
+     * @param darkMode A boolean value indicating whether dark mode should be enabled.
+     */
     public void toggleDarkMode(boolean darkMode) {
         if (darkMode) {
             ((Rectangle) (this.getChildren().get(0))).setFill(Color.rgb(30, 30, 30));
