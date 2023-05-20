@@ -67,7 +67,7 @@ public class ScrollPaneVariablesElement extends HBox {
 
     /**
      * Resizes the newVariableTextField in correlation to the width of the plotArea.
-     * The width of the newVariableTextField is set to 49% of the plotArea width minus 30 pixels.
+     * The width of the newVariableTextField is set to 49% of the plotArea width minus 30 pixels for the button.
      */
     public void resizeInCorrelationToPlotArea() {
         newVariableTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 30);

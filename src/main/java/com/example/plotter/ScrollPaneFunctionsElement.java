@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  * ScrollPaneFunctionsElement represents a single function element in the scroll pane, including a TextField for input,
- * and buttons for derivative calculation, deletion, visibility, and function analysis.
+ * and buttons for derivative calculation, deletion, visibility.
  *
  * @author Plotter
  * @version 1.0
@@ -109,7 +109,7 @@ public class ScrollPaneFunctionsElement extends HBox {
         functionAnalysisInformationButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                // todo label with function-analysis data
+                // todo open new window with function-analysis data
             }
         });
          */
@@ -118,7 +118,7 @@ public class ScrollPaneFunctionsElement extends HBox {
 
     /**
      * Resizes the newFunctionTextField in correlation to the width of the plotArea.
-     * The width of the newFunctionTextField is set to 49% of the plotArea width minus 135 pixels.
+     * The width of the newFunctionTextField is set to 49% of the plotArea width minus 135 pixels for the buttons.
      */
     public void resizeInCorrelationToPlotArea() {
         newFunctionTextField.setPrefWidth(plotArea.getWidth() * 0.49 - 135);
