@@ -42,16 +42,16 @@ public class Layout extends Group {
      * @param height The height of the layout.
      */
     public Layout(double width, double height) {
+        // to add background:
         background = new Rectangle(0, 0, width, height);
         background.setFill(Color.WHITE);
         this.getChildren().add(background);
+        // to add PlotArea (where the functions get plotted):
         plotArea = new PlotArea(width * 0.666 - 4, height * 0.95 - 4);
         this.getChildren().add(plotArea);
         plotArea.setLayoutX(2);
         plotArea.setLayoutY(2);
-
-
-
+        // to add the Panel for inputting and editing functions:
         scrollPaneFunctions = new ScrollPane();
         scrollPaneFunctions.setLayoutX(width * 0.666 + 4);
         scrollPaneFunctions.setLayoutY(height * 0.05);
@@ -59,6 +59,7 @@ public class Layout extends Group {
         scrollPaneFunctions.setPrefWidth(width * 0.334 - 8);
         scrollPaneFunctions.setPrefHeight(height * 0.2);
         this.getChildren().add(scrollPaneFunctions);
+        // to add the Panel for inputting and editing variables:
         scrollPaneVariables = new ScrollPane();
         scrollPaneVariables.setLayoutX(width * 0.666 + 4);
         scrollPaneVariables.setLayoutY(height * 0.3);
@@ -66,6 +67,7 @@ public class Layout extends Group {
         scrollPaneVariables.setPrefWidth(width * 0.334 - 8);
         scrollPaneVariables.setPrefHeight(height * 0.2);
         this.getChildren().add(scrollPaneVariables);
+        // to create the elements inside the panels:
         Button addFunctionButton = new Button("+");
         functions.getChildren().add(addFunctionButton);
         addFunctionButton.setOnAction(actionEvent -> {
@@ -79,7 +81,7 @@ public class Layout extends Group {
             constants.getChildren().add(constants.getChildren().size() - 1, newRow);
         });
 
-        // buttons
+        // to add the buttons with different mathematical calculations and constants:
         operation[0][0] = new Button("sin");
         operation[0][0].setOnAction(actionEvent -> {
             if (selectedTextField != null) {
@@ -164,7 +166,7 @@ public class Layout extends Group {
                 operation[x][y].setLayoutY(height * (0.55 + 0.1 * y));
             }
         }
-        // Labels
+        // to add the Titles above the panels for functions and variables
         functionTitle = new Label("Funktionen");
         functionTitle.setLayoutX(width * 0.666 + 4);
         functionTitle.setLayoutY(height * 0.01);
@@ -175,7 +177,7 @@ public class Layout extends Group {
         variableTitle.setLayoutY(height * 0.26);
         variableTitle.setStyle("-fx-font-size: 24");
         this.getChildren().add(variableTitle);
-
+        // to create a button to toggle between dark and light mode:
         darkModeToggleButton = new Button("\u263E");
         darkModeToggleButton.setPrefWidth(width * 0.1);
         darkModeToggleButton.setPrefHeight(height * 0.03);
@@ -203,6 +205,9 @@ public class Layout extends Group {
      */
     public void newFunction() {
         HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this);
+        // click-listener to save the current ScrollPaneFunctionsElement.
+        // This way the last selected TextField is in "selectedTextField".
+        // When a button of a constant or a calculation is pressed, the corresponding text gets added in the selectedTextField.
         newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
         functions.getChildren().add(functions.getChildren().size() - 1, newRow);
     }
@@ -216,6 +221,9 @@ public class Layout extends Group {
      */
     public void newFunction(String equation) {
         HBox newRow = new ScrollPaneFunctionsElement(functions.getChildren().size() - 1, plotArea, functions, this, equation);
+        // click-listener to save the current ScrollPaneFunctionsElement.
+        // This way the last selected TextField is in "selectedTextField".
+        // When a button of a constant or a calculation is pressed, the corresponding text gets added in the selectedTextField.
         newRow.getChildren().get(0).setOnMouseClicked(mouseEvent -> selectedTextField = (TextField) newRow.getChildren().get(0));
         functions.getChildren().add(functions.getChildren().size() - 1, newRow);
     }
@@ -241,6 +249,8 @@ public class Layout extends Group {
 
     /**
      * Resizes the layout and its components based on the new dimensions.
+     * @param width The new width of the layout.
+     * @param height The new height of the layout.
      */
     public void resize(double width, double height) {
         background.setWidth(width);

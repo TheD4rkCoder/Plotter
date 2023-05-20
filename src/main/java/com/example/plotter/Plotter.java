@@ -22,13 +22,7 @@ import java.util.Objects;
  * creating and displaying the main application window.
  */
 public class Plotter extends Application {
-    /**
-     * Constructs a new DerivativeCalculator instance.
-     * This constructor is used to create an instance of the DerivativeCalculator class.
-     */
-    public Plotter() {
-        // Default constructor
-    }
+
     final double BEGINWIDTH = 1200;  // The initial width of the window
     final double BEGINHEIGHT = 800;  // The initial height of the window
 
@@ -56,6 +50,7 @@ public class Plotter extends Application {
         Layout root = new Layout(BEGINWIDTH, BEGINHEIGHT);  // main Group
 
         Scene scene = new Scene(root, BEGINWIDTH, BEGINHEIGHT);
+        // to react to the window being resized:
         scene.widthProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
@@ -68,11 +63,13 @@ public class Plotter extends Application {
                 root.resize(scene.getWidth(), scene.getHeight());
             }
         });
-        // stage.setFullScreen(true);
+        // start style sheet (light mode):
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
 
+        // to limit the amount you can resize the plotter to, so as not to prevent functionality:
         stage.setMinHeight(400);
         stage.setMinWidth(600);
+        // show the window:
         stage.setTitle("Plotter");
         stage.setScene(scene);
         stage.show();

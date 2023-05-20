@@ -73,6 +73,9 @@ public class PlotArea extends Group {
      */
     public PlotArea(double beginWidth, double beginHeight) {
         super();
+        this.height = beginHeight;
+        this.width = beginWidth;
+        // to enable dragging:
         double[] initialMouseDragCoords = new double[2];
         this.setOnMousePressed(mouse -> {
             initialMouseDragCoords[0] = mouse.getX();
@@ -84,12 +87,13 @@ public class PlotArea extends Group {
             initialMouseDragCoords[0] = mouse.getX();
             initialMouseDragCoords[1] = mouse.getY();
         });
-        this.height = beginHeight;
-        this.width = beginWidth;
 
+        // to enable scrolling:
         this.setOnScroll(scrollEvent -> changePlottedArea(-0.01 * plotCoordinatesWidth * (scrollEvent.getX() / width) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), -0.01 * plotCoordinatesHeight * (1 - scrollEvent.getY() / height) * ((scrollEvent.getDeltaY() == 0) ? 0.1 : scrollEvent.getDeltaY()), 1 + 0.01 * ((scrollEvent.getDeltaY() <= -100) ? -99 : scrollEvent.getDeltaY()), 1 + 0.01 * ((scrollEvent.getDeltaY() <= -100) ? -99 : scrollEvent.getDeltaY())));
+        // to add background:
         background = new Rectangle(beginWidth, beginHeight, Color.LIGHTGRAY);
         this.getChildren().add(background);
+        // to create TextFields that let the user input a specific area of the plot area:
         plotScaleEditLabels[0] = new Label("Min X:");
         plotScaleEditLabels[1] = new Label("Width:");
         plotScaleEditLabels[2] = new Label("Min Y:");
@@ -116,6 +120,7 @@ public class PlotArea extends Group {
             });
             this.getChildren().addAll(plotScaleEditLabels[i], plotScaleEditTextFields[i]);
         }
+        // to add background axis lines:
         axisLines[0] = new Line(0, beginHeight / 2, beginWidth, beginHeight / 2);
         axisLines[0].setStrokeWidth(beginHeight / 400);
         axisLines[0].setStroke(Color.DARKGRAY);
@@ -124,6 +129,7 @@ public class PlotArea extends Group {
         axisLines[1].setStrokeWidth(beginWidth / 400);
         axisLines[1].setStroke(Color.DARKGRAY);
         this.getChildren().add(axisLines[1]);
+        // to add background grid lines:
         for (int i = 0; i < 2 * MAX_NUMBER_OF_GRIDLINES; i++) {
             Label tempLabel = new Label();
             labelsForAxis.add(tempLabel);
@@ -142,6 +148,7 @@ public class PlotArea extends Group {
             }
             this.getChildren().add(tempLine);
         }
+        // to display the grid lines and axis lines in the beginning
         drawPlotArea();
     }
 
@@ -235,7 +242,7 @@ public class PlotArea extends Group {
      * Updates the plotting area by redrawing the grid lines, axes, and functions.
      */
     private void drawPlotArea() {
-        // reset Axis; later also reset Labels
+        // to calculate and set the new start and end positions of the axis lines:
         double xAxisPos = height + offset[1] / plotCoordinatesHeight * height;
         double yAxisPos = -offset[0] / plotCoordinatesWidth * width;
         yAxisPos = (yAxisPos > width) ? -20 : yAxisPos;
@@ -244,7 +251,7 @@ public class PlotArea extends Group {
         axisLines[1].setStartX(yAxisPos);
         axisLines[1].setEndX(yAxisPos);
 
-        // GridLines + Labels for coordinates
+        // to calculate and set the new start and end positions of the background grid lines (the calculated Positions are also used for the grid line labels):
         double distanceBetweenGridlinesX = getNumberOfGridLinesWithCurrentZoomFactor(plotCoordinatesWidth), distanceToFirstLineX;
         double distanceBetweenGridlinesY = getNumberOfGridLinesWithCurrentZoomFactor(plotCoordinatesHeight), distanceToFirstLineY;
         distanceBetweenGridlinesX = plotCoordinatesWidth / distanceBetweenGridlinesX;
@@ -292,12 +299,18 @@ public class PlotArea extends Group {
                 labelsForAxis.get(i).setLayoutX(-100);
             }
         }
-
+        // recalculate and redraw all functions
         for (PlotFunction f : functions) {
             f.recalculateLinesPosition(offset, plotCoordinatesWidth, plotCoordinatesHeight, width, height);
         }
     }
 
+    /**
+     * Calculates the number of grid lines that need to be displayed with the current zoom-factor
+     *
+     * @param coordinatesWidth  The span of the interval which gets displayed.
+     * @return                  the number of grid lines that should be displayed
+     */
     private double getNumberOfGridLinesWithCurrentZoomFactor(double coordinatesWidth) {
         while (coordinatesWidth > MAX_NUMBER_OF_GRIDLINES) {
             coordinatesWidth *= 0.1;
@@ -315,6 +328,7 @@ public class PlotArea extends Group {
 
     /**
      * Changes the plotted area by translating and scaling the coordinate system.
+     * It also calls the drawPlotArea() method to redraw the plot area.
      *
      * @param deltaX                       The translation amount in the x-direction.
      * @param deltaY                       The translation amount in the y-direction.
@@ -327,9 +341,9 @@ public class PlotArea extends Group {
         this.plotCoordinatesWidth *= plotCoordsWidthChangeFactor;
         this.plotCoordinatesHeight *= plotCoordsHeightChangeFactor;
         plotScaleEditTextFields[0].setText(String.format("%f", offset[0]));
-        plotScaleEditTextFields[1].setText(String.format("%f",plotCoordinatesWidth));
-        plotScaleEditTextFields[2].setText(String.format("%f",offset[1]));
-        plotScaleEditTextFields[3].setText(String.format("%f",plotCoordinatesHeight));
+        plotScaleEditTextFields[1].setText(String.format("%f", plotCoordinatesWidth));
+        plotScaleEditTextFields[2].setText(String.format("%f", offset[1]));
+        plotScaleEditTextFields[3].setText(String.format("%f", plotCoordinatesHeight));
         drawPlotArea();
     }
 
@@ -337,9 +351,9 @@ public class PlotArea extends Group {
      * This method sets the plotted area of the graph with the given parameters.
      * It also calls the drawPlotArea() method to redraw the plot area.
      *
-     * @param deltaX The change in X direction.
-     * @param deltaY The change in Y direction.
-     * @param plotCoordsWidth The width of the plot coordinates.
+     * @param deltaX           The change in X direction from the origin (starts from 0 from left to right if 0).
+     * @param deltaY           The change in Y direction from the origin (starts from 0 from bottom to top if 0).
+     * @param plotCoordsWidth  The width of the plot coordinates.
      * @param plotCoordsHeight The height of the plot coordinates.
      */
     public void setPlottedArea(double deltaX, double deltaY, double plotCoordsWidth, double plotCoordsHeight) {
@@ -351,10 +365,10 @@ public class PlotArea extends Group {
     }
 
     /**
-     * Resizes the plotting area to the specified dimensions.
+     * Resizes all elements of the plot area to the new specified dimensions.
      *
-     * @param newWidth  The new width of the plotting area.
-     * @param newHeight The new height of the plotting area.
+     * @param newWidth  The new width of the plot area.
+     * @param newHeight The new height of the plot area.
      */
     public void resize(double newWidth, double newHeight) {
         this.width = newWidth;
@@ -383,7 +397,6 @@ public class PlotArea extends Group {
             }
         }
         drawPlotArea();
-        // todo
     }
 
     /**
@@ -434,16 +447,16 @@ public class PlotArea extends Group {
     }
 
     /**
-     * This method toggles the dark mode of the application.
-     * It changes the color of the first child of this object's children list based on the darkMode parameter.
+     * This method toggles the dark background of the plot area.
+     * It changes the color of the background rectangle based on the darkMode parameter.
      *
      * @param darkMode A boolean value indicating whether dark mode should be enabled.
      */
     public void toggleDarkMode(boolean darkMode) {
         if (darkMode) {
-            ((Rectangle) (this.getChildren().get(0))).setFill(Color.rgb(30, 30, 30));
+            background.setFill(Color.rgb(30, 30, 30));
         } else {
-            ((Rectangle) (this.getChildren().get(0))).setFill(Color.LIGHTGRAY);
+            background.setFill(Color.LIGHTGRAY);
 
         }
     }

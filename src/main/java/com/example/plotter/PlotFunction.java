@@ -31,6 +31,7 @@ public class PlotFunction {
      */
     public PlotFunction(Function function, PlotArea root) {
         this.function = function;
+        // to create all the line segments that will be displayed:
         Color color = Color.color(random.nextDouble(0, 1), random.nextDouble(0, 1), random.nextDouble(0, 1));
         for (int i = 0; i < POINTS; i++) {
             Line temp = new Line();
@@ -68,11 +69,14 @@ public class PlotFunction {
         }
 
         int numOfPoints;
+        // derivatives need a lot more time to calculate, therefore, to not lag out the window,
+        // fewer points of a derivation get calculated.
         if (function.getFunctionName().length() >= 3 && function.getFunctionName().startsWith("der")) {
             numOfPoints = POINTS_FOR_DERIVATIVES;
         } else {
             numOfPoints = POINTS;
         }
+        // to calculate points of the function and set the Start and End coordinates of the lines:
         lines.get(0).setStartX(0);
         lines.get(0).setStartY(plotAreaHeight - (function.calculate(offset[0]) - offset[1]) / graphHeight * plotAreaHeight);
 
