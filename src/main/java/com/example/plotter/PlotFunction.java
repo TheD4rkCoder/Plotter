@@ -84,6 +84,8 @@ public class PlotFunction {
         for (int i = 1; i < numOfPoints; v += graphWidth / numOfPoints, i++) {
             double value = function.calculate(v);
             if (!Double.isFinite(value)) {
+                lines.get(i-1).setVisible(false);
+                lines.get(i).setVisible(false);
                 continue;
             }
             double posY = plotAreaHeight - (value - offset[1]) / graphHeight * plotAreaHeight;
