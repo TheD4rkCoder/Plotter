@@ -1,3 +1,8 @@
+/**
+ * This CSS file defines The Styles of the different elements for dark mode
+ */
+
+
 .root {
     -fx-base: rgb(50, 50, 50);
     -fx-background: rgb(40, 40, 40);
