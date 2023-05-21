@@ -25,6 +25,7 @@ Ensure you have the following installed on your local setup for optimal performa
 To run:
 
 - JRE 18 or later
+- JDK 11 or later
 
 To continure working on this project if you clone it:
 
