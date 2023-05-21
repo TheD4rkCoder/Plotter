@@ -7,6 +7,8 @@
 \usepackage{fancyhdr}
 \usepackage{xurl}
 \usepackage{titling}
+\usepackage{booktabs}
+\usepackage{tabularx}
 
 \newcommand{\bardots}{\smash{\parbox[b]{1.2em}{\rule{1.2em}{0.2ex}\\[-1ex]\dots}}}
 \newcommand{\justbar}{\smash{\parbox[b]{1.2em}{\rule{1.2em}{0.2ex}\\[-1ex]\phantom{\dots}}}}
@@ -147,12 +149,11 @@ Bei der Entwicklung des Plotters haben wir eine Reihe von Technologien und Tools
 \begin{itemize}
 	\item \textbf{IntelliJ IDEA}: Wir haben die IntelliJ IDEA-Entwicklungsumgebung verwendet, um unseren Code zu schreiben, zu testen und zu debuggen. IntelliJ IDEA bietet eine Vielzahl von Funktionen, die die Entwicklung von Java- und JavaFX-Anwendungen erleichtern, einschließlich Code-Vervollständigung, Refactoring-Tools und Integration mit Versionskontrollsystemen wie Git.
 
-	\item \textbf{Maven}: Maven ist ein Build-Management-Tool, das wir verwendet haben, um den Build-Prozess zu automatisieren und die Abhängigkeiten unseres Projekts zu verwalten. Maven erleichtert die Integration von externen Bibliotheken wie mxParser und JScience und stellt sicher, dass unser Projekt auf verschiedenen Plattformen und Systemen konsistent gebaut und ausgeführt werden kann.
+	\item \textbf{Maven}: Maven ist ein Build-Management-Tool, das wir verwendet haben, um den Build-Prozess zu automatisieren und die Abhängigkeiten unseres Projekts zu verwalten. Maven erleichtert die Integration von externen Bibliotheken wie mxParser und JScience und stellt sicher, dass unser Projekt auf verschiedenen Plattformen und Systemen konsistent gebaut und ausgeführt werden kann. In unserem Fall war Maven zusätzlich vorteilhaft, da es die Verwendung von JavaFX in IntelliJ IDEA stark vereinfacht hat.
 
-	      \newpage
-
-	\item \textbf{Git}: Für die Versionskontrolle und das Teamwork haben wir Git verwendet. Git ermöglicht es uns, Änderungen am Code nachzuvollziehen, verschiedene Versionen der Anwendung zu verwalten und die Zusammenarbeit zwischen Teammitgliedern zu erleichtern.
+	\item \textbf{Git}: Für die Versionskontrolle und das Teamwork haben wir Git und GitHub verwendet. Git ermöglicht es uns, Änderungen am Code nachzuvollziehen, verschiedene Versionen der Anwendung zu verwalten und die Zusammenarbeit zwischen Teammitgliedern zu erleichtern. Generell hatten wir bei GitHub kaum Probleme, bis auf kleine Konflikte jeweils beim Mergen. Wir haben den Fehler gemacht, oft Dateien wie beispielsweise "workspace" oder ähnliche Dateien von IntelliJ zu commiten, die auf allen Geräten natürlich unterschiedlich sind und so kleine Konflikte entstanden, die recht schnell behoben wurden. Die Mergekonflikte wurden manuell behoben. Was sehr hilfreich war, waren die Commitnachrichten, durch die wir am Ende genau wussten, was gemacht wurde (wichtig für die Dokumentation). Für die Zukunft wäre es besser, nicht zu oft zu commiten und nur fertige, funktionierende Codeteile zu commiten, da sonst alles unübersichtlich wird. Die "rollback"-Funktion mussten wir glücklicherweise nie verwenden. Ganz zu Beginn wurde einmal aus Versehen ein ganzer Branch gelöscht, was aber schnell kompensiert werden konnte.
 \end{itemize}
+
 
 Durch die Kombination dieser Technologien und Tools konnten wir eine leistungsfähige und benutzerfreundliche Anwendung entwickeln, die es Benutzern ermöglicht, mathematische Funktionen effizient zu visualisieren und zu analysieren.
 
@@ -240,6 +241,55 @@ Ein Aktivitätsdiagramm ist eine grafische Darstellung der Arbeitsabläufe und A
 	\caption{Aktivitätsdiagramm des Plotter-Projekts}
 	\label{fig:aktivitaetsdiagramm}
 \end{figure}
+
+Das Aktivitätsdiagramm beschreibt den Ablauf eines Plotters. Ein Prozess beginnt damit, dass der Nutzer in ein Textfeld schreiben kann, dies kann er entweder mithilfe von Buttons für Sonderzeichen oder auch direkt. Nachher wird die Eingabe auf ihre Gültigkeit überprüft.
+Parallel kann der User auch Variablen hinzufügen, welche auf ihre Gültigkeit anschließend überprüft werden, sollte die Variable falsch eingegeben werden, nimmt es die letzte gültige Eingabe und setzt die Variable auf deren Wert, und gibt gleichzeitig eine Aufforderung aus, dass die Variable richtig eingegeben werden soll. Sollte die Funktion einen falschen Syntax haben, wird wiederum eine Aufforderung angezeigt, welche fordert die Funktion richtig einzugeben. Sollten die Eingaben gültig sein, wird die Funktion gezeichnet.
+
+Wenn der Nutzer die Ansicht des Plottbereichs verändern will, kann er mithilfe des Mausrads zoomen. Zudem kann der User mithilfe von Ziehen der Maus die Oberfläche in x und y Richtung verschieben.
+Wenn der Benutzer mit einer vorhandenen Funktion interagieren möchte, kann er die Schaltflächen verwenden. Diese Schaltflächen ermöglichen es ihm, die Funktion auszublenden, wenn sie sichtbar ist, oder sie wieder anzuzeigen, wenn sie ausgeblendet wurde. Außerdem kann er die Funktion löschen, ihre Ableitung berechnen oder sich die vollständige Kurvendiskussion anzeigen lassen.
+
+
+\newpage
+
+\subsection{Zeiteinteilung}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{5cm}|p{2cm}|p{2cm}|p{2cm}|}
+		\hline
+		\textbf{Anforderung}                                                                                    & \textbf{Geschätzte Zeit} & \textbf{Priorität (1-10)} & \textbf{Effektive Zeit} \\
+		\hline
+		Eingegebene mathematische Funktion auf dem Plottbereich anzeigen (Grafisches + Berechnung der Funktion) & 10                       & 10                        & 12                      \\
+		\hline
+		Mathematische Variablen                                                                                 & 6                        & 8                         & 3                       \\
+		\hline
+		Zoom im Plottbereich                                                                                    & 3                        & 7                         & 3                       \\
+		\hline
+		Plottbereich bewegen                                                                                    & 2                        & 7                         & 1+                      \\
+		\hline
+		Beschriftung der Achsen                                                                                 & 1                        & 8                         & 2                       \\
+		\hline
+		Ableitungsbutton der Funktion                                                                           & 5                        & 4                         & 2                       \\
+		\hline
+		Sichtbarkeitsbutton der Funktion                                                                        & 2                        & 5                         & 1                       \\
+		\hline
+		Löschbutton der Funktion                                                                                & 1                        & 6                         & 1                       \\
+		\hline
+		Kurvendiskussionsbutton der Funktion                                                                    & 8                        & 3                         & 2                       \\
+		\hline
+		Styling der Oberfläche                                                                                  & 4                        & 4                         & 5                       \\
+		\hline
+		Javadocs                                                                                                & 5                        & 8                         & 5                       \\
+		\hline
+		JUnit                                                                                                   & 6                        & 8 dann 1                  & 6                       \\
+		\hline
+		Dokumentation des Programms                                                                             & 8                        & 10                        & 20                      \\
+		\hline
+	\end{tabular}
+	\caption{Anforderungsanalyse}
+	\label{tab:anforderungsanalyse}
+\end{table}
+
+Die Tabelle \ref{tab:anforderungsanalyse} zeigt eine Übersicht über die Anforderungen an das Projekt. Für jede Anforderung wird die geschätzte Zeit für die Implementierung, die Priorität der Anforderung und die tatsächlich aufgewendete Zeit aufgeführt. Es wird deutlich, dass einige Anforderungen, wie die Darstellung der eingegebenen mathematischen Funktion auf dem Plotbereich und die Dokumentation des Programms, eine hohe Priorität hatten und entsprechend mehr Zeit in Anspruch nahmen. Andere Anforderungen, wie der Ableitungsbutton und der Kurvendiskussionsbutton, hatten eine niedrigere Priorität und benötigten weniger Zeit. Insgesamt zeigt die Tabelle, dass die effektive Zeit oft von der geschätzten Zeit abweicht, was auf die Komplexität und die unvorhergesehenen Herausforderungen bei der Implementierung der verschiedenen Anforderungen hinweist.
 
 \newpage
 
@@ -377,7 +427,6 @@ Um die Plotter-Anwendung zu installieren und einzurichten, befolgen Sie die folg
 		      \item f': Berechnen und Anzeigen der Ableitung der Funktion
 		      \item \(\mathrm{\large{\textbf{X}}}\): Entfernen der Funktion aus dem Graphen
 		      \item \(\mathrm{\large{\textbf{O}}}\): Umschalten der Sichtbarkeit der Funktion im Graphen
-		      \item i: Anzeigen von Informationen zur Funktionsanalyse
 	      \end{itemize}
 	      \begin{figure}[ht]
 		      \centering
@@ -445,14 +494,50 @@ Mögliche zukünftige Erweiterungen der Plotter-Anwendung könnten sein:
 \section{Anhang}
 
 \subsection{Arbeitstagebuch (Planung)}
-[Platzhalter]
+\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{>{\hsize=0.5\hsize}X>{\hsize=0.5\hsize}X>{\hsize=0.3\hsize}X>{\hsize=2.7\hsize}X}
+		\toprule
+		\textbf{Person} & \textbf{Datum} & \textbf{Zeit} & \textbf{Tätigkeiten}                                             \\
+		\midrule
+		Daniel          & 16.01.         & 1h            & Auf github registriert, Beginn Use-Case                          \\
+		David           & 16.01.         & 1h            & Erstellung des Git-Repositorys, Besprechung des Projekts         \\
+		Patrick         & 16.01.         & 1h            & Erstellung Jira Projekt, Beginn Erstellung UseCaseDiagram(Lucid) \\
+		Daniel          & 30.01          & 1h            & Fertigstellung Use-Case Diagramm                                 \\
+		David           & 30.01          & 1h            & helfen beim Use-Case Diagramm                                    \\
+		David           & 06.02.         & 1h            & Schauen, wie ein Aktivitätsdiagramm und Ablaufdiagramm aussieht  \\
+		David           & 12.02.         & 1h            & Anforderungsanalyse                                              \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Planung}
+	\label{table:planung}
+\end{table}
 
 \subsection{Arbeitstagebuch (Umsetzung)}
-[Platzhalter]
+\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{>{\hsize=0.5\hsize}X>{\hsize=0.5\hsize}X>{\hsize=0.3\hsize}X>{\hsize=2.7\hsize}X}
+		\toprule
+		\textbf{Person} & \textbf{Datum} & \textbf{Zeit} & \textbf{Tätigkeiten}                                                                                                                                                                         \\
+		\midrule
+		alle            & 17.04.         & 3h            & Tests schreiben (für Ableitung, Klasse Plotarea und sonstige Konstanten und mathematische Funktionen wie Sinus)                                                                              \\
+		David           & 19.04.         & 4h            & zeichnen der PlotFunction in PlotArea                                                                                                                                                        \\
+		David           & 26.04          & 3h            & PlotArea changePlottedArea und drawPlotArea Methoden                                                                                                                                         \\
+		David           & 30.04          & 4h            & Menü für die eingabe von Funktionen, Konstanten und Knöpfe für mathematische Funktionen sowie Knöpfe zur löschung, ableitung und umstellen der Sichtbarkeit einer Funktion. Auch Css styling \\
+		Patrick         & 20.05.         & 1h            & updated README.md                                                                                                                                                                            \\
+		David           & 20.05.         & 1h            & Kommentieren                                                                                                                                                                                 \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Umsetzung}
+	\label{table:umsetzung}
+\end{table}
 
 \subsection{Quellcode}
 Der Quellcode für das Plotter-Projekt ist auf GitHub verfügbar:
 \url{https://github.com/TheD4rkCoder/Plotter/tree/master/src/main/java/com/example/plotter}
+
+\subsection{Anwendungsdiagramm}
+
 
 \clearpage
 
@@ -484,6 +569,13 @@ Folgende Screenshots können in den Anhang aufgenommen werden:
 	\includegraphics[width=0.8\textwidth]{Resources/zoom.png}
 	\caption{Zoom: Gezoomte Ansicht der $sec(x)$ Funktion}
 	\label{fig:zoom}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Resources/heartshape.png}
+	\caption{Funktion in der Form eines Herzens}
+	\label{fig:heart}
 \end{figure}
 
 \clearpage
