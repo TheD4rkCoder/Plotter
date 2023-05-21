@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  21 MAY 2023 21:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  22 MAY 2023 00:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -282,7 +282,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 70
  (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<Resources/logo.png, id=199, 1691.31876pt x 1691.31876pt>
+<Resources/logo.png, id=191, 1691.31876pt x 1691.31876pt>
 File: Resources/logo.png Graphic file (type png)
 <use Resources/logo.png>
 Package pdftex.def Info: Resources/logo.png  used on input line 70.
@@ -298,7 +298,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 ...erline {9.3}Quellcode}{24}{subsection.9.3}
+l.44 ....4}Anwendungsdiagramm}{24}{subsection.9.4}
                                                   % [1
 
 ])
@@ -317,169 +317,159 @@ Overfull \hbox (15.94577pt too wide) in paragraph at lines 134--135
  []
 
 [5] [6]
-<Resources/kanban_board_example.png, id=290, 3011.25pt x 1806.75pt>
+<Resources/kanban_board_example.png, id=280, 3011.25pt x 1806.75pt>
 File: Resources/kanban_board_example.png Graphic file (type png)
 <use Resources/kanban_board_example.png>
-Package pdftex.def Info: Resources/kanban_board_example.png  used on input line 158.
+Package pdftex.def Info: Resources/kanban_board_example.png  used on input line 159.
 (pdftex.def)             Requested size: 345.0pt x 206.98618pt.
  [7 <./Resources/kanban_board_example.png
 
 pdfTeX warning: pdflatex.exe (file ./Resources/kanban_board_example.png): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
 >]
-Overfull \hbox (9.9764pt too wide) in paragraph at lines 183--184
+Overfull \hbox (9.9764pt too wide) in paragraph at lines 184--185
 []\T1/cmr/bx/n/10 Transparenz\T1/cmr/m/n/10 : Durch die Vi-sua-li-sie-rung des Ar-beits-ab-laufs auf dem Kanban-
  []
 
 
-Overfull \hbox (0.63701pt too wide) in paragraph at lines 184--185
+Overfull \hbox (0.63701pt too wide) in paragraph at lines 185--186
 []\T1/cmr/bx/n/10 Effizienz\T1/cmr/m/n/10 : Die An-wen-dung von Kan-ban und die Auf-tei-lung des Pro-gramms
  []
 
 [8] [9]
-<Resources/aktivitaetsdiagramm.png, id=305, 1282.7925pt x 604.50844pt>
+<Resources/aktivitaetsdiagramm.png, id=295, 1282.7925pt x 604.50844pt>
 File: Resources/aktivitaetsdiagramm.png Graphic file (type png)
 <use Resources/aktivitaetsdiagramm.png>
-Package pdftex.def Info: Resources/aktivitaetsdiagramm.png  used on input line 224.
+Package pdftex.def Info: Resources/aktivitaetsdiagramm.png  used on input line 225.
 (pdftex.def)             Requested size: 345.0pt x 162.57378pt.
  [10 <./Resources/aktivitaetsdiagramm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
-[]|\T1/cmr/bx/n/10 Geschätzte
+Overfull \hbox (17.96587pt too wide) in paragraph at lines 260--260
+[]|\T1/cmr/bx/n/10 Tätigkeiten| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--243
-[]|\T1/cmr/bx/n/10 Priorität
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
-[]|\T1/cmr/bx/n/10 Effektive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
-[]|\T1/cmr/m/n/10 Eingegebene ma-the-ma-ti-sche
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 261--261
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
 []|\T1/cmr/m/n/10 Kurvendiskussionsbutton der
  []
 
 
-Overfull \hbox (17.98026pt too wide) in paragraph at lines 241--272
- [][] 
+Underfull \hbox (badness 10000) in alignment at lines 260--260
+[][][][] 
  []
 
 [11]
-<Resources/use-case-diagram.png, id=319, 390.70969pt x 369.63094pt>
+<Resources/use-case-diagram.png, id=309, 390.70969pt x 369.63094pt>
 File: Resources/use-case-diagram.png Graphic file (type png)
 <use Resources/use-case-diagram.png>
-Package pdftex.def Info: Resources/use-case-diagram.png  used on input line 292.
+Package pdftex.def Info: Resources/use-case-diagram.png  used on input line 281.
 (pdftex.def)             Requested size: 276.00105pt x 261.12001pt.
  [12 <./Resources/use-case-diagram.png>]
-<Resources/gui_screenshot.png, id=327, 901.11656pt x 624.83438pt>
+<Resources/gui_screenshot.png, id=317, 901.11656pt x 624.83438pt>
 File: Resources/gui_screenshot.png Graphic file (type png)
 <use Resources/gui_screenshot.png>
-Package pdftex.def Info: Resources/gui_screenshot.png  used on input line 311.
+Package pdftex.def Info: Resources/gui_screenshot.png  used on input line 300.
 (pdftex.def)             Requested size: 345.0pt x 239.22243pt.
  [13 <./Resources/gui_screenshot.png>] [14]
-<Resources/class_diagram.png, id=338, 2384.91pt x 1985.4175pt>
+<Resources/class_diagram.png, id=328, 2384.91pt x 1985.4175pt>
 File: Resources/class_diagram.png Graphic file (type png)
 <use Resources/class_diagram.png>
-Package pdftex.def Info: Resources/class_diagram.png  used on input line 346.
+Package pdftex.def Info: Resources/class_diagram.png  used on input line 335.
 (pdftex.def)             Requested size: 345.0pt x 287.19653pt.
  [15 <./Resources/class_diagram.png (PNG copy)>]
-<Resources/ui_prototype.png, id=345, 1104.37593pt x 796.47563pt>
+<Resources/ui_prototype.png, id=335, 1104.37593pt x 796.47563pt>
 File: Resources/ui_prototype.png Graphic file (type png)
 <use Resources/ui_prototype.png>
-Package pdftex.def Info: Resources/ui_prototype.png  used on input line 361.
+Package pdftex.def Info: Resources/ui_prototype.png  used on input line 350.
 (pdftex.def)             Requested size: 345.0pt x 248.81294pt.
  [16 <./Resources/ui_prototype.png>] [17]
-Overfull \hbox (84.15134pt too wide) in paragraph at lines 394--397
-\T1/cmtt/m/n/10 --add-modules javafx.controls,javafx.fxml -jar target/plotter-1.0-SNAPSHOT.jar 
+Overfull \hbox (16.23737pt too wide) in paragraph at lines 376--378
+[]\T1/cmr/m/n/10 Laden Sie die aus-führ-ba-re Da-tei aus dem Release-Teil des GitHub-Repositories
  []
 
-<Resources/example_function.png, id=356, 302.63063pt x 147.55125pt>
+<Resources/example_function.png, id=347, 302.63063pt x 147.55125pt>
 File: Resources/example_function.png Graphic file (type png)
 <use Resources/example_function.png>
-Package pdftex.def Info: Resources/example_function.png  used on input line 404.
+Package pdftex.def Info: Resources/example_function.png  used on input line 389.
 (pdftex.def)             Requested size: 241.49895pt x 117.7462pt.
 [18 <./Resources/example_function.png>]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 412.
+LaTeX Font Warning: Command \large invalid in math mode on input line 397.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 413.
+LaTeX Font Warning: Command \large invalid in math mode on input line 398.
 
-<Resources/example_buttons.png, id=369, 78.2925pt x 30.1125pt>
+<Resources/example_buttons.png, id=361, 78.2925pt x 30.1125pt>
 File: Resources/example_buttons.png Graphic file (type png)
 <use Resources/example_buttons.png>
-Package pdftex.def Info: Resources/example_buttons.png  used on input line 417.
+Package pdftex.def Info: Resources/example_buttons.png  used on input line 402.
 (pdftex.def)             Requested size: 172.5pt x 66.35518pt.
-<Resources/example_linear.png, id=370, 901.11656pt x 621.82312pt>
+<Resources/example_linear.png, id=362, 901.11656pt x 621.82312pt>
 File: Resources/example_linear.png Graphic file (type png)
 <use Resources/example_linear.png>
-Package pdftex.def Info: Resources/example_linear.png  used on input line 430.
+Package pdftex.def Info: Resources/example_linear.png  used on input line 415.
 (pdftex.def)             Requested size: 276.00105pt x 190.45752pt.
 [19 <./Resources/example_buttons.png> <./Resources/example_linear.png>]
-<Resources/example_quadratic.png, id=383, 902.6222pt x 626.34pt>
+<Resources/example_quadratic.png, id=375, 902.6222pt x 626.34pt>
 File: Resources/example_quadratic.png Graphic file (type png)
 <use Resources/example_quadratic.png>
-Package pdftex.def Info: Resources/example_quadratic.png  used on input line 438.
+Package pdftex.def Info: Resources/example_quadratic.png  used on input line 423.
 (pdftex.def)             Requested size: 276.00105pt x 191.5256pt.
-<Resources/example_trigonometric.png, id=384, 901.86937pt x 624.83438pt>
+<Resources/example_trigonometric.png, id=376, 901.86937pt x 624.83438pt>
 File: Resources/example_trigonometric.png Graphic file (type png)
 <use Resources/example_trigonometric.png>
-Package pdftex.def Info: Resources/example_trigonometric.png  used on input line 445.
+Package pdftex.def Info: Resources/example_trigonometric.png  used on input line 430.
 (pdftex.def)             Requested size: 276.00105pt x 191.21776pt.
  [20 <./Resources/example_quadratic.png> <./Resources/example_trigonometric.png>] [21]
-Underfull \hbox (badness 1112) in paragraph at lines 495--495
+Underfull \hbox (badness 1112) in paragraph at lines 481--481
 []|\T1/cmr/m/n/10 Erstellung Ji-ra Pro-jekt, Be-ginn Er-stel-lung
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 495--495
+Underfull \hbox (badness 10000) in alignment at lines 481--481
 [][][][] 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 534--534
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
 []|\T1/cmr/m/n/10 SECURITY.md, CON-TRI-BU-TING.md,
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 534--534
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
+[]|\T1/cmr/m/n/10 Patrick
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 521--521
 [][][][] 
  []
 
 [23] [24
 
 ]
-<Resources/startbildschirm.png, id=425, 902.6222pt x 622.57594pt>
+<Resources/startbildschirm.png, id=416, 902.6222pt x 622.57594pt>
 File: Resources/startbildschirm.png Graphic file (type png)
 <use Resources/startbildschirm.png>
-Package pdftex.def Info: Resources/startbildschirm.png  used on input line 562.
+Package pdftex.def Info: Resources/startbildschirm.png  used on input line 549.
 (pdftex.def)             Requested size: 276.00105pt x 190.37462pt.
-<Resources/eingabe_darstellung.png, id=426, 902.6222pt x 622.57594pt>
+<Resources/eingabe_darstellung.png, id=417, 902.6222pt x 622.57594pt>
 File: Resources/eingabe_darstellung.png Graphic file (type png)
 <use Resources/eingabe_darstellung.png>
-Package pdftex.def Info: Resources/eingabe_darstellung.png  used on input line 569.
+Package pdftex.def Info: Resources/eingabe_darstellung.png  used on input line 556.
 (pdftex.def)             Requested size: 276.00105pt x 190.37462pt.
-<Resources/anwendung.png, id=427, 901.86937pt x 630.10406pt>
+<Resources/anwendung.png, id=418, 901.86937pt x 630.10406pt>
 File: Resources/anwendung.png Graphic file (type png)
 <use Resources/anwendung.png>
-Package pdftex.def Info: Resources/anwendung.png  used on input line 576.
+Package pdftex.def Info: Resources/anwendung.png  used on input line 563.
 (pdftex.def)             Requested size: 276.00105pt x 192.83044pt.
-<Resources/zoom.png, id=428, 903.375pt x 624.83438pt>
+<Resources/zoom.png, id=419, 903.375pt x 624.83438pt>
 File: Resources/zoom.png Graphic file (type png)
 <use Resources/zoom.png>
-Package pdftex.def Info: Resources/zoom.png  used on input line 583.
+Package pdftex.def Info: Resources/zoom.png  used on input line 570.
 (pdftex.def)             Requested size: 276.00105pt x 190.90314pt.
-<Resources/heartshape.png, id=429, 901.86937pt x 624.08156pt>
+<Resources/heartshape.png, id=420, 901.86937pt x 624.08156pt>
 File: Resources/heartshape.png Graphic file (type png)
 <use Resources/heartshape.png>
-Package pdftex.def Info: Resources/heartshape.png  used on input line 590.
+Package pdftex.def Info: Resources/heartshape.png  used on input line 577.
 (pdftex.def)             Requested size: 276.00105pt x 190.98738pt.
  [25
 
@@ -491,21 +481,21 @@ Package pdftex.def Info: Resources/heartshape.png  used on input line 590.
 
  [29] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3F7AC27D6A2B016AC4393B344F741DC0;7069.
+(rerunfilecheck)             Checksum: FF26395EBDC8F52011BC11D3B0259AD4;6742.
  ) 
 Here is how much of TeX's memory you used:
- 10209 strings out of 475071
- 164522 string characters out of 5782907
- 530532 words of memory out of 5000000
- 31350 multiletter control sequences out of 15000+600000
+ 10206 strings out of 475071
+ 164466 string characters out of 5782907
+ 531527 words of memory out of 5000000
+ 31348 multiletter control sequences out of 15000+600000
  477589 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,12n,77p,1222b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (30 pages, 1667645 bytes).
+Output written on main.pdf (30 pages, 1665465 bytes).
 PDF statistics:
- 559 PDF objects out of 1000 (max. 8388607)
- 466 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
- 470 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 551 PDF objects out of 1000 (max. 8388607)
+ 458 compressed objects within 5 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 454 words of extra memory for PDF output out of 10000 (max. 10000000)
 

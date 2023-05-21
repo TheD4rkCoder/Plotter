@@ -28,8 +28,7 @@
 \contentsline {subsection}{\numberline {6.1}UI-Prototyp}{16}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Backend-Entwicklung}{16}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Frontend-Entwicklung}{17}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Integration von APIs}{17}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Teststrategie}{17}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.4}Teststrategie}{17}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Benutzung (User Guide)}{18}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Installation und Einrichtung}{18}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Bedienung der Anwendung}{18}{subsection.7.2}%
@@ -46,4 +45,3 @@
 \contentsline {subsection}{\numberline {9.5}Use-Case-Diagramm}{24}{subsection.9.5}%
 \contentsline {subsection}{\numberline {9.6}Screenshots}{25}{subsection.9.6}%
 \contentsline {subsection}{\numberline {9.7}Lizenzinformationen}{28}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Abbildungsverzeichnis}{29}{subsection.9.8}%
