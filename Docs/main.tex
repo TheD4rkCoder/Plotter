@@ -238,42 +238,30 @@ Wenn der Benutzer mit einer vorhandenen Funktion interagieren möchte, kann er d
 \subsection{Zeiteinteilung}
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|p{5cm}|p{2cm}|p{2cm}|p{2cm}|}
-		\hline
-		\textbf{Anforderung}                                                                                    & \textbf{Geschätzte Zeit} & \textbf{Priorität (1-10)} & \textbf{Effektive Zeit} \\
-		\hline
-		Eingegebene mathematische Funktion auf dem Plottbereich anzeigen (Grafisches + Berechnung der Funktion) & 10                       & 10                        & 12                      \\
-		\hline
-		Mathematische Variablen                                                                                 & 6                        & 8                         & 3                       \\
-		\hline
-		Zoom im Plottbereich                                                                                    & 3                        & 7                         & 3                       \\
-		\hline
-		Plottbereich bewegen                                                                                    & 2                        & 7                         & 1+                      \\
-		\hline
-		Beschriftung der Achsen                                                                                 & 1                        & 8                         & 2                       \\
-		\hline
-		Ableitungsbutton der Funktion                                                                           & 5                        & 4                         & 2                       \\
-		\hline
-		Sichtbarkeitsbutton der Funktion                                                                        & 2                        & 5                         & 1                       \\
-		\hline
-		Löschbutton der Funktion                                                                                & 1                        & 6                         & 1                       \\
-		\hline
-		Kurvendiskussionsbutton der Funktion                                                                    & 8                        & 3                         & unendlich               \\
-		\hline
-		Styling der Oberfläche                                                                                  & 4                        & 4                         & 5                       \\
-		\hline
-		Javadocs                                                                                                & 5                        & 8                         & 5                       \\
-		\hline
-		JUnit                                                                                                   & 6                        & 8 dann 1                  & 6                       \\
-		\hline
-		Dokumentation des Programms                                                                             & 8                        & 10                        & 20                      \\
-		\hline
-	\end{tabular}
-	\caption{Anforderungsanalyse}
-	\label{tab:anforderungsanalyse}
+	\begin{tabularx}{\textwidth}{>{\hsize=2.3\hsize}X>{\hsize=0.6\hsize}X>{\hsize=0.6\hsize}X>{\hsize=0.6\hsize}X}
+		\toprule
+		\textbf{Person}                                                                                         & \textbf{Datum} & \textbf{Zeit} & \textbf{Tätigkeiten} \\
+		\midrule
+		Eingegebene mathematische Funktion auf dem Plottbereich anzeigen (Grafisches + Berechnung der Funktion) & 10             & 10            & 12                   \\
+		Mathematische Variablen                                                                                 & 6              & 8             & 3                    \\
+		Zoom im Plottbereich                                                                                    & 3              & 7             & 3                    \\
+		Plottbereich bewegen                                                                                    & 2              & 7             & 1+                   \\
+		Beschriftung der Achsen                                                                                 & 1              & 8             & 2                    \\
+		Ableitungsbutton der Funktion                                                                           & 5              & 4             & 2                    \\
+		Sichtbarkeitsbutton der Funktion                                                                        & 2              & 5             & 1                    \\
+		Löschbutton der Funktion                                                                                & 1              & 6             & 1                    \\
+		Kurvendiskussionsbutton der Funktion                                                                    & 8              & 3             & N/A                  \\
+		Styling der Oberfläche                                                                                  & 4              & 4             & 5                    \\
+		Javadocs                                                                                                & 5              & 8             & 5                    \\
+		JUnit                                                                                                   & 6              & 8 > 1         & 6                    \\
+		Dokumentation des Programms                                                                             & 8              & 10            & 20                   \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Zeiteinteilung}
+	\label{table:zeiteinteilung}
 \end{table}
 
-Die Tabelle \ref{tab:anforderungsanalyse} zeigt eine Übersicht über die Anforderungen an das Projekt. Für jede Anforderung wird die geschätzte Zeit für die Implementierung, die Priorität der Anforderung und die tatsächlich aufgewendete Zeit aufgeführt. Es wird deutlich, dass einige Anforderungen, wie die Darstellung der eingegebenen mathematischen Funktion auf dem Plotbereich und die Dokumentation des Programms, eine hohe Priorität hatten und entsprechend mehr Zeit in Anspruch nahmen. Andere Anforderungen, wie der Ableitungsbutton und der Kurvendiskussionsbutton, hatten eine niedrigere Priorität und benötigten weniger Zeit. Insgesamt zeigt die Tabelle, dass die effektive Zeit oft von der geschätzten Zeit abweicht, was auf die Komplexität und die unvorhergesehenen Herausforderungen bei der Implementierung der verschiedenen Anforderungen hinweist.
+Die Tabelle \ref{table:zeiteinteilung} zeigt eine Übersicht über die Anforderungen an das Projekt. Für jede Anforderung wird die geschätzte Zeit für die Implementierung, die Priorität der Anforderung und die tatsächlich aufgewendete Zeit aufgeführt. Es wird deutlich, dass einige Anforderungen, wie die Darstellung der eingegebenen mathematischen Funktion auf dem Plotbereich und die Dokumentation des Programms, eine hohe Priorität hatten und entsprechend mehr Zeit in Anspruch nahmen. Andere Anforderungen, wie der Ableitungsbutton und der Kurvendiskussionsbutton, hatten eine niedrigere Priorität und benötigten weniger Zeit. Insgesamt zeigt die Tabelle, dass die effektive Zeit oft von der geschätzten Zeit abweicht, was auf die Komplexität und die unvorhergesehenen Herausforderungen bei der Implementierung der verschiedenen Anforderungen hinweist.
 
 \newpage
 
@@ -369,14 +357,12 @@ Die Backend-Entwicklung fokussierte sich auf die Berechnung von Funktionswerten 
 \subsection{Frontend-Entwicklung}
 Die Frontend-Entwicklung konzentrierte sich auf die Gestaltung der Benutzeroberfläche und die Implementierung der verschiedenen UI-Komponenten. Insbesondere die Erstellung und Formatierung der Knöpfe für die Eingabe von Funktionen, Variablen und mathematischen Operationen stellte eine Herausforderung dar. Die Verwendung von HTML, CSS und JavaFX für das Styling und Layout der Benutzeroberfläche erleichterte den Prozess. Dennoch war es schwierig, alle Elemente so zu gestalten, dass sie korrekt miteinander interagierten, insbesondere beim Verschieben des Netzwerks oder beim Anpassen der Größe des gesamten Fensters. Das Erstellen von Rändern und optisch ansprechenden Knöpfen erforderte ebenfalls besondere Aufmerksamkeit.
 
-\subsection{Integration von APIs}
-Die mxParser-Bibliothek wurde für die Berechnung von mathematischen Funktionen und deren Ableitungen ausgewählt und in das Projekt integriert. Die Bibliothek zeichnet sich durch ihre umfangreichen Möglichkeiten und gute Dokumentation aus, die den Entwicklungsprozess erheblich erleichterten. Die Integration verlief problemlos und fehlerfrei. Die Anwendung nutzt mxParser für das Parsen und Evaluieren der eingegebenen Funktionen, um deren Graphen darzustellen.
-
 \subsection{Teststrategie}
 Um die Qualität und Korrektheit der implementierten Funktionen zu gewährleisten, wurde eine Teststrategie entwickelt und JUnit-Tests für verschiedene Aspekte der Anwendung erstellt. Es wurden verschiedene Arten von Funktionen getestet, wie beispielsweise lineare, quadratische und höhergradige Funktionen. Die Tests verglichen die berechneten Werte der Anwendung mit den tatsächlichen Werten und stellten sicher, dass die Abweichungen innerhalb eines akzeptablen Bereichs lagen (in der Regel auf drei Nachkommastellen genau).
 
 Gelegentlich kam es zu geringfügigen Abweichungen in den Ergebnissen, die jedoch auf die Unvermeidlichkeit von Rundungsfehlern und die Begrenzungen von Java bei der Verarbeitung von Gleitkommazahlen zurückzuführen sind. Beispielsweise kann es vorkommen, dass statt dem Wert 3,0 der Wert 3,000000000003 errechnet wird. Diese Abweichungen sind jedoch für die Zwecke der Anwendung vernachlässigbar und beeinträchtigen nicht die Funktionalität des Plotters.
 
+Um sicherzustellen, dass die grafische Darstellung der Funktionen korrekt war, haben wir festgestellt, dass das Testen mit JUnit allein ungeschickt war. Daher haben wir eine alternative Methode angewendet. Wir haben das Programm gestartet und die grafische Oberfläche manuell überprüft, um sicherzustellen, dass die dargestellten Funktionen den erwarteten Ergebnissen entsprachen. Dieser Ansatz ermöglichte es uns, visuell zu überprüfen, ob die Funktionen korrekt gezeichnet wurden und ob die grafische Darstellung den Anforderungen entsprach. Durch diese kombinierte Herangehensweise konnten wir sowohl die Genauigkeit der berechneten Werte als auch die Richtigkeit der grafischen Darstellung der Funktionen gewährleisten.
 \newpage
 
 \section{Benutzung (User Guide)}
@@ -385,16 +371,14 @@ Gelegentlich kam es zu geringfügigen Abweichungen in den Ergebnissen, die jedoc
 Um die Plotter-Anwendung zu installieren und einzurichten, befolgen Sie die folgenden Schritte:
 
 \begin{enumerate}
-	\item Stellen Sie sicher, dass JDK 11 oder höher und JavaFX 11 oder höher auf Ihrem Computer installiert sind.
-	\item Klone das Projekt-Repository von GitHub:\\
-	      \texttt{git clone https://github.com/TheD4rkCoder/Plotter}\\
-	      \texttt{cd plotter}
-	\item Erstellen Sie das Projekt mit Maven:\\
-	      \texttt{mvn clean install}
-	\item Führen Sie die Anwendung aus:\\
-	      \texttt{java --module-path /path/to/javafx-sdk-11/lib\\ --add-modules javafx.controls,javafx.fxml -jar target/plotter-1.0-SNAPSHOT.jar}\\
-	      Ersetzen Sie dabei \texttt{/path/to/javafx-sdk-11/lib} durch den Pfad zum JavaFX SDK \texttt{lib}-Verzeichnis.
+	\item Stellen Sie sicher, dass JDK 11 oder höher und JRE 18 installiert sind, da das Programm sonst nicht ausgeführt werden kann.
+	\item Laden Sie die ausführbare Datei aus dem Release-Teil des GitHub-Repositories herunter: \
+	      \texttt{\href{https://github.com/TheD4rkCoder/Plotter/releases}{https://github.com/TheD4rkCoder/Plotter/releases}}
+	\item Führen Sie die heruntergeladene Datei aus, um die Anwendung zu starten.
+	\item Beachten Sie, dass JavaFX 18 oder höher ebenfalls auf Ihrem Computer installiert sein muss, um die grafische Benutzeroberfläche korrekt anzeigen zu können.
+	\item Bei Problemen können genauere Informationen und Anweisungen in der Datei README.md im GitHub-Repository gefunden werden. \
 \end{enumerate}
+
 
 \subsection{Bedienung der Anwendung}
 \begin{enumerate}
@@ -454,6 +438,7 @@ Folgende Beispiele zeigen verschiedene Funktionen, die mit dem Plotter dargestel
 
 \subsection{Zusammenfassung}
 In diesem Projekt haben wir erfolgreich eine Java-basierte Plotter-Anwendung entwickelt, die es Benutzern ermöglicht, mathematische Funktionen und ihre Ableitungen grafisch darzustellen. Wir haben das flexible und leicht verständliche Kanban-System zur Verwaltung unserer Arbeitsabläufe verwendet. Durch den Einsatz von APIs wie mxParser und JavaFX haben wir eine effiziente und benutzerfreundliche Anwendung erstellt, die eine breite Palette von Funktionen unterstützt.
+Es war uns jedoch nicht möglich, alle Anforderungen zu erfüllen, da uns die Zeit für die Implementierung einer umfassenden Funktionsanalyse fehlte. Eine solche Analyse hätte die Berechnung von Nullstellen, Extremwerten und Wendepunkten umfassen können. Aufgrund der Komplexität dieser Funktionen und des begrenzten Zeitrahmens konnten wir diese Erweiterungen nicht vollständig umsetzen. Dennoch haben wir eine solide Grundlage geschaffen, auf der zukünftige Entwicklungen aufbauen können, um die Plotter-Anwendung weiter zu verbessern und zu erweitern.
 
 \subsection{Erreichte Ziele}
 Die wichtigsten erreichten Ziele sind:
@@ -526,10 +511,11 @@ Mögliche zukünftige Erweiterungen der Plotter-Anwendung könnten sein:
 		Patrick         & 17.05.         & 1h            & SECURITY.md, CONTRIBUTING.md, PULL\_REQUEST\_TEMPLATE.md ect \\
 		David           & 18.05.         & 2h            & Bugfixes                                                     \\
 		Patrick         & 19.05.         & 3h            & JavaDOCS aktualisiert                                        \\
-		David           & 20.05.         & 3h            & Kommentieren                                                 \\
+		David           & 20.05.         & 3h            & Kommentieren/bugfixing                                       \\
 		Patrick         & 20.05.         & 1h            & Updated README.md                                            \\
 		David           & 20.05.         & 1h            & Kommentieren                                                 \\
 		Patrick         & 21.05.         & 5h            & Weiterarbeitung Doku                                         \\
+		Patrick David   & 21.05.         & 3h            & Verbesserung Dokumente und abschließendes Gespräch           \\
 		\bottomrule
 	\end{tabularx}
 	\caption{Umsetzung}
