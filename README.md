@@ -21,9 +21,13 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 Ensure you have the following installed on your local setup for optimal performance:
-to run:
+
+To run:
+
 - JRE 18 or later
-to continure working on this project if you clone it:
+
+To continure working on this project if you clone it:
+
 - JDK 11 or later
 - JavaFX 11 or later
 - Maven (required for building the project)
