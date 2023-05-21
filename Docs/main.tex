@@ -88,7 +88,7 @@ In diesem Projekt verfolgen wir das Ziel, eine benutzerfreundliche und leistungs
 \begin{itemize}
 	\item Entwicklung einer benutzerfreundlichen Oberfläche, die es Benutzern ermöglicht, Funktionen einfach einzugeben und zu bearbeiten.
 	\item Unterstützung einer breiten Palette von mathematischen Funktionen, einschließlich linearer, quadratischer, exponentieller und trigonometrischer Funktionen.
-	\item Integration von APIs wie mxParser und JScience, um die Funktionalität und Benutzerfreundlichkeit der Anwendung zu erweitern.
+	\item Integration von APIs wie mxParser, um die Funktionalität und Benutzerfreundlichkeit der Anwendung zu erweitern.
 	\item Implementierung von Funktionen zur Berechnung und Anzeige von Ableitungen und Kurvendiskussionen.
 	\item Bereitstellung von Werkzeugen zur Anpassung der Darstellung von Funktionen und des Plotbereichs.
 	\item Ermöglichung von Zoomen und Verschieben des Plotbereichs, um die Anzeige von Funktionen flexibel zu gestalten.
@@ -98,29 +98,15 @@ In diesem Projekt verfolgen wir das Ziel, eine benutzerfreundliche und leistungs
 
 Durch das Erreichen dieser Ziele wollen wir eine leistungsstarke und benutzerfreundliche Plotter-Anwendung schaffen, die sowohl für den Bildungsbereich als auch für professionelle Anwender wertvoll ist und die Visualisierung und Analyse von mathematischen Funktionen vereinfacht.
 
-
-\subsection{Unsere Vision}
-Unsere Vision für das Plotter-Projekt war es, eine benutzerfreundliche und leistungsfähige Java-basierte grafische Funktionen-Plotting-Anwendung zu entwickeln, die es Benutzern ermöglicht, mathematische Funktionen und ihre Ableitungen zu visualisieren. Wir wollten eine breite Palette von Funktionen unterstützen, einschließlich linearer, quadratischer, exponentieller und trigonometrischer Funktionen. Dabei sollte die Anwendung die mxParser-Bibliothek verwenden, um mathematische Ausdrücke zu analysieren und ihre Werte zu berechnen.
-
-Zu Beginn des Projekts haben wir uns darauf konzentriert, die Kernfunktionen der Anwendung zu entwickeln, wie das Plotten von Funktionen in einer benutzerfreundlichen Oberfläche, das Berechnen und Anzeigen von Ableitungen von Funktionen, das Anwenden von Konstanten und Variablen auf Funktionen, das Ein- und Ausblenden von Funktionen im Graphen und das Anpassen des Erscheinungsbilds des Plotbereichs. Zudem haben wir die Möglichkeit geschaffen, die Ansicht des Plotbereichs zu vergrößern und zu verkleinern.
-
-Wir wollten sicherstellen, dass die Anwendung einfach zu installieren und auszuführen ist, weshalb wir uns für den Einsatz von Maven zur Erstellung des Projekts entschieden haben. Um das Projekt schnell und einfach zu nutzen, haben wir detaillierte Anweisungen zur Installation der erforderlichen Abhängigkeiten, zum Erstellen des Projekts mit Maven und zum Ausführen der Anwendung bereitgestellt.
-
-Insgesamt war unsere Vision, ein leistungsstarkes und benutzerfreundliches Plotter-Tool zu entwickeln, das sowohl für den Bildungsbereich als auch für professionelle Anwender wertvoll ist und die Visualisierung und Analyse von mathematischen Funktionen vereinfacht.
+\newpage
 
 \subsection{Potenziell nutzbare APIs}
 
-In unserem Plotter-Projekt haben wir verschiedene APIs in Betracht gezogen, um die Funktionalität und Benutzerfreundlichkeit der Anwendung zu erweitern. Zwei der vielversprechendsten APIs, die wir untersucht haben, sind mxParser und JScience.
+In unserem Plotter-Projekt haben wir verschiedene APIs in Betracht gezogen, um die Funktionalität und Benutzerfreundlichkeit der Anwendung zu erweitern. Zwei der vielversprechendsten APIs, die wir untersucht haben, sind mxParser.
 
 \subsubsection{mxParser}
 
 mxParser ist eine vielseitige und leistungsfähige Bibliothek zur Analyse und Berechnung mathematischer Ausdrücke. Die Bibliothek ist in Java geschrieben und unterstützt eine breite Palette von Funktionen, einschließlich algebraischer, trigonometrischer, exponentieller und logarithmischer Funktionen. Wir haben mxParser in unserem Plotter-Projekt verwendet, um mathematische Ausdrücke zu analysieren und ihre Werte zu berechnen. Die offizielle Website von mxParser bietet umfassende Dokumentation und Beispiele zur Verwendung der Bibliothek: \url{http://mathparser.org/}
-
-\subsubsection{JScience}
-
-JScience ist eine umfangreiche Java-Bibliothek, die verschiedene wissenschaftliche Disziplinen abdeckt, darunter Mathematik, Physik, Chemie und Informatik. Die Bibliothek bietet eine Reihe von Funktionen, die für unser Plotter-Projekt nützlich sein könnten, wie z.B. Unterstützung für komplexe Zahlen, Einheitenkonversion und lineare Algebra. JScience könnte verwendet werden, um die Funktionalität unserer Anwendung zu erweitern und die Unterstützung für zusätzliche mathematische Funktionen und Operationen zu verbessern. Weitere Informationen zu JScience finden Sie auf der offiziellen Website: \url{http://jscience.org/}\\
-
-Durch die Integration dieser APIs in unser Plotter-Projekt können wir die Benutzererfahrung und die Funktionalität unserer Anwendung weiter verbessern und eine breitere Palette von mathematischen Funktionen und Operationen unterstützen.
 
 \newpage
 
@@ -140,8 +126,6 @@ Bei der Entwicklung des Plotters haben wir eine Reihe von Technologien und Tools
 
 \begin{itemize}
 	\item \textbf{mxParser}: Diese leistungsfähige Bibliothek wird verwendet, um mathematische Ausdrücke zu analysieren und ihre Werte zu berechnen. mxParser unterstützt eine Vielzahl von Funktionen, was es uns ermöglicht, eine breite Palette von mathematischen Funktionen in unserer Anwendung zu unterstützen.
-
-	\item \textbf{JScience}: JScience ist eine umfangreiche Java-Bibliothek, die verschiedene wissenschaftliche Disziplinen abdeckt. Durch die Integration von JScience in unser Projekt könnten wir die Funktionalität unserer Anwendung erweitern und zusätzliche mathematische Funktionen und Operationen unterstützen.
 \end{itemize}
 
 \subsection{Entwicklungsumgebung und Tools}
@@ -149,9 +133,9 @@ Bei der Entwicklung des Plotters haben wir eine Reihe von Technologien und Tools
 \begin{itemize}
 	\item \textbf{IntelliJ IDEA}: Wir haben die IntelliJ IDEA-Entwicklungsumgebung verwendet, um unseren Code zu schreiben, zu testen und zu debuggen. IntelliJ IDEA bietet eine Vielzahl von Funktionen, die die Entwicklung von Java- und JavaFX-Anwendungen erleichtern, einschließlich Code-Vervollständigung, Refactoring-Tools und Integration mit Versionskontrollsystemen wie Git.
 
-	\item \textbf{Maven}: Maven ist ein Build-Management-Tool, das wir verwendet haben, um den Build-Prozess zu automatisieren und die Abhängigkeiten unseres Projekts zu verwalten. Maven erleichtert die Integration von externen Bibliotheken wie mxParser und JScience und stellt sicher, dass unser Projekt auf verschiedenen Plattformen und Systemen konsistent gebaut und ausgeführt werden kann. In unserem Fall war Maven zusätzlich vorteilhaft, da es die Verwendung von JavaFX in IntelliJ IDEA stark vereinfacht hat.
+	\item \textbf{Maven}: Maven ist ein Build-Management-Tool, das wir verwendet haben, um den Build-Prozess zu automatisieren und die Abhängigkeiten unseres Projekts zu verwalten. Maven erleichtert die Integration von externen Bibliotheken wie mxParser und stellt sicher, dass unser Projekt auf verschiedenen Plattformen und Systemen konsistent gebaut und ausgeführt werden kann. In unserem Fall war Maven zusätzlich vorteilhaft, da es die Verwendung von JavaFX in IntelliJ IDEA stark vereinfacht hat.
 
-	\item \textbf{Git}: Für die Versionskontrolle und das Teamwork haben wir Git und GitHub verwendet. Git ermöglicht es uns, Änderungen am Code nachzuvollziehen, verschiedene Versionen der Anwendung zu verwalten und die Zusammenarbeit zwischen Teammitgliedern zu erleichtern. Generell hatten wir bei GitHub kaum Probleme, bis auf kleine Konflikte jeweils beim Mergen. Wir haben den Fehler gemacht, oft Dateien wie beispielsweise "workspace" oder ähnliche Dateien von IntelliJ zu commiten, die auf allen Geräten natürlich unterschiedlich sind und so kleine Konflikte entstanden, die recht schnell behoben wurden. Die Mergekonflikte wurden manuell behoben. Was sehr hilfreich war, waren die Commitnachrichten, durch die wir am Ende genau wussten, was gemacht wurde (wichtig für die Dokumentation). Für die Zukunft wäre es besser, nicht zu oft zu commiten und nur fertige, funktionierende Codeteile zu commiten, da sonst alles unübersichtlich wird. Die "rollback"-Funktion mussten wir glücklicherweise nie verwenden. Ganz zu Beginn wurde einmal aus Versehen ein ganzer Branch gelöscht, was aber schnell kompensiert werden konnte.
+	\item \textbf{Git}: Für die Versionskontrolle und das Teamwork haben wir Git und GitHub verwendet. Git ermöglicht es uns, Änderungen am Code nachzuvollziehen, verschiedene Versionen der Anwendung zu verwalten und die Zusammenarbeit zwischen Teammitgliedern zu erleichtern. Generell hatten wir bei GitHub kaum Probleme, bis auf kleine Konflikte jeweils beim Mergen. Wir haben den Fehler gemacht, oft Dateien wie beispielsweise ``workspace`` oder ähnliche Dateien von IntelliJ zu commiten, die auf allen Geräten natürlich unterschiedlich sind und so kleine Konflikte entstanden, die recht schnell behoben wurden. Die Mergekonflikte wurden manuell behoben. Was sehr hilfreich war, waren die Commitnachrichten, durch die wir am Ende genau wussten, was gemacht wurde (wichtig für die Dokumentation). Für die Zukunft wäre es besser, nicht zu oft zu commiten und nur fertige, funktionierende Codeteile zu commiten, da sonst alles unübersichtlich wird. Die ``rollback``-Funktion mussten wir glücklicherweise nie verwenden. Ganz zu Beginn wurde einmal aus Versehen ein ganzer Branch gelöscht, was aber schnell kompensiert werden konnte.
 \end{itemize}
 
 
@@ -161,9 +145,9 @@ Durch die Kombination dieser Technologien und Tools konnten wir eine leistungsf�
 
 \section{Vorgehensmodell: Kanban}
 \subsection{Grundlagen von Kanban}
-Kandan ist ein visuelles Projektmanagement-System, das ursprünglich in der Automobilindustrie entwickelt wurde und auf der Kanban-Methode basiert. Für unser Plotter-Projekt wurde Kandan gewählt, da es eine hohe Flexibilität bietet und es uns ermöglicht, einen guten Überblick über den Fortschritt des Projekts zu behalten.
+Kanban ist ein visuelles Projektmanagement-System, das ursprünglich in der Automobilindustrie entwickelt wurde und auf der Kanban-Methode basiert. Für unser Plotter-Projekt wurde Kandan gewählt, da es eine hohe Flexibilität bietet und es uns ermöglicht, einen guten Überblick über den Fortschritt des Projekts zu behalten.
 
-Kandan besteht aus einer Reihe von Spalten, die verschiedene Phasen des Projekts repräsentieren, z. B. "Zu erledigen", "In Arbeit" und "Fertig". Innerhalb dieser Spalten werden Aufgaben als Karten dargestellt, die Informationen zu Priorität, Verantwortlichen und Fälligkeitsdatum enthalten. Karten werden von einer Spalte zur nächsten verschoben, wenn sie von einer Phase zur nächsten fortschreiten.
+Kanban besteht aus einer Reihe von Spalten, die verschiedene Phasen des Projekts repräsentieren, z. B. ``Zu erledigen``, ``In Arbeit`` und ``Fertig``. Innerhalb dieser Spalten werden Aufgaben als Karten dargestellt, die Informationen zu Priorität, Verantwortlichen und Fälligkeitsdatum enthalten. Karten werden von einer Spalte zur nächsten verschoben, wenn sie von einer Phase zur nächsten fortschreiten.
 
 Dieses System erleichtert die Verfolgung des Fortschritts und hilft dabei, Engpässe oder Verzögerungen schnell zu identifizieren. Es fördert außerdem eine kontinuierliche Verbesserung, indem es Teams dazu anregt, regelmäßig den Workflow zu überprüfen und anzupassen.
 
@@ -274,7 +258,7 @@ Wenn der Benutzer mit einer vorhandenen Funktion interagieren möchte, kann er d
 		\hline
 		Löschbutton der Funktion                                                                                & 1                        & 6                         & 1                       \\
 		\hline
-		Kurvendiskussionsbutton der Funktion                                                                    & 8                        & 3                         & 2                       \\
+		Kurvendiskussionsbutton der Funktion                                                                    & 8                        & 3                         & unendlich               \\
 		\hline
 		Styling der Oberfläche                                                                                  & 4                        & 4                         & 5                       \\
 		\hline
@@ -333,7 +317,7 @@ Das Frontend der Anwendung ist mit JavaFX implementiert, einer leistungsstarken 
 
 \subsection{Backend}
 
-Das Backend der Anwendung ist für die Verarbeitung der eingegebenen mathematischen Funktionen, Berechnung der Ableitungen und Aktualisierung des Plotbereichs verantwortlich. Es verwendet die mxparser-Bibliothek, um mathematische Ausdrücke zu parsen und auszuwerten, und die Hauptklassen der Anwendung, um die grafischen Darstellungen der Funktionen und ihrer Ableitungen zu erzeugen. Die Klassen DerivativeCalculator, PlotFunction und PlotArea sind die Hauptkomponenten des Backends und arbeiten zusammen, um die gewünschte Funktionalität bereitzustellen.
+Das Backend der Anwendung ist für die Verarbeitung der eingegebenen mathematischen Funktionen, die Berechnung der Ableitungen und die Aktualisierung des Plotbereichs verantwortlich. Es verwendet die mxparser-Bibliothek, um mathematische Ausdrücke zu parsen und auszuwerten. Die Hauptklassen der Anwendung sind verantwortlich für die grafischen Darstellungen der Funktionen und ihrer Ableitungen. Die Klassen DerivativeCalculator, PlotFunction und PlotArea waren ursprünglich die Hauptkomponenten des Backends und arbeiteten zusammen, um die gewünschte Funktionalität bereitzustellen. Es ist jedoch zu beachten, dass die DerivativeCalculator-Klasse später nicht mehr benötigt wurde, da mxparser eine ähnliche Funktionalität bietet. Die Ableitungsrechenfunktion von mxparser ist jedoch nicht so effizient. Daher besteht die Möglichkeit, dass wir in Zukunft die DerivativeCalculator-Klasse erneut implementieren könnten, um eine effizientere Berechnung der Ableitungen zu ermöglichen.
 
 \subsection{Klassendiagramm}
 
@@ -560,7 +544,7 @@ Der Quellcode für das Plotter-Projekt ist auf GitHub verfügbar:
 \url{https://github.com/TheD4rkCoder/Plotter/tree/master/src/main/java/com/example/plotter}
 
 \subsection{Anwendungsdiagramm}
-Das Anwendungsdiagramm kann mit diesem Link abgerufen werden: 
+Das Anwendungsdiagramm kann mit diesem Link abgerufen werden:
 \newline
 \url{https://lucid.app/lucidchart/3770db6f-dc16-404d-9219-95c7e45f323b/edit?viewport_loc=-131%2C-12%2C1805%2C823%2Cfwoxo931mB.p&invitationId=inv_0618e768-45cb-485d-9af9-8d05938abe2a}
 
