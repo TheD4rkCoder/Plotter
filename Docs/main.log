@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  19 MAY 2023 16:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  21 MAY 2023 14:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -191,63 +191,101 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip59
 \thanksmargin=\skip60
 \droptitle=\skip61
+) (c:/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen148
+\lightrulewidth=\dimen149
+\cmidrulewidth=\dimen150
+\belowrulesep=\dimen151
+\belowbottomsep=\dimen152
+\aboverulesep=\dimen153
+\abovetopsep=\dimen154
+\cmidrulesep=\dimen155
+\cmidrulekern=\dimen156
+\defaultaddspace=\dimen157
+\@cmidla=\count272
+\@cmidlb=\count273
+\@aboverulesep=\dimen158
+\@belowrulesep=\dimen159
+\@thisruleclass=\count274
+\@lastruleclass=\count275
+\@thisrulewidth=\dimen160
+) (c:/texlive/2022/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+ (c:/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen161
+\ar@mcellbox=\box51
+\extrarowheight=\dimen162
+\NC@list=\toks19
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box52
+)
+\TX@col@width=\dimen163
+\TX@old@table=\dimen164
+\TX@old@col=\dimen165
+\TX@target=\dimen166
+\TX@delta=\dimen167
+\TX@cols=\count276
+\TX@ftn=\toks20
 ) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count272
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count277
+\l__pdf_internal_box=\box53
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count273
-\scratchdimen=\dimen148
-\scratchbox=\box52
-\nofMPsegments=\count274
-\nofMParguments=\count275
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count276
-\MPscratchDim=\dimen149
-\MPnumerator=\count277
-\makeMPintoPDFobject=\count278
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count278
+\scratchdimen=\dimen168
+\scratchbox=\box54
+\nofMPsegments=\count279
+\nofMParguments=\count280
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count281
+\MPscratchDim=\dimen169
+\MPnumerator=\count282
+\makeMPintoPDFobject=\count283
+\everyMPtoPDFconversion=\toks22
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 57.
+Package hyperref Info: Link coloring OFF on input line 59.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for T1+cmss on input line 68.
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 70.
  (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<Resources/logo.png, id=195, 1691.31876pt x 1691.31876pt>
+<Resources/logo.png, id=203, 1691.31876pt x 1691.31876pt>
 File: Resources/logo.png Graphic file (type png)
 <use Resources/logo.png>
-Package pdftex.def Info: Resources/logo.png  used on input line 68.
+Package pdftex.def Info: Resources/logo.png  used on input line 70.
 (pdftex.def)             Requested size: 144.54pt x 144.5215pt.
  [1
 
@@ -260,7 +298,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 ...stagebuch (Umsetzung)}{21}{subsection.9.2}
+l.44 ...itstagebuch (Planung)}{22}{subsection.9.1}
                                                   % [1
 
 ])
@@ -270,152 +308,202 @@ l.44 ...stagebuch (Umsetzung)}{21}{subsection.9.2}
  [2] [3
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 115.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 117.
  (c:/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
 [4]
-Overfull \hbox (15.94577pt too wide) in paragraph at lines 148--149
+Overfull \hbox (15.94577pt too wide) in paragraph at lines 150--151
 \T1/cmr/m/n/10 und JavaFX-Anwendungen er-leich-tern, ein-schlieÿ-lich Code-Vervollständigung,
  []
 
 [5] [6]
-<Resources/kanban_board_example.png, id=286, 3011.25pt x 1806.75pt>
+<Resources/kanban_board_example.png, id=296, 3011.25pt x 1806.75pt>
 File: Resources/kanban_board_example.png Graphic file (type png)
 <use Resources/kanban_board_example.png>
-Package pdftex.def Info: Resources/kanban_board_example.png  used on input line 173.
+Package pdftex.def Info: Resources/kanban_board_example.png  used on input line 174.
 (pdftex.def)             Requested size: 345.0pt x 206.98618pt.
  [7 <./Resources/kanban_board_example.png
 
 pdfTeX warning: pdflatex.exe (file ./Resources/kanban_board_example.png): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
 >]
-Overfull \hbox (9.9764pt too wide) in paragraph at lines 198--199
+Overfull \hbox (9.9764pt too wide) in paragraph at lines 199--200
 []\T1/cmr/bx/n/10 Transparenz\T1/cmr/m/n/10 : Durch die Vi-sua-li-sie-rung des Ar-beits-ab-laufs auf dem Kanban-
  []
 
 
-Overfull \hbox (0.63701pt too wide) in paragraph at lines 199--200
+Overfull \hbox (0.63701pt too wide) in paragraph at lines 200--201
 []\T1/cmr/bx/n/10 Effizienz\T1/cmr/m/n/10 : Die An-wen-dung von Kan-ban und die Auf-tei-lung des Pro-gramms
  []
 
 [8] [9]
-<Resources/aktivitaetsdiagramm.png, id=301, 1282.7925pt x 604.50844pt>
+<Resources/aktivitaetsdiagramm.png, id=312, 1282.7925pt x 604.50844pt>
 File: Resources/aktivitaetsdiagramm.png Graphic file (type png)
 <use Resources/aktivitaetsdiagramm.png>
-Package pdftex.def Info: Resources/aktivitaetsdiagramm.png  used on input line 239.
+Package pdftex.def Info: Resources/aktivitaetsdiagramm.png  used on input line 240.
 (pdftex.def)             Requested size: 345.0pt x 162.57378pt.
  [10 <./Resources/aktivitaetsdiagramm.png>]
-<Resources/use-case-diagram.png, id=309, 390.70969pt x 369.63094pt>
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+[]|\T1/cmr/bx/n/10 Geschätzte
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+[]|\T1/cmr/bx/n/10 Priorität
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+[]|\T1/cmr/bx/n/10 Effektive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[]|\T1/cmr/m/n/10 Eingegebene ma-the-ma-ti-sche
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--277
+[]|\T1/cmr/m/n/10 Kurvendiskussionsbutton der
+ []
+
+
+Overfull \hbox (17.98026pt too wide) in paragraph at lines 257--288
+ [][] 
+ []
+
+[11]
+<Resources/use-case-diagram.png, id=325, 390.70969pt x 369.63094pt>
 File: Resources/use-case-diagram.png Graphic file (type png)
 <use Resources/use-case-diagram.png>
-Package pdftex.def Info: Resources/use-case-diagram.png  used on input line 258.
+Package pdftex.def Info: Resources/use-case-diagram.png  used on input line 308.
 (pdftex.def)             Requested size: 276.00105pt x 261.12001pt.
- [11 <./Resources/use-case-diagram.png>]
-<Resources/gui_screenshot.png, id=316, 901.11656pt x 624.83438pt>
+ [12 <./Resources/use-case-diagram.png>]
+<Resources/gui_screenshot.png, id=333, 901.11656pt x 624.83438pt>
 File: Resources/gui_screenshot.png Graphic file (type png)
 <use Resources/gui_screenshot.png>
-Package pdftex.def Info: Resources/gui_screenshot.png  used on input line 277.
+Package pdftex.def Info: Resources/gui_screenshot.png  used on input line 327.
 (pdftex.def)             Requested size: 345.0pt x 239.22243pt.
- [12 <./Resources/gui_screenshot.png>] [13]
-<Resources/class_diagram.png, id=328, 752.0597pt x 736.25063pt>
+ [13 <./Resources/gui_screenshot.png>] [14]
+<Resources/class_diagram.png, id=344, 2384.91pt x 1985.4175pt>
 File: Resources/class_diagram.png Graphic file (type png)
 <use Resources/class_diagram.png>
-Package pdftex.def Info: Resources/class_diagram.png  used on input line 312.
-(pdftex.def)             Requested size: 345.0pt x 337.75818pt.
- [14 <./Resources/class_diagram.png>]
-<Resources/ui_prototype.png, id=336, 973.38657pt x 668.4975pt>
+Package pdftex.def Info: Resources/class_diagram.png  used on input line 362.
+(pdftex.def)             Requested size: 345.0pt x 287.19653pt.
+ [15 <./Resources/class_diagram.png (PNG copy)>]
+<Resources/ui_prototype.png, id=351, 1104.37593pt x 796.47563pt>
 File: Resources/ui_prototype.png Graphic file (type png)
 <use Resources/ui_prototype.png>
-Package pdftex.def Info: Resources/ui_prototype.png  used on input line 327.
-(pdftex.def)             Requested size: 345.0pt x 236.93575pt.
- [15 <./Resources/ui_prototype.png>] [16]
-Overfull \hbox (84.15134pt too wide) in paragraph at lines 360--363
+Package pdftex.def Info: Resources/ui_prototype.png  used on input line 377.
+(pdftex.def)             Requested size: 345.0pt x 248.81294pt.
+ [16 <./Resources/ui_prototype.png>] [17]
+Overfull \hbox (84.15134pt too wide) in paragraph at lines 410--413
 \T1/cmtt/m/n/10 --add-modules javafx.controls,javafx.fxml -jar target/plotter-1.0-SNAPSHOT.jar 
  []
 
-<Resources/example_function.png, id=347, 302.63063pt x 147.55125pt>
+<Resources/example_function.png, id=362, 302.63063pt x 147.55125pt>
 File: Resources/example_function.png Graphic file (type png)
 <use Resources/example_function.png>
-Package pdftex.def Info: Resources/example_function.png  used on input line 370.
+Package pdftex.def Info: Resources/example_function.png  used on input line 420.
 (pdftex.def)             Requested size: 241.49895pt x 117.7462pt.
-[17 <./Resources/example_function.png>]
+[18 <./Resources/example_function.png>]
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 378.
+LaTeX Font Warning: Command \large invalid in math mode on input line 428.
 
 
-LaTeX Font Warning: Command \large invalid in math mode on input line 379.
+LaTeX Font Warning: Command \large invalid in math mode on input line 429.
 
-<Resources/example_buttons.png, id=359, 78.2925pt x 30.1125pt>
+<Resources/example_buttons.png, id=375, 78.2925pt x 30.1125pt>
 File: Resources/example_buttons.png Graphic file (type png)
 <use Resources/example_buttons.png>
-Package pdftex.def Info: Resources/example_buttons.png  used on input line 384.
+Package pdftex.def Info: Resources/example_buttons.png  used on input line 433.
 (pdftex.def)             Requested size: 172.5pt x 66.35518pt.
-<Resources/example_linear.png, id=360, 901.11656pt x 621.82312pt>
+<Resources/example_linear.png, id=376, 901.11656pt x 621.82312pt>
 File: Resources/example_linear.png Graphic file (type png)
 <use Resources/example_linear.png>
-Package pdftex.def Info: Resources/example_linear.png  used on input line 397.
+Package pdftex.def Info: Resources/example_linear.png  used on input line 446.
 (pdftex.def)             Requested size: 276.00105pt x 190.45752pt.
-[18 <./Resources/example_buttons.png> <./Resources/example_linear.png>]
-<Resources/example_quadratic.png, id=374, 902.6222pt x 626.34pt>
+[19 <./Resources/example_buttons.png> <./Resources/example_linear.png>]
+<Resources/example_quadratic.png, id=389, 902.6222pt x 626.34pt>
 File: Resources/example_quadratic.png Graphic file (type png)
 <use Resources/example_quadratic.png>
-Package pdftex.def Info: Resources/example_quadratic.png  used on input line 405.
+Package pdftex.def Info: Resources/example_quadratic.png  used on input line 454.
 (pdftex.def)             Requested size: 276.00105pt x 191.5256pt.
-<Resources/example_trigonometric.png, id=375, 901.86937pt x 624.83438pt>
+<Resources/example_trigonometric.png, id=390, 901.86937pt x 624.83438pt>
 File: Resources/example_trigonometric.png Graphic file (type png)
 <use Resources/example_trigonometric.png>
-Package pdftex.def Info: Resources/example_trigonometric.png  used on input line 412.
+Package pdftex.def Info: Resources/example_trigonometric.png  used on input line 461.
 (pdftex.def)             Requested size: 276.00105pt x 191.21776pt.
- [19 <./Resources/example_quadratic.png> <./Resources/example_trigonometric.png>] [20] [21]
-<Resources/startbildschirm.png, id=399, 902.6222pt x 622.57594pt>
+ [20 <./Resources/example_quadratic.png> <./Resources/example_trigonometric.png>] [21]
+Underfull \hbox (badness 1112) in paragraph at lines 511--511
+[]|\T1/cmr/m/n/10 Erstellung Ji-ra Pro-jekt, Be-ginn Er-stel-lung
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 511--511
+[][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 530--530
+[][][][] 
+ []
+
+[22]
+<Resources/startbildschirm.png, id=416, 902.6222pt x 622.57594pt>
 File: Resources/startbildschirm.png Graphic file (type png)
 <use Resources/startbildschirm.png>
-Package pdftex.def Info: Resources/startbildschirm.png  used on input line 463.
+Package pdftex.def Info: Resources/startbildschirm.png  used on input line 548.
 (pdftex.def)             Requested size: 276.00105pt x 190.37462pt.
-<Resources/eingabe_darstellung.png, id=400, 902.6222pt x 622.57594pt>
+<Resources/eingabe_darstellung.png, id=417, 902.6222pt x 622.57594pt>
 File: Resources/eingabe_darstellung.png Graphic file (type png)
 <use Resources/eingabe_darstellung.png>
-Package pdftex.def Info: Resources/eingabe_darstellung.png  used on input line 470.
+Package pdftex.def Info: Resources/eingabe_darstellung.png  used on input line 555.
 (pdftex.def)             Requested size: 276.00105pt x 190.37462pt.
-<Resources/anwendung.png, id=401, 903.375pt x 624.08156pt>
+<Resources/anwendung.png, id=418, 901.86937pt x 630.10406pt>
 File: Resources/anwendung.png Graphic file (type png)
 <use Resources/anwendung.png>
-Package pdftex.def Info: Resources/anwendung.png  used on input line 477.
-(pdftex.def)             Requested size: 276.00105pt x 190.67313pt.
-<Resources/zoom.png, id=402, 903.375pt x 624.83438pt>
+Package pdftex.def Info: Resources/anwendung.png  used on input line 562.
+(pdftex.def)             Requested size: 276.00105pt x 192.83044pt.
+<Resources/zoom.png, id=419, 903.375pt x 624.83438pt>
 File: Resources/zoom.png Graphic file (type png)
 <use Resources/zoom.png>
-Package pdftex.def Info: Resources/zoom.png  used on input line 484.
+Package pdftex.def Info: Resources/zoom.png  used on input line 569.
 (pdftex.def)             Requested size: 276.00105pt x 190.90314pt.
- [22
+<Resources/heartshape.png, id=420, 901.86937pt x 624.08156pt>
+File: Resources/heartshape.png Graphic file (type png)
+<use Resources/heartshape.png>
+Package pdftex.def Info: Resources/heartshape.png  used on input line 576.
+(pdftex.def)             Requested size: 276.00105pt x 190.98738pt.
+ [23
 
- <./Resources/startbildschirm.png> <./Resources/eingabe_darstellung.png>] [23 <./Resources/anwendung.png> <./Resources/zoom.png>] [24
+ <./Resources/startbildschirm.png> <./Resources/eingabe_darstellung.png>] [24 <./Resources/anwendung.png> <./Resources/zoom.png>] [25 <./Resources/heartshape.png>] [26
 
 ] (./main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [25] (./main.aux)
+ [27] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FF8A1F5D3F6AF82F9844B683866693FF;6884.
+(rerunfilecheck)             Checksum: 1E31768D029156B2E176C1231A26FFC4;7160.
  ) 
 Here is how much of TeX's memory you used:
- 9995 strings out of 475071
- 160945 string characters out of 5782907
- 521607 words of memory out of 5000000
- 31156 multiletter control sequences out of 15000+600000
+ 10219 strings out of 475071
+ 164686 string characters out of 5782907
+ 526532 words of memory out of 5000000
+ 31361 multiletter control sequences out of 15000+600000
  477589 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,77p,808b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,12n,77p,1218b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (26 pages, 1477261 bytes).
+Output written on main.pdf (28 pages, 1663755 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 436 compressed objects within 5 object streams
- 102 named destinations out of 1000 (max. 500000)
- 457 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 552 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 478 words of extra memory for PDF output out of 10000 (max. 10000000)
 
