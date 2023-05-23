@@ -239,9 +239,9 @@ Wenn der Benutzer mit einer vorhandenen Funktion interagieren möchte, kann er d
 \subsection{Zeiteinteilung}
 \begin{table}[h]
 	\centering
-	\begin{tabularx}{\textwidth}{>{\hsize=2.3\hsize}X>{\hsize=0.6\hsize}X>{\hsize=0.6\hsize}X>{\hsize=0.6\hsize}X}
+	\begin{tabularx}{\textwidth}{>{\hsize=2.1\hsize}X>{\hsize=0.4\hsize}X>{\hsize=0.5\hsize}X>{\hsize=0.4\hsize}X}
 		\toprule
-		\textbf{Person}                                                                                         & \textbf{Datum} & \textbf{Zeit} & \textbf{Tätigkeiten} \\
+		\textbf{Feature}                                                                                         & \textbf{Zeit est.} & \textbf{Priorität} & \textbf{Zeit act.} \\
 		\midrule
 		Eingegebene mathematische Funktion auf dem Plottbereich anzeigen (Grafisches + Berechnung der Funktion) & 10             & 10            & 12                   \\
 		Mathematische Variablen                                                                                 & 6              & 8             & 3                    \\
@@ -262,7 +262,7 @@ Wenn der Benutzer mit einer vorhandenen Funktion interagieren möchte, kann er d
 	\label{table:zeiteinteilung}
 \end{table}
 
-Die Tabelle \ref{table:zeiteinteilung} zeigt eine Übersicht über die Anforderungen an das Projekt. Für jede Anforderung wird die geschätzte Zeit für die Implementierung, die Priorität der Anforderung und die tatsächlich aufgewendete Zeit aufgeführt. Es wird deutlich, dass einige Anforderungen, wie die Darstellung der eingegebenen mathematischen Funktion auf dem Plotbereich und die Dokumentation des Programms, eine hohe Priorität hatten und entsprechend mehr Zeit in Anspruch nahmen. Andere Anforderungen, wie der Ableitungsbutton und der Kurvendiskussionsbutton, hatten eine niedrigere Priorität und benötigten weniger Zeit. Insgesamt zeigt die Tabelle, dass die effektive Zeit oft von der geschätzten Zeit abweicht, was auf die Komplexität und die unvorhergesehenen Herausforderungen bei der Implementierung der verschiedenen Anforderungen hinweist.
+Die Tabelle \ref{table:zeiteinteilung} zeigt eine Übersicht über die Anforderungen an das Projekt. Für jede Anforderung wird die geschätzte Zeit für die Implementierung, die Priorität der Anforderung und die tatsächlich aufgewendete Zeit aufgeführt. Es wird deutlich, dass einige Anforderungen, wie die Darstellung der eingegebenen mathematischen Funktion auf dem Plotbereich und die Dokumentation des Programms, eine hohe Priorität hatten und entsprechend mehr Zeit in Anspruch nahmen. Andere Anforderungen, wie der Ableitungsbutton und der Kurvendiskussionsbutton, hatten eine niedrigere Priorität und benötigten weniger Zeit. Der Kurvendiskussionsbutton wurde aus diesem Grund beispielsweise nicht mehr umgesetzt, da das Verhältnis von Zeitaufwand und Priorität zu hoch war. Insgesamt zeigt die Tabelle, dass die effektive Zeit oft von der geschätzten Zeit abweicht, was auf die Komplexität und die unvorhergesehenen Herausforderungen bei der Implementierung der verschiedenen Anforderungen hinweist.
 
 \newpage
 
@@ -503,6 +503,7 @@ Mögliche zukünftige Erweiterungen der Plotter-Anwendung könnten sein:
 		Patrick         & 02.05.         & 1h            & Grid Labels                                                  \\
 		Patrick         & 02.05.         & 1h            & Erstellung Doku, Aktualisierung JavaDOCS                     \\
 		David           & 02.05.         & 1h            & Darkmode hinzugefügt                                         \\
+        Patrick         &                &               &                                                              \\
 		David           & 05.05.         & 2h            & Resizing umgesetzt                                           \\
 		Patrick         & 05.05.         & 2h            & Umstrukturierung der Klassen, lambdas hinzugefügt            \\
 		Patrick         & 06.05.         & 1h            & Styling                                                      \\
